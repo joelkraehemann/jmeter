@@ -1,0 +1,225 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Apache Tomcat</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="openolat LMS - JMeter Loadtests"><link rel="up" href="bk02ch02.html" title="Kapitel 2. Umgebung"><link rel="prev" href="bk02ch02.html" title="Kapitel 2. Umgebung"><link rel="next" href="bk02ch02s03.html" title="MySQL"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Apache Tomcat</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bk02ch02.html">Zurück</a> </td><th width="60%" align="center">Kapitel 2. Umgebung</th><td width="20%" align="right"> <a accesskey="n" href="bk02ch02s03.html">Weiter</a></td></tr></table><hr></div><div class="sect1" title="Apache Tomcat"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idm2526448"></a>Apache Tomcat</h2></div></div></div>
+    
+    <p>
+      Apache Tomcat ist ein Java Servlet Container, das ist ein Webserver der unteranderem dynamische Seiten enthalten
+      kann. Dabei stehen einem die volle Funktionalität des <acronym class="acronym">JRE</acronym> zur Verfügung.
+    </p>
+
+    <p>
+      Wir konfigurieren Apache Tomcat so, dass er auf Port 80 horcht. Damit das möglich ist muss in der Konfigurationsdatei
+      <code class="filename">/etc/default/tomcat7</code> der Parameter <span class="emphasis"><em>AUTHBIND</em></span> auf <span class="emphasis"><em>yes</em></span>
+      gestellt sein. Desweiteren ändern wir die RAM-Belegungsparameter, damit die Java Virtual Machine mehr Arbeitsspeicher
+      zur Verfügung hat.
+    </p>
+
+    <div class="example"><a name="idp226816"></a><p class="title"><b>Beispiel 2.5. /etc/default/tomcat7</b></p><div class="example-contents">
+      
+      <div class="literallayout"><p><br>
+# Run Tomcat as this user ID. Not setting this or leaving it blank will use the<br>
+# default of tomcat7.<br>
+TOMCAT7_USER=tomcat7<br>
+<br>
+# Run Tomcat as this group ID. Not setting this or leaving it blank will use<br>
+# the default of tomcat7.<br>
+TOMCAT7_GROUP=tomcat7<br>
+<br>
+# The home directory of the Java development kit (JDK). You need at least<br>
+# JDK version 1.5. If JAVA_HOME is not set, some common directories for <br>
+# OpenJDK, the Sun JDK, and various J2SE 1.5 versions are tried.<br>
+#JAVA_HOME=/usr/lib/jvm/openjdk-6-jdk<br>
+<br>
+# You may pass JVM startup parameters to Java here. If unset, the default<br>
+# options will be: -Djava.awt.headless=true -Xmx128m -XX:+UseConcMarkSweepGC<br>
+#<br>
+# Use "-XX:+UseConcMarkSweepGC" to enable the CMS garbage collector (improved<br>
+# response time). If you use that option and you run Tomcat on a machine with<br>
+# exactly one CPU chip that contains one or two cores, you should also add<br>
+# the "-XX:+CMSIncrementalMode" option.<br>
+JAVA_OPTS="-Djava.awt.headless=true -XX:MaxPermSize=128m -Xmx512m -Xms256m -XX:+UseConcMarkSweepGC"<br>
+<br>
+# To enable remote debugging uncomment the following line.<br>
+# You will then be able to use a java debugger on port 8000.<br>
+#JAVA_OPTS="${JAVA_OPTS} -Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n"<br>
+<br>
+# Java compiler to use for translating JavaServer Pages (JSPs). You can use all<br>
+# compilers that are accepted by Ant's build.compiler property.<br>
+#JSP_COMPILER=javac<br>
+<br>
+# Use the Java security manager? (yes/no, default: no)<br>
+#TOMCAT7_SECURITY=no<br>
+<br>
+# Number of days to keep logfiles in /var/log/tomcat7. Default is 14 days.<br>
+#LOGFILE_DAYS=14<br>
+<br>
+# Location of the JVM temporary directory<br>
+# WARNING: This directory will be destroyed and recreated at every startup !<br>
+#JVM_TMP=/tmp/tomcat7-temp<br>
+<br>
+# If you run Tomcat on port numbers that are all higher than 1023, then you<br>
+# do not need authbind.  It is used for binding Tomcat to lower port numbers.<br>
+# NOTE: authbind works only with IPv4.  Do not enable it when using IPv6.<br>
+# (yes/no, default: no)<br>
+AUTHBIND=yes<br>
+<br>
+      </p></div>
+    </div></div><br class="example-break">
+
+    <p>
+      In der Datei <code class="filename">/etc/tomcat7/server.xml</code> können wir nun das Attribut <span class="emphasis"><em>port</em></span> auf
+      <span class="emphasis"><em>80</em></span> setzen.
+    </p>
+
+    <div class="example"><a name="idp229008"></a><p class="title"><b>Beispiel 2.6. /etc/tomcat7/server.xml</b></p><div class="example-contents">
+      
+      <div class="literallayout"><p><br>
+&lt;?xml version='1.0' encoding='utf-8'?&gt;<br>
+&lt;!--<br>
+  Licensed to the Apache Software Foundation (ASF) under one or more<br>
+  contributor license agreements.  See the NOTICE file distributed with<br>
+  this work for additional information regarding copyright ownership.<br>
+  The ASF licenses this file to You under the Apache License, Version 2.0<br>
+  (the "License"); you may not use this file except in compliance with<br>
+  the License.  You may obtain a copy of the License at<br>
+<br>
+      http://www.apache.org/licenses/LICENSE-2.0<br>
+<br>
+  Unless required by applicable law or agreed to in writing, software<br>
+  distributed under the License is distributed on an "AS IS" BASIS,<br>
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>
+  See the License for the specific language governing permissions and<br>
+  limitations under the License.<br>
+--&gt;<br>
+&lt;!-- Note:  A "Server" is not itself a "Container", so you may not<br>
+     define subcomponents such as "Valves" at this level.<br>
+     Documentation at /docs/config/server.html<br>
+ --&gt;<br>
+&lt;Server port="8005" shutdown="SHUTDOWN"&gt;<br>
+  &lt;!-- Security listener. Documentation at /docs/config/listeners.html<br>
+  &lt;Listener className="org.apache.catalina.security.SecurityListener" /&gt;<br>
+  --&gt;<br>
+  &lt;!--APR library loader. Documentation at /docs/apr.html --&gt;<br>
+  &lt;!--<br>
+  &lt;Listener className="org.apache.catalina.core.AprLifecycleListener" SSLEngine="on" /&gt;<br>
+  --&gt;<br>
+  &lt;!--Initialize Jasper prior to webapps are loaded. Documentation at /docs/jasper-howto.html --&gt;<br>
+  &lt;Listener className="org.apache.catalina.core.JasperListener" /&gt;<br>
+  &lt;!-- Prevent memory leaks due to use of particular java/javax APIs--&gt;<br>
+  &lt;Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener" /&gt;<br>
+  &lt;Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener" /&gt;<br>
+  &lt;Listener className="org.apache.catalina.core.ThreadLocalLeakPreventionListener" /&gt;<br>
+<br>
+  &lt;!-- Global JNDI resources<br>
+       Documentation at /docs/jndi-resources-howto.html<br>
+  --&gt;<br>
+  &lt;GlobalNamingResources&gt;<br>
+    &lt;!-- Editable user database that can also be used by<br>
+         UserDatabaseRealm to authenticate users<br>
+    --&gt;<br>
+    &lt;Resource name="UserDatabase" auth="Container"<br>
+              type="org.apache.catalina.UserDatabase"<br>
+              description="User database that can be updated and saved"<br>
+              factory="org.apache.catalina.users.MemoryUserDatabaseFactory"<br>
+              pathname="conf/tomcat-users.xml" /&gt;<br>
+  &lt;/GlobalNamingResources&gt;<br>
+<br>
+  &lt;!-- A "Service" is a collection of one or more "Connectors" that share<br>
+       a single "Container" Note:  A "Service" is not itself a "Container",<br>
+       so you may not define subcomponents such as "Valves" at this level.<br>
+       Documentation at /docs/config/service.html<br>
+   --&gt;<br>
+  &lt;Service name="Catalina"&gt;<br>
+<br>
+    &lt;!--The connectors can use a shared executor, you can define one or more named thread pools--&gt;<br>
+    &lt;!--<br>
+    &lt;Executor name="tomcatThreadPool" namePrefix="catalina-exec-"<br>
+        maxThreads="150" minSpareThreads="4"/&gt;<br>
+    --&gt;<br>
+<br>
+<br>
+    &lt;!-- A "Connector" represents an endpoint by which requests are received<br>
+         and responses are returned. Documentation at :<br>
+         Java HTTP Connector: /docs/config/http.html (blocking &amp; non-blocking)<br>
+         Java AJP  Connector: /docs/config/ajp.html<br>
+         APR (HTTP/AJP) Connector: /docs/apr.html<br>
+         Define a non-SSL HTTP/1.1 Connector on port 8080<br>
+    --&gt;<br>
+    &lt;Connector port="80" protocol="HTTP/1.1"<br>
+               connectionTimeout="20000"<br>
+               URIEncoding="UTF-8"<br>
+               redirectPort="8443" /&gt;<br>
+    &lt;!-- A "Connector" using the shared thread pool--&gt;<br>
+    &lt;!--<br>
+    &lt;Connector executor="tomcatThreadPool"<br>
+               port="8080" protocol="HTTP/1.1"<br>
+               connectionTimeout="20000"<br>
+               redirectPort="8443" /&gt;<br>
+    --&gt;<br>
+    &lt;!-- Define a SSL HTTP/1.1 Connector on port 8443<br>
+         This connector uses the JSSE configuration, when using APR, the<br>
+         connector should be using the OpenSSL style configuration<br>
+         described in the APR documentation --&gt;<br>
+    &lt;!--<br>
+    &lt;Connector port="8443" protocol="HTTP/1.1" SSLEnabled="true"<br>
+               maxThreads="150" scheme="https" secure="true"<br>
+               clientAuth="false" sslProtocol="TLS" /&gt;<br>
+    --&gt;<br>
+<br>
+    &lt;!-- Define an AJP 1.3 Connector on port 8009 --&gt;<br>
+    &lt;!--<br>
+    &lt;Connector port="8009" protocol="AJP/1.3" redirectPort="8443" /&gt;<br>
+    --&gt;<br>
+<br>
+<br>
+    &lt;!-- An Engine represents the entry point (within Catalina) that processes<br>
+         every request.  The Engine implementation for Tomcat stand alone<br>
+         analyzes the HTTP headers included with the request, and passes them<br>
+         on to the appropriate Host (virtual host).<br>
+         Documentation at /docs/config/engine.html --&gt;<br>
+<br>
+    &lt;!-- You should set jvmRoute to support load-balancing via AJP ie :<br>
+    &lt;Engine name="Catalina" defaultHost="localhost" jvmRoute="jvm1"&gt;<br>
+    --&gt;<br>
+    &lt;Engine name="Catalina" defaultHost="localhost"&gt;<br>
+<br>
+      &lt;!--For clustering, please take a look at documentation at:<br>
+          /docs/cluster-howto.html  (simple how to)<br>
+          /docs/config/cluster.html (reference documentation) --&gt;<br>
+      &lt;!--<br>
+      &lt;Cluster className="org.apache.catalina.ha.tcp.SimpleTcpCluster"/&gt;<br>
+      --&gt;<br>
+<br>
+      &lt;!-- Use the LockOutRealm to prevent attempts to guess user passwords<br>
+           via a brute-force attack --&gt;<br>
+      &lt;Realm className="org.apache.catalina.realm.LockOutRealm"&gt;<br>
+        &lt;!-- This Realm uses the UserDatabase configured in the global JNDI<br>
+             resources under the key "UserDatabase".  Any edits<br>
+             that are performed against this UserDatabase are immediately<br>
+             available for use by the Realm.  --&gt;<br>
+        &lt;Realm className="org.apache.catalina.realm.UserDatabaseRealm"<br>
+               resourceName="UserDatabase"/&gt;<br>
+      &lt;/Realm&gt;<br>
+<br>
+      &lt;Host name="localhost"  appBase="webapps"<br>
+            unpackWARs="true" autoDeploy="true"&gt;<br>
+<br>
+        &lt;!-- SingleSignOn valve, share authentication between web applications<br>
+             Documentation at: /docs/config/valve.html --&gt;<br>
+        &lt;!--<br>
+        &lt;Valve className="org.apache.catalina.authenticator.SingleSignOn" /&gt;<br>
+        --&gt;<br>
+<br>
+        &lt;!-- Access log processes all example.<br>
+             Documentation at: /docs/config/valve.html<br>
+             Note: The pattern used is equivalent to using pattern="common" --&gt;<br>
+        &lt;Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"<br>
+               prefix="localhost_access_log." suffix=".txt"<br>
+               pattern="%h %l %u %t &amp;quot;%r&amp;quot; %s %b" /&gt;<br>
+<br>
+      &lt;/Host&gt;<br>
+    &lt;/Engine&gt;<br>
+  &lt;/Service&gt;<br>
+&lt;/Server&gt;<br>
+<br>
+      </p></div>
+    </div></div><br class="example-break">
+  </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bk02ch02.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="bk02ch02.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="bk02ch02s03.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Kapitel 2. Umgebung </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> MySQL</td></tr></table></div></body></html>

@@ -1,0 +1,466 @@
+<?xml version='1.0' encoding="utf-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0">
+  <title>JMeter Loadtests</title>
+  <para>
+    JMeter ist eine Open Source Software veröffentlicht unter Apache License Version 2.0 und
+    ist somit frei verfügbar. Mit JMeter kann man automatisierte Tests von Netzwerk
+    Anwendungen durchführen. Es bietet für verschiedene Problemstellungen das passende Werkzeug,
+    wie zum Beispiel Konstrukte die aus der Software Programmierung kommen. Namentlich Variablen,
+    Bedingungen, Schleifen und Zähler. Man hat auch die Möglichkeit diverse Scriptsprachen zu
+    verwenden.
+  </para>
+  <para>
+    Es würde den Rahmen der Abschlussarbeit sprengen alle Komponenten von JMeter zu dokumentieren.
+    Deshalb gehe ich speziell auf die im eAssessment Loadtest verwendeten Elemente ein. Der Einfachheit wegen
+    verzichtete ich die unvollständig übersetzten Komponenten der <acronym>GUI</acronym> einzudeutschen.
+  </para>
+
+  <sect1>
+    <title>Threads (Users)</title>
+
+    <para>
+      Threads sind gleichzeitig ablaufende Handlungen, dabei hat jeder Thread seinen eigenen Geltungsbereich.
+    </para>
+
+    <sect2>
+      <title>Thread-Gruppe</title>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="../images/jmeter_thread_groups.png" align="top"/>
+	</imageobject>
+	<caption align="bottom">
+	  <para>
+	    Bildschirmfoto JMeter Thread Gruppe
+	  </para>
+	</caption>
+      </mediaobject>
+
+      <para>
+	Thread-Gruppen bietet einem die Möglichkeit Threads zu gruppieren, um diese anschliessend
+	mit Verzögerungen zu starten. Das <emphasis>Ramp up period</emphasis> Feld gibt dabei an nach wie vielen
+	Sekunden alle Threads gestartet sein sollen.
+      </para>
+
+    </sect2>
+
+  </sect1>
+
+  <sect1>
+    <title>Logik Controller</title>
+
+    <para>
+      Die Logik Bausteine bilden die in der Programmierung üblichen Sprachkonstrukte ab.
+    </para>
+    
+    <sect2>
+      <title>If-Controller</title>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="../images/jmeter_if_controller.png" align="top"/>
+	</imageobject>
+	<caption align="bottom">
+	  <para>
+	    Bildschirmfoto JMeter If-Controller
+	  </para>
+	</caption>
+      </mediaobject>
+
+      <para>
+	Der If-Controller braucht man um Ausschlüsse nach Bedingungen umzusetzen. Das das Feld <emphasis>Bedingung
+      (JavaScript)</emphasis> muss eine gültiger Boolescher JavaScript Ausdruck sein. Es lassen sich JMeter Variablen
+      in diesem Feld verwenden, welche jedoch mittels doppeltem Hochkomata als Escape-Sequenz umschlossen sein muss.
+      </para>
+
+    </sect2>
+
+    <sect2>
+      <title>Loop-Controller</title>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="../images/jmeter_loop_controller.png" align="top"/>
+	</imageobject>
+	<caption align="bottom">
+	  <para>
+	    Bildschirmfoto JMeter Loop-Controller
+	  </para>
+	</caption>
+      </mediaobject>
+
+      <para>
+	Der Loop Controller bildet eine spezielle For-Schleife ab, wo man lediglich die Anzahl Iterationen angeben
+	kann. Sie können JMeter Variablen ohne Escape-Sequenz verwenden.
+      </para>
+
+    </sect2>
+
+  </sect1>
+
+  <sect1>
+    <title>Konfigurations Elemente</title>
+
+    <para>
+      Mit Konfigurations Elementen kann man Standard Werte und Variablen definieren. Diese werden
+      am Anfang des Gültigkeitsbereiches verarbeitet, bevor irgendetwas verarbeitet oder generiert
+      wird. Es gibt verschiedene Namenskonzepte, aber am naheliegensten ist es das von Java zu übernehmen.
+      Global sichtbare Variablen in Upper-Case und kontextbezogene in Camel-Case.
+    </para>
+
+    <sect2>
+      <title>Benutzer Definierte Variablen</title>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="../images/jmeter_variables.png" align="top"/>
+	</imageobject>
+	<caption align="bottom">
+	  <para>
+	    Bildschirmfoto JMeter Benutzer Definierte Variablen
+	  </para>
+	</caption>
+      </mediaobject>
+
+      <para>
+	In diesem Konfigurations Element gibt man Konstanten an, die sich während der Laufzeit nicht ändern.
+	Es eignet sich Ideal um Textbausteine zu erstellen. Diese Variablen werden analog zu Referenzen aufgerufen.
+	${host} wäre demnach der Wert <emphasis>debian-openolat</emphasis>. Manche Felder von JMeter erlauben keine
+	Variablen oder verlangen das Umschliessen mittels doppeltem Hochkomata.
+      </para>
+
+    </sect2>
+
+    <sect2>
+      <title>CSV Einstellungen</title>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="../images/jmeter_csv.png" align="top"/>
+	</imageobject>
+	<caption align="bottom">
+	  <para>
+	    Bildschirmfoto JMeter CSV Einstellungen
+	  </para>
+	</caption>
+      </mediaobject>
+
+      <para>
+	<acronym>CSV</acronym> Dateien eignen sich gut um Tabellen auszulesen. Dabei kann man den <emphasis>Sharing
+	Mode</emphasis> auf <emphasis>Current Thread Group</emphasis> setzen, was dazu führt, dass jeder Thread
+	eine Zeile erhält. Die Spalten werden durch das Feld Variablenname ausgelesen und den angegeben Variablen
+	zugewiesen.
+      </para>
+
+    </sect2>
+
+    <sect2>
+      <title>HTTP Managers</title>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="../images/jmeter_cookie_manager.png" align="top"/>
+	</imageobject>
+	<caption align="bottom">
+	  <para>
+	    Bildschirmfoto JMeter HTTP Cookie Manager
+	  </para>
+	</caption>
+      </mediaobject>
+
+      <para>
+	Die diversen HTTP Managers die vorhanden sind, bieten einem die Möglichkeit das Standardverhalten des
+	HTTP Clients zu steuern. Es stehen folgende HTTP Managers zur Verfügung:
+      </para>
+
+      <itemizedlist mark="bullet">
+	<listitem>
+	  <para>
+	    HTTP Authorisierungs Manager
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    HTTP Cache Manager
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    HTTP Cookie Manager
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    HTTP Header Manager
+	  </para>
+	</listitem>
+      </itemizedlist>
+
+    </sect2>
+
+    <sect2>
+      <title>Zähler (Counter)</title>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="../images/jmeter_counter.png" align="top"/>
+	</imageobject>
+	<caption align="bottom">
+	  <para>
+	    Bildschirmfoto JMeter Zähler
+	  </para>
+	</caption>
+      </mediaobject>
+
+      <para>
+	Mit Zähler inkrementiert man Variablen um die angegebene Zunahme. Die Option <emphasis>Zähler für jeden
+	Benutzer einzeln führen</emphasis> hat den Effekt, dass jeder Benutzer (Thread) eine eigene Variable erhält.
+	<emphasis>Reset counter on each Thread Group Iteration</emphasis> führt dazu, dass der Zähler nicht immer
+	weiter erhöht wird.
+      </para>
+    </sect2>
+
+  </sect1>
+
+  <sect1>
+    <title>Sampler</title>
+
+    <para>
+      Unter einem Sampler versteht man ein Werkzeug, das die eigentliche Netzwerk Kommunikation durchführt. JMeter
+      bietet für verschiedene Protokolle Samplers an.
+    </para>
+
+    <sect2>
+      <title>HTTP Request</title>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="../images/jmeter_http_request.png" align="top"/>
+	</imageobject>
+	<caption align="bottom">
+	  <para>
+	    Bildschirmfoto JMeter HTTP Request
+	  </para>
+	</caption>
+      </mediaobject>
+
+      <para>
+	Der HTTP Request kann sehr vielseitig konfiguriert werden. Es lässt sich die HTTP Methode definieren, die
+	benutzt werden soll und Parameter die mit dem Request verschickt werden sollen. Parameter entsprechen den
+	Formularfelder einer Webpage.
+      </para>
+
+    </sect2>
+
+  </sect1>
+
+  <sect1>
+    <title>Präprozessoren</title>
+
+    <para>
+      Diese Verarbeitungswerkzeuge werden vor den eigentlichen Samplern ausgeführt. Sie dienen dazu Variablen
+      aufzubereiten und um allfällige Berechnungen durchzuführen, die dann für den Sampler zur Verfügung gestellt
+      werden.
+    </para>
+
+    <sect2>
+      <title>JSR223 Präprozessor</title>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="../images/jmeter_jsr223_preprocessor.png" align="top"/>
+	</imageobject>
+	<caption align="bottom">
+	  <para>
+	    Bildschirmfoto JMeter JSR223 Präprozessor
+	  </para>
+	</caption>
+      </mediaobject>
+
+      <para>
+	JSR223 ist eine Scripting Engine für Java. Die Groovy Erweiterung erlaubt es auch Java Snippets auszuführen.
+      </para>
+      
+    <example>
+      <title>GapTextProcessor.java</title>
+      <programlisting language="java">
+<xi:include href="../listings/GapTextPreProcessor.java" parse="text"/>
+      </programlisting>
+    </example>
+
+    </sect2>
+
+  </sect1>
+
+  <sect1>
+    <title>Postprozessoren</title>
+
+    <para>
+      Diese Prozessoren werden nach dem Samplerdurchgang ausgeführt. Diese Prozessoren erhalten die Antwort auf die
+      vom Sampler ausgeführte Anfrage.
+    </para>
+
+    <sect2>
+      <title>XPath Extractor</title>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="../images/jmeter_xpath_extractor.png" align="top"/>
+	</imageobject>
+	<caption align="bottom">
+	  <para>
+	    Bildschirmfoto JMeter XPath Extractor
+	  </para>
+	</caption>
+      </mediaobject>
+
+      <para>
+	XPath dient zum Auslesen von Elementen und Attributen von XML-Konformen Baumstrukturen. Dieser Postprozessor
+	hat die Option <emphasis>Use tidy</emphasis>, was dazu führt einen tolerante Verarbeitung von XML durchzuführen
+	und ist somit anwendbar auf HTML.
+      </para>
+      
+      <para>
+	Der XPath Extractor erzeugt mehrere Referenzen die mittels dem entsprechendem Suffix angesprochen werden.
+	Nachstehende Tabelle zeigt die Suffixes anhand der angegebenen Referenz <emphasis>TEXT_INPUT_NAME_REF</emphasis> und
+	dem aufgeführtem XPath Ausdruck. Die Indizien können weitergeführt werden und hören nicht bei 2 auf.
+      </para>
+
+    <example>
+      <title>XPath Ausdruck</title>
+      <programlisting language="xml">
+//input[@type='text']/@name
+      </programlisting>
+    </example>
+
+      <table>
+	<title>Suffix Übersicht</title>
+	<tgroup cols="2" align="left" colsep="1" rowsep="1">
+	  <thead>
+	    <row>
+	      <entry>Referenz</entry>
+	      <entry>Bedeutung</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row>
+	      <entry>
+		TEXT_INPUT_NAME_REF_matchNr
+	      </entry>
+	      <entry>
+		Anzahl gefundener Elemente, die auf den XPath Ausdruck passen.
+	      </entry>
+	    </row>
+	    <row>
+	      <entry>
+		TEXT_INPUT_NAME_REF_1
+	      </entry>
+	      <entry>
+		Erstes Element, das auf den XPath Ausdruck passt.
+	      </entry>
+	    </row>
+	    <row>
+	      <entry>
+		TEXT_INPUT_NAME_REF_2
+	      </entry>
+	      <entry>
+		Zweites Element, das auf den XPath Ausdruck passt.
+	      </entry>
+	    </row>
+	    <row>
+	      <entry>
+		...
+	      </entry>
+	      <entry>
+		...
+	      </entry>
+	    </row>
+	  </tbody>
+	</tgroup>
+      </table>
+
+    </sect2>
+    
+  </sect1>
+
+  <sect1>
+    <title>Überprüfung</title>
+
+    <para>
+      Mit Überprüfungen kann man Annahmen machen über Inhalte. Falls eine Annahme fehlschlagt erhält man ein entsprechendes
+      Feedback.
+    </para>
+
+    <sect2>
+      <title>Versicherte Antwort</title>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="../images/jmeter_guaranteed_answer.png" align="top"/>
+	</imageobject>
+	<caption align="bottom">
+	  <para>
+	    Bildschirmfoto JMeter Versicherte Antwort
+	  </para>
+	</caption>
+      </mediaobject>
+
+      <para>
+	
+      </para>
+
+    </sect2>
+  </sect1>
+
+  <sect1>
+    <title>Listeners</title>
+
+    <para>
+      Listeners arbeiten im globalen Gültigkeitsbereich. Sie werden dazu verwendet Auswertungen durchzuführen. 
+    </para>
+
+    <sect2>
+      <title>View Results Tree</title>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="../images/jmeter_view_results_tree.png" align="top"/>
+	</imageobject>
+	<caption align="bottom">
+	  <para>
+	    Bildschirmfoto JMeter View Results Tree
+	  </para>
+	</caption>
+      </mediaobject>
+
+      <para>
+	Visualisiert die Ergebnisse der Sampler und Annahmen als Baum.
+      </para>
+    </sect2>
+
+
+  </sect1>
+
+  <sect1>
+    <title>Funktionsbausteine</title>
+
+    <para>
+      Die meisten Felder von JMeter erlauben den Einsatz von Funktionen, die auch in Referenzen schreiben können.
+      In der JMeter Dokumentation wird Upper-Case für Referenzen verwendet sowie der Suffix <emphasis>_REF</emphasis>.
+      Funktionen können verschachtelt werden.
+    </para>
+
+    <sect2>
+      <title>Random</title>
+
+      <para>
+	${__Random(mindestWert, maximalWert, [referenz])} ist die Syntax der Random Funktion. Ersichtlich ist, dass die
+	Referenz optional ist.
+      </para>
+
+    </sect2>
+
+  </sect1>
+
+</chapter>

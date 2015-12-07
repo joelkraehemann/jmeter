@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding="utf-8"?>
+<appendix xmlns="http://docbook.org/ns/docbook"
+	  xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0">
+  <title>Literatur</title>
+  <bibliography>
+    <title>Literatur</title>
+
+    <bibliomixed>
+      <bibliomset relation="journal">
+	<title><ulink url="http://www.debian.org/doc/manuals/debian-reference/">Debian Reference</ulink></title>.
+	<publishername>Software in the Public Interest, Inc.</publishername>.
+	<pubdate>Stand 25.03.2013</pubdate>
+	<link>http://www.debian.org</link></bibliomset>.
+    </bibliomixed>
+
+    <bibliomixed>
+      <bibliomset relation="journal">
+	<title><ulink url="http://tomcat.apache.org/tomcat-7.0-doc/index.html">Tomcat 7</ulink></title>.
+	<publishername>Apache Software Foundation</publishername>.
+	<pubdate>Stand 25.03.2013</pubdate>
+	<link>http://tomcat.apache.org</link></bibliomset>.
+    </bibliomixed>
+
+    <bibliomixed>
+      <bibliomset relation="journal">
+	<title><ulink url="http://dev.mysql.com/doc/refman/5.5/en/">MySQL 5.5 Reference Manual</ulink></title>.
+	<publishername>Oracle</publishername>.
+	<pubdate>Stand 25.03.2013</pubdate>
+	<link>http://www.mysql.com</link></bibliomset>.
+    </bibliomixed>
+
+    <bibliomixed>
+      <bibliomset relation="journal">
+	<title><ulink url="http://www.openolat.org/fileadmin/documents/openolat/OpenOLAT_8.1_User_Manual.pdf">OpenOLAT 8 User Manual</ulink></title>.
+	<publishername>frentix GmbH</publishername>.
+	<pubdate>Stand 25.03.2013</pubdate>
+	<link>http://www.openolat.org</link></bibliomset>.
+    </bibliomixed>
+
+    <bibliomixed>
+      <bibliomset relation="journal">
+	<title><ulink url="http://community.openolat.org/commolat/restapi/api/doc">openolat LMS - RESTful API</ulink></title>.
+	<publishername>frentix GmbH</publishername>.
+	<pubdate>Stand 25.03.2013</pubdate>
+	<link>http://www.openolat.org</link></bibliomset>.
+    </bibliomixed>
+
+    <bibliomixed>
+      <bibliomset relation="book">
+	<title><ulink url="http://www.oreilly.com">Maven - The Definitive Guide</ulink></title>.
+	<publishername>O'Reilly</publishername>.
+	<pubdate>September 2008</pubdate>
+	<link>http://www.oreilly.com</link>
+	<isbn>978-0-596-51733-5</isbn></bibliomset>.
+    </bibliomixed>
+
+    <bibliomixed>
+      <bibliomset relation="book">
+	<title><ulink url="http://www.javabuch.de">Java Buch</ulink></title>.
+	<publishername>Addison-Wesley</publishername>.
+	<pubdate>Stand 11.03.2012</pubdate>
+	<link>http://www.addison-wesley.de</link>
+	<isbn>978-3-8273-2751-2</isbn></bibliomset>.
+    </bibliomixed>
+    
+    <bibliomixed>
+      <bibliomset relation="book">
+	<title><ulink url="http://www.oreilly.com">RESTful Java with JAX-RS</ulink></title>.
+	<publishername>O'Reilly</publishername>.
+	<pubdate>Dezember 2009</pubdate>
+	<link>http://www.oreilly.com</link>
+	<isbn>978-0-596-15804-0</isbn></bibliomset>.
+    </bibliomixed>
+    
+    <bibliomixed>
+      <bibliomset relation="journal">
+	<title><ulink url="http://www.w3.org/TR/xpath/">XPath Specification</ulink></title>.
+	<publishername>W3 Consortium</publishername>.
+	<pubdate>Stand 25.03.2012</pubdate>
+	<link>http://www.w3c.org</link></bibliomset>.
+    </bibliomixed>
+
+    <bibliomixed>
+      <bibliomset relation="journal">
+	<title><ulink url="http://jmeter.apache.org/usermanual/index.html">JMeter - User's Manual</ulink></title>.
+	<publishername>Apache Software Foundation</publishername>.
+	<pubdate>Stand 11.03.2012</pubdate>
+	<link>http://jmeter.apache.org</link></bibliomset>.
+    </bibliomixed>
+
+    <bibliomixed>
+      <bibliomset relation="journal">
+	<title><ulink url="http://docs.oracle.com/javase/7/docs/technotes/guides/management/jconsole.html">JConsole - Java SE Monitoring and Management Guide</ulink></title>.
+	<publishername>Oracle</publishername>.
+	<pubdate>Stand 25.03.2012</pubdate>
+	<link>http://www.oracle.com</link></bibliomset>.
+    </bibliomixed>
+
+  </bibliography>
+</appendix>

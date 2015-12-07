@@ -1,0 +1,114 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Kapitel 4. Auswertung</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="openolat LMS - JMeter Loadtests"><link rel="up" href="bk02.html" title="openolat LMS - JMeter Loadtests"><link rel="prev" href="bk02ch03s09.html" title="Funktionsbausteine"><link rel="next" href="bk02ch04s02.html" title="Resttool"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Kapitel 4. Auswertung</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bk02ch03s09.html">Zurück</a> </td><th width="60%" align="center">openolat LMS - JMeter Loadtests</th><td width="20%" align="right"> <a accesskey="n" href="bk02ch04s02.html">Weiter</a></td></tr></table><hr></div><div class="chapter" title="Kapitel 4. Auswertung"><div class="titlepage"><div><div><h2 class="title"><a name="idp337392"></a>Kapitel 4. Auswertung</h2></div></div></div><div class="toc"><p><b>Inhaltsverzeichnis</b></p><dl><dt><span class="sect1"><a href="bk02ch04.html#idp356528">JConsole</a></span></dt><dt><span class="sect1"><a href="bk02ch04s02.html">Resttool</a></span></dt><dt><span class="sect1"><a href="bk02ch04s03.html">Test 1: 50 Benutzer</a></span></dt><dt><span class="sect1"><a href="bk02ch04s04.html">Test 2: 100 Benutzer</a></span></dt><dt><span class="sect1"><a href="bk02ch04s05.html">Test 3: 200 Benutzer</a></span></dt><dt><span class="sect1"><a href="bk02ch04s06.html">Test 4: 200 Benutzer</a></span></dt></dl></div>
+  
+  <p>
+    Ziel der Auswertung ist es zwei Situationen nachzustellen. Die eine wo der Betrieb von openolat LMS genug Ressourcen
+    zur Verfügung hat und eine andere wo sie nicht genügen. Dies mit der Absicht für eine Hilfestellung zum Evaluieren
+    von Fehlern.
+  </p>
+  <p>
+    Es gelten für beide Tests die gleich Rahmenbedingungen, es variiert lediglich die Benutzeranzahl und das verzögerte
+    einloggen in das System. Beide Tests laufen auf einem leeren System - die Datenbank wird vor jedem Durchlauf gelöscht
+    und neu angelegt sowie das Datenverzeichnis gelöscht, zusätzlich das Tomcat 7 Logfile neu angelegt.
+    Es wird vor und nach dem Test der Garbage Collector laufen gelassen.
+  </p>
+
+  <pre class="programlisting">
+drop database if exists openolat;
+
+  </pre>
+
+  <pre class="programlisting">
+#!/bin/bash
+
+# remove OpenOLAT directory and create it again.
+rm -rf /opt/openolat/olatdata
+mkdir /opt/openolat/olatdata
+chown tomcat7.tomcat7 /opt/openolat/olatdata
+
+# remove tomcat7 log file and create empty file
+rm /var/lib/tomcat7/logs/catalina.out
+touch /var/lib/tomcat7/logs/catalina.out
+
+  </pre>
+
+  <p>
+    Der Server wird während einem Durchlauf mit Formulardaten von eAssessment Tests belastet.
+  </p>
+
+  <p>
+    Für die Gemeinsamen Bedingungen gelten folgende Java Parameter für Apache Tomcat:
+  </p>
+
+  <div class="table"><a name="idp341072"></a><p class="title"><b>Tabelle 4.1. openolat LMS - Java Parameter</b></p><div class="table-contents">
+    
+    <table summary="openolat LMS - Java Parameter" border="1"><colgroup><col align="left"><col align="left"><col align="left"></colgroup><thead><tr><th align="left">Java Parameter</th><th align="left">Beschreibung</th><th align="left">Wert</th></tr></thead><tbody><tr><td align="left">
+	    -Xmx
+	  </td><td align="left">
+	    Maximum Arbeitsspeicher begrenzung
+	  </td><td align="left">
+	    128m
+	  </td></tr><tr><td align="left">
+	    -Xms
+	  </td><td align="left">
+	    Initiale Arbeitsspeicher Anlegung
+	  </td><td align="left">
+	    256m
+	  </td></tr><tr><td align="left">
+	    -XX:MaxPermSize
+	  </td><td align="left">
+	    Maximum des permanenten Generierheaps
+	  </td><td align="left">
+	    128m
+	  </td></tr><tr><td align="left">
+	    -Xss
+	  </td><td align="left">
+	    Thread Stackgrösse
+	  </td><td align="left">
+	    1m (default)
+	  </td></tr></tbody></table>
+  </div></div><br class="table-break">
+
+  <p>
+    Die JMeter Benutzer werden innerhalb von 50 Sekunden mit 50 Benutzern aufgeschaltet sein. Der Einfachheit halber passen wir
+    das Aufschalten der Threads entsprechen der Benutzeranzahl an. Es wird ein Durchlauf durchgeführt.
+  </p>
+
+  <div class="sect1" title="JConsole"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp356528"></a>JConsole</h2></div></div></div>
+    
+
+    <p>
+      Damit wir Apache Tomcat über das Netzwerk überwachen können, müssen wir <span style="color: red">&lt;accronym&gt;JMX&lt;/accronym&gt;</span> aktivieren. Dazu
+      bearbeiten wir <code class="filename">/etc/init.d/tomcat7</code> und setzen die Umgebungsvariable <span class="emphasis"><em>CATALINA_OPTS</em></span>
+      wie folgt - WARNUNG Authentifizierung abgeschaltet:
+    </p>
+
+  <div class="literallayout"><p><br>
+CATALINA_OPTS="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false"<br>
+<br>
+  </p></div>
+
+  <p>
+    Um die Authentifizierung einzuschalten, lesen Sie bitte folgenden Artikel: <a class="ulink" href="" target="_top">http://tomcat.apache.org/tomcat-7.0-doc/monitoring.html</a>. Hinweis Änderungen an den Konfigurationsdateien
+    oder Startscript erfordert einen Neustart.
+  </p>
+
+  <pre class="programlisting">
+#!/bin/bash
+
+/etc/init.d/tomcat7 restart
+
+  </pre>
+
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bk02ch03s09.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="bk02.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="bk02ch04s02.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Funktionsbausteine </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Resttool</td></tr></table></div></body></html>

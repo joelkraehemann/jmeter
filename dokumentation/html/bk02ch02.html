@@ -1,0 +1,83 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Kapitel 2. Umgebung</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="openolat LMS - JMeter Loadtests"><link rel="up" href="bk02.html" title="openolat LMS - JMeter Loadtests"><link rel="prev" href="bk02ch01s04.html" title="Journal"><link rel="next" href="bk02ch02s02.html" title="Apache Tomcat"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Kapitel 2. Umgebung</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bk02ch01s04.html">Zurück</a> </td><th width="60%" align="center">openolat LMS - JMeter Loadtests</th><td width="20%" align="right"> <a accesskey="n" href="bk02ch02s02.html">Weiter</a></td></tr></table><hr></div><div class="chapter" title="Kapitel 2. Umgebung"><div class="titlepage"><div><div><h2 class="title"><a name="idp215712"></a>Kapitel 2. Umgebung</h2></div></div></div><div class="toc"><p><b>Inhaltsverzeichnis</b></p><dl><dt><span class="sect1"><a href="bk02ch02.html#idp217360">Debian GNU/Linux</a></span></dt><dt><span class="sect1"><a href="bk02ch02s02.html">Apache Tomcat</a></span></dt><dt><span class="sect1"><a href="bk02ch02s03.html">MySQL</a></span></dt><dt><span class="sect1"><a href="bk02ch02s04.html">openolat LMS</a></span></dt><dt><span class="sect1"><a href="bk02ch02s05.html">JMeter</a></span></dt></dl></div>
+  
+  <p>
+    Es wird Vorausgesetzt, dass eine funktionsfähige Installation eines Unixartigen-Betriebssystem vorhanden ist. Hier
+    wird anhand einer Debian GNU/Linux "stable" Distribution erklärt, wie man die Arbeitsumgebung aufsetzt.
+  </p>
+
+  <div class="sect1" title="Debian GNU/Linux"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp217360"></a>Debian GNU/Linux</h2></div></div></div>
+    
+    <p>
+      Bevor wir das Testing Repository hinzufügen legen wir fest, dass das Standard Repository "stable" ist. Falls dies
+      unterlassen wird, werden Sie nach dem nächsten Upgrade eine "testing" Distribution haben.
+    </p>
+
+    <div class="example"><a name="idp218768"></a><p class="title"><b>Beispiel 2.1. /etc/apt/apt.conf</b></p><div class="example-contents">
+      
+      <div class="literallayout"><p><br>
+APT::Default-Release "stable";<br>
+<br>
+      </p></div>
+    </div></div><br class="example-break">
+
+    <p>
+      Nachdem wir das Standard Repository definiert haben, ist es sicher das "testing" Repository hinzuzufügen.
+    </p>
+
+    <div class="example"><a name="idp220048"></a><p class="title"><b>Beispiel 2.2. /etc/apt/sources.list</b></p><div class="example-contents">
+      
+      <div class="literallayout"><p><br>
+# <br>
+<br>
+# deb cdrom:[Debian GNU/Linux 6.0.7 _Squeeze_ - Official amd64 CD Binary-1 20130223-14:06]/ squeeze main<br>
+<br>
+# deb cdrom:[Debian GNU/Linux 6.0.7 _Squeeze_ - Official amd64 CD Binary-1 20130223-14:06]/ squeeze main<br>
+<br>
+deb http://ftp.ch.debian.org/debian/ stable main contrib non-free<br>
+deb-src http://ftp.ch.debian.org/debian/ stable main contrib non-free<br>
+<br>
+deb http://security.debian.org/ stable/updates main contrib non-free<br>
+deb-src http://security.debian.org/ stable/updates main contrib non-free<br>
+<br>
+# testing repo<br>
+deb http://ftp.ch.debian.org/debian/ testing main contrib non-free<br>
+deb-src http://ftp.ch.debian.org/debian/ testing main contrib non-free<br>
+<br>
+      </p></div>
+    </div></div><br class="example-break">
+
+    <p>
+      Wenn jetzt in der Ausgabe ersichtlich ist, dass das testing Repository abgerufen wird, dann können wir mit der 
+      Installation fortfahren.
+    </p>
+
+    <div class="example"><a name="idp221104"></a><p class="title"><b>Beispiel 2.3. Aktualisiere Paketdatenbank</b></p><div class="example-contents">
+      
+      <pre class="programlisting">
+#!/bin/bash
+
+apt-get update
+
+      </pre>
+    </div></div><br class="example-break">
+
+    <div class="example"><a name="idp222160"></a><p class="title"><b>Beispiel 2.4. Installiere Software</b></p><div class="example-contents">
+      
+      <pre class="programlisting">
+#!/bin/bash
+
+apt-get -t testing install java7-jdk mysql-server mysql-client tomcat7 maven2
+
+      </pre>
+    </div></div><br class="example-break">
+
+  </div>
+
+  
+
+  
+
+  
+
+  
+</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bk02ch01s04.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="bk02.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="bk02ch02s02.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Journal </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Apache Tomcat</td></tr></table></div></body></html>

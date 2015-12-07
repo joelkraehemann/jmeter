@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding="utf-8"?>
+<book xmlns="http://docbook.org/ns/docbook"
+      xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0">
+  <title>openolat LMS - JMeter Quick-Start</title>
+  <subtitle>frentix GmbH Dokumentation</subtitle>
+
+  <info>
+      <legalnotice>
+	<para>
+	  Copyright (C)  frentix GmbH.
+	</para>
+      </legalnotice>
+    <author>
+      <personname>
+	<firstname>Joël</firstname>
+	<surname>Krähemann</surname>
+      </personname>
+    </author>
+  </info>
+
+  <!-- documentation -->
+  <!-- foreword -->
+  <xi:include href="quickStart/preface.xml"/>
+
+  <!-- environment -->
+  <xi:include href="quickStart/chap1.xml"/>
+
+  <!-- invoking jmeter and jconsole -->
+  <xi:include href="quickStart/chap2.xml"/>
+
+  <!-- running tests -->
+  <xi:include href="quickStart/chap3.xml"/>
+
+</book>

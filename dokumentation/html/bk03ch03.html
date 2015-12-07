@@ -1,0 +1,62 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Kapitel 3. Paket com.­frentix.­restapi.­tool</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="openolat LMS - JMeter Loadtests"><link rel="up" href="bk03.html" title="JavaDoc Reference"><link rel="prev" href="bk03ch02.html" title="Kapitel 2. Paket com.­frentix.­restapi"><link rel="next" href="bk03ch03s02.html" title="Klasse RepositoryEntry"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Kapitel 3. Paket com.­frentix.­restapi.­tool</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bk03ch02.html">Zurück</a> </td><th width="60%" align="center">JavaDoc Reference</th><td width="20%" align="right"> <a accesskey="n" href="bk03ch03s02.html">Weiter</a></td></tr></table><hr></div><div class="chapter" title="Kapitel 3. Paket com.­frentix.­restapi.­tool"><div class="titlepage"><div><div><h2 class="title"><a name="dbdoclet-PACKAGE-3"></a>Kapitel 3. Paket com.­frentix.­restapi.­tool</h2></div></div></div><div class="toc"><p><b>Inhaltsverzeichnis</b></p><dl><dt><span class="sect1"><a href="bk03ch03.html#dbdoclet-CLASS-3">Klasse Course</a></span></dt><dd><dl><dt><span class="sect2"><a href="bk03ch03.html#idp1073568">Syntax</a></span></dt><dt><span class="sect2"><a href="bk03ch03.html#dbdoclet-CONSTRUCTOR-3-1">Course(RestConnection)</a></span></dt><dt><span class="sect2"><a href="bk03ch03.html#dbdoclet-METHOD-3-1">importCourse(File, File)</a></span></dt><dt><span class="sect2"><a href="bk03ch03.html#dbdoclet-METHOD-3-2">queryCourse(File)</a></span></dt></dl></dd><dt><span class="sect1"><a href="bk03ch03s02.html">Klasse RepositoryEntry</a></span></dt><dd><dl><dt><span class="sect2"><a href="bk03ch03s02.html#idp1155536">Syntax</a></span></dt><dt><span class="sect2"><a href="bk03ch03s02.html#dbdoclet-CONSTRUCTOR-4-1">RepositoryEntry(RestConnection)</a></span></dt><dt><span class="sect2"><a href="bk03ch03s02.html#dbdoclet-METHOD-4-1">importRepositoryEntry(File, File)</a></span></dt><dt><span class="sect2"><a href="bk03ch03s02.html#dbdoclet-METHOD-4-2">queryRepositoryEntry(File)</a></span></dt></dl></dd><dt><span class="sect1"><a href="bk03ch03s03.html">Klasse User</a></span></dt><dd><dl><dt><span class="sect2"><a href="bk03ch03s03.html#idp1231888">Syntax</a></span></dt><dt><span class="sect2"><a href="bk03ch03s03.html#dbdoclet-CONSTRUCTOR-5-1">User(RestConnection)</a></span></dt><dt><span class="sect2"><a href="bk03ch03s03.html#dbdoclet-CONSTRUCTOR-5-2">User(RestConnection, String, String, String)</a></span></dt><dt><span class="sect2"><a href="bk03ch03s03.html#dbdoclet-METHOD-5-4">applyProperties(Properties)</a></span></dt><dt><span class="sect2"><a href="bk03ch03s03.html#dbdoclet-METHOD-5-1">generateUser(File, int)</a></span></dt><dt><span class="sect2"><a href="bk03ch03s03.html#dbdoclet-METHOD-5-2">importUser(File, File)</a></span></dt><dt><span class="sect2"><a href="bk03ch03s03.html#dbdoclet-METHOD-5-3">queryUser(File)</a></span></dt></dl></dd></dl></div>
+    
+    <p></p>
+    <div class="sect1" title="Klasse Course"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="dbdoclet-CLASS-3"></a>Klasse Course</h2></div></div></div>
+      
+      <a class="indexterm" name="idp1071904"></a>
+      <a class="indexterm" name="idp1072416"></a>
+      <p>Import or query courses via RESTful web service.</p>
+      <div class="sect2" title="Syntax"><div class="titlepage"><div><div><h3 class="title"><a name="idp1073568"></a>Syntax</h3></div></div></div>
+        
+        <pre class="classsynopsis"> <span class="ooclass">
+            <span class="modifier">public </span>
+            <span class="modifier">class </span>
+            <span class="classname">Course</span>
+          </span> {<br>// Public Constructors<code class="constructorsynopsis">  <span class="modifier">public </span><span class="methodname">Course</span>(<span class="methodparam"><span class="type">RestConnection </span><span class="parameter">restConnection</span></span>);</code><br>// Public Methods<code class="methodsynopsis">  <span class="modifier">public </span><span class="type">RestConnection </span><span class="methodname">getRestConnection</span>();</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">importCourse</span>(<span class="methodparam"><span class="type">File </span><span class="parameter">outputFile</span></span>,<br>                           <span class="methodparam"><span class="type">File </span><span class="parameter">inputFile</span></span>)<br>    throws <span class="exceptionname">IOException</span>, <span class="exceptionname">URISyntaxException</span>;</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">queryCourse</span>(<span class="methodparam"><span class="type">File </span><span class="parameter">outputFile</span></span>);</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">setRestConnection</span>(<span class="methodparam"><span class="type">RestConnection </span><span class="parameter">restConnection</span></span>);</code><br>}</pre>
+        <p><span class="bold"><strong>Methoden geerbt von java.lang.Object</strong></span>: <span class="simplelist"><code class="varname">clone</code>, <code class="varname">equals</code>, <code class="varname">finalize</code>, <code class="varname">getClass</code>, <code class="varname">hashCode</code>, <code class="varname">notify</code>, <code class="varname">notifyAll</code>, <code class="varname">toString</code>, <code class="varname">wait</code></span></p>
+        <div class="variablelist"><dl><dt><span class="term"><span class="emphasis"><em>Autor</em></span></span></dt><dd>
+              <p><span class="simplelist">jkraehemann, joel.kraehemann@frentix.com, http://www.frentix.com</span></p>
+            </dd></dl></div>
+        <div class="informalfigure">
+          <div class="mediaobject" align="center"><img src="./figures/com/frentix/restapi/tool/Course/ClassDiagram.png" align="middle"></div>
+        </div>
+      </div>
+      <div class="sect2" title="Course(RestConnection)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-CONSTRUCTOR-3-1"></a>Course(RestConnection)<a class="indexterm" name="idp1106960"></a><a class="indexterm" name="idp1107344"></a></h3></div></div></div>
+        
+        <code class="constructorsynopsis"><span class="modifier">public </span><span class="methodname">Course</span>(<span class="methodparam"><span class="type">RestConnection </span><span class="parameter">restConnection</span></span>);</code>
+        <p>Creates a new Course instance.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>restConnection</p></td><td><p> the RestConnection</p></td></tr></tbody></table>
+        </div>
+      </div>
+      <div class="sect2" title="importCourse(File, File)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-3-1"></a>importCourse(File, File)<a class="indexterm" name="idp1119696"></a><a class="indexterm" name="idp1120080"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="type">void </span><span class="methodname">importCourse</span>(<span class="methodparam"><span class="type">File </span><span class="parameter">outputFile</span></span>,<br>                         <span class="methodparam"><span class="type">File </span><span class="parameter">inputFile</span></span>)<br>    throws <span class="exceptionname">IOException</span>, <span class="exceptionname">URISyntaxException</span>;</code>
+        <p>Imports a course via RESTful web service.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>outputFile</p></td><td><p> the file to safe the course's attributes.</p></td></tr><tr><td><p>inputFile</p></td><td><p> the course as a ZIP file</p></td></tr></tbody></table>
+        </div>
+        <div class="variablelist" title="Exceptions"><p class="title"><b>Exceptions</b></p><dl><dt><span class="term"><code class="exceptionname">IOException</code></span></dt><dd>
+              <p>java.io.IOException</p>
+            </dd><dt><span class="term"><code class="exceptionname">URISyntaxExceptio</code></span></dt><dd>
+              <p></p>
+            </dd></dl></div>
+      </div>
+      <div class="sect2" title="queryCourse(File)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-3-2"></a>queryCourse(File)<a class="indexterm" name="idp1140416"></a><a class="indexterm" name="idp1140880"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="type">void </span><span class="methodname">queryCourse</span>(<span class="methodparam"><span class="type">File </span><span class="parameter">outputFile</span></span>);</code>
+        <p>Queries courses via RESTful web service.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>outputFile</p></td><td><p> the file to safe the queried courses</p></td></tr></tbody></table>
+        </div>
+      </div>
+    </div>
+    
+    
+  </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bk03ch02.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="bk03.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="bk03ch03s02.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Kapitel 2. Paket com.­frentix.­restapi </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Klasse RepositoryEntry</td></tr></table></div></body></html>

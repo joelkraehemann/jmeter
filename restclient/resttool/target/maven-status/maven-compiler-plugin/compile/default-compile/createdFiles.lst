@@ -1,0 +1,6 @@
+com/frentix/restapi/RestConnection.class
+com/frentix/restapi/tool/RepositoryEntry.class
+com/frentix/Resttool.class
+com/frentix/restapi/tool/Course.class
+com/frentix/restapi/tool/User.class
+com/frentix/util/CsvHelper.class

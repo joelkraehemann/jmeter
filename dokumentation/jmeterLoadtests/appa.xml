@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding="utf-8"?>
+<appendix>
+  <title>Zeitraffer - Status der Arbeiten</title>
+
+  <para>
+    Wegen halbtägigem Stromausfall und Fehlkalkulation von 2 Stunden hatte ich für M07 länger als geplant.
+    Die Fehleinschätzung ist auf Komplikationen betreffend Verständis des XPath Konzeptes zurückzuführen.
+  </para>
+
+  <para>
+    Nicht ersichtlich ist der halbe Tag Aufschub, wegen dem Stromausfall. Ich habe es nicht mehr angepasst, da
+    der letzte Task Pufferzeit beinhaltet.
+  </para>
+
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="../images/timetable_reflection.svg" align="top"/>
+    </imageobject>
+    <caption align="bottom">
+      <para>
+	Reflexion Zeitplanung im Raster.
+      </para>
+    </caption>
+  </mediaobject>
+
+</appendix>

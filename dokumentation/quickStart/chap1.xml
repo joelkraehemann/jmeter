@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding="utf-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0">
+  <title>Environment</title>
+  <para>
+    This chapter shows you what prerequisites are taken to successfully run <programname>JMeter</programname> loadtests against
+    an existing OpenOLAT LMS server instance. Further an application called <programname>JConsole</programname> distributed with
+    your JavaSE package. This quick start guide assumes your OpenOLAT instance is running on a Debian GNU/Linux server. Configuration
+    may differ from specific distribution.
+  </para>
+
+  <sect1>
+    <title>Apache Tomcat</title>
+
+    <para>
+      Change the line containing <emphasis>JAVA_OPTS</emphasis> parameter.
+    </para>
+
+  <literallayout>
+<xi:include href="../conf/tomcat-java-opts.conf" parse="text" />
+  </literallayout>
+
+  </sect1>
+
+  <sect1>
+    <title>OpenOLAT LMS</title>
+    <para>
+      Set the given properties in your <filename>olat.local.properties</filename> to <emphasis>true</emphasis>. JMeter requires loadtest
+      mode enabled. To generate users or import a course you need RESTful webservice enabled.
+    </para>
+
+  <literallayout>
+<xi:include href="../conf/quickstart-olat.local.properties" parse="text" />
+  </literallayout>
+
+  </sect1>
+
+  <sect1>
+    <title>Resttool</title>    
+
+    <para>
+      Configure <filename>com/frentix/resttool.properties</filename> that it fit your needs.
+    </para>
+
+  <literallayout>
+<xi:include href="../conf/resttool.properties" parse="text" />
+  </literallayout>
+  </sect1>
+
+  <sect1>
+    <title>JMeter</title>
+    
+    <para>
+      Within the <accronym>GUI</accronym> you should modify the following user defined variables:
+    </para>
+
+    <itemizedlist mark="bullet">
+      <listitem>
+	<para>
+	  openolat LMS
+	</para>
+      </listitem>
+    </itemizedlist>
+    
+    <para>
+      Additionally you may configure the business path of the eAssessment test to run JMeter test against.
+      Path is located within the following sampler:
+    </para>
+    
+    <itemizedlist mark="bullet">
+      <listitem>
+	<para>
+	  open eAssessment test
+	</para>
+      </listitem>
+    </itemizedlist>
+    
+  </sect1>
+
+
+</chapter>

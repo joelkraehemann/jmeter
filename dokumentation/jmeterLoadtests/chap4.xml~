@@ -1,0 +1,444 @@
+<?xml version='1.0' encoding="utf-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0">
+  <title>Auswertung</title>
+  <para>
+    Ziel der Auswertung ist es zwei Situationen nachzustellen. Die eine wo der Betrieb von openolat LMS genug Ressourcen
+    zur Verfügung hat und eine andere wo sie nicht genügen. Dies mit der Absicht für eine Hilfestellung zum Evaluieren
+    von Fehlern.
+  </para>
+  <para>
+    Es gelten für beide Tests die gleich Rahmenbedingungen, es variiert lediglich die Benutzeranzahl und das verzögerte
+    einloggen in das System. Beide Tests laufen auf einem leeren System - die Datenbank wird vor jedem Durchlauf gelöscht
+    und neu angelegt sowie das Datenverzeichnis gelöscht, zusätzlich das Tomcat 7 Logfile neu angelegt.
+    Es wird vor und nach dem Test der Garbage Collector laufen gelassen.
+  </para>
+
+  <programlisting language="sql">
+<xi:include href="../listings/mysql-drop.sql" parse="text" />
+  </programlisting>
+
+  <programlisting language="bash">
+<xi:include href="../listings/rm-logs.sh" parse="text" />
+  </programlisting>
+
+  <para>
+    Der Server wird während einem Durchlauf mit Formulardaten von eAssessment Tests belastet.
+  </para>
+
+  <para>
+    Für die Gemeinsamen Bedingungen gelten folgende Java Parameter für Apache Tomcat:
+  </para>
+
+  <table>
+    <title>openolat LMS - Java Parameter</title>
+    <tgroup cols="3" align="left" colsep="1" rowsep="1">
+      <colspec colnum="1" colwidth="3cm"/>
+      <colspec colnum="2" colwidth="*"/>
+      <colspec colnum="3" colwidth="2.2cm"/>
+      <thead>
+	<row>
+	  <entry>Java Parameter</entry>
+	  <entry>Beschreibung</entry>
+	  <entry>Wert</entry>
+	</row>
+      </thead>
+      <tbody>
+	<row>
+	  <entry>
+	    -Xmx
+	  </entry>
+	  <entry>
+	    Maximum Arbeitsspeicher begrenzung
+	  </entry>
+	  <entry>
+	    128m
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    -Xms
+	  </entry>
+	  <entry>
+	    Initiale Arbeitsspeicher Anlegung
+	  </entry>
+	  <entry>
+	    256m
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    -XX:MaxPermSize
+	  </entry>
+	  <entry>
+	    Maximum des permanenten Generierheaps
+	  </entry>
+	  <entry>
+	    128m
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    -Xss
+	  </entry>
+	  <entry>
+	    Thread Stackgrösse
+	  </entry>
+	  <entry>
+	    1m (default)
+	  </entry>
+	</row>
+      </tbody>
+    </tgroup>
+  </table>
+
+  <para>
+    Die JMeter Benutzer werden innerhalb von 50 Sekunden mit 50 Benutzern aufgeschaltet sein. Der Einfachheit halber passen wir
+    das Aufschalten der Threads entsprechen der Benutzeranzahl an. Es wird ein Durchlauf durchgeführt.
+  </para>
+
+  <sect1>
+    <title>JConsole</title>
+
+    <para>
+      Damit wir Apache Tomcat über das Netzwerk überwachen können, müssen wir <accronym>JMX</accronym> aktivieren. Dazu
+      bearbeiten wir <filename>/etc/init.d/tomcat7</filename> und setzen die Umgebungsvariable <emphasis>CATALINA_OPTS</emphasis>
+      wie folgt - WARNUNG Authentifizierung abgeschaltet:
+    </para>
+
+  <literallayout>
+<xi:include href="../conf/tomcat-java-opts.conf" parse="text" />
+  </literallayout>
+
+  <para>
+    Um die Authentifizierung einzuschalten, lesen Sie bitte folgenden Artikel: <ulink href="http://tomcat.apache.org/tomcat-7.0-doc/monitoring.html">http://tomcat.apache.org/tomcat-7.0-doc/monitoring.html</ulink>. Hinweis Änderungen an den Konfigurationsdateien
+    oder Startscript erfordert einen Neustart.
+  </para>
+
+  <programlisting language="bash">
+<xi:include href="../listings/tomcat-restart.sh" parse="text" />
+  </programlisting>
+
+  </sect1>
+
+  <sect1>
+    <title>Resttool</title>
+
+    <para>
+      Ausführbare JAR Datei erstellen:
+    </para>
+
+    <programlisting language="bash">
+<xi:include href="../listings/resttool-jar.sh" parse="text" />
+    </programlisting>
+
+    <para>
+      Generieren der Testbenutzer:
+    </para>
+
+    <programlisting language="bash">
+<xi:include href="../listings/generate-users.sh" parse="text" />
+    </programlisting>
+
+    <para>
+      Import des eAssessment Kurses:
+    </para>
+
+    <programlisting language="bash">
+<xi:include href="../listings/import-course.sh" parse="text" />
+    </programlisting>
+
+    <para>
+      Da das Resttool nicht automatisiert die Benutzungsbedingungen annehmen kann, müssen wir noch in der Administration
+      Site dies mittels der Bulkaufgabe machen. Dabei stellen wir die Standardsprache zudem auf Deutsch. Ausserdem muss
+      in JMeter im <emphasis>open eAssessment test</emphasis> Sampler die Repository Entry ID auf den importierten Kurs
+      angepasst werden, welche Sie aus course.csv entnehmen können.
+    </para>
+
+    <programlisting language="bash">
+<xi:include href="../listings/awk-users.sh" parse="text" />
+    </programlisting>
+
+  </sect1>
+
+  <sect1>
+    <title>Test 1: 50 Benutzer</title>
+
+    <table>
+      <title>Auslastung mit 50 Benutzer</title>
+      <tgroup cols="2" align="left" colsep="1" rowsep="1">
+	<colspec colnum="1" colwidth="*"/>
+	<colspec colnum="2" colwidth="*"/>
+	<thead>
+	  <row>
+	    <entry>Kondition</entry>
+	    <entry>Ergebnis</entry>
+	  </row>
+	</thead>
+	<tbody>
+	  <row>
+	    <entry>
+	      ein Durchlauf, alle Threads innerhalb 50 Sekunden gestartet.
+	    </entry>
+	    <entry>
+	      Erfolg 100%, Dauer 3min 30s
+	    </entry>
+	  </row>
+	  <row>
+	    <entry>
+	      Auslastung RAM vor dem Test
+	    </entry>
+	    <entry>
+	      85MB
+	    </entry>
+	  </row>
+	  <row>
+	    <entry>
+	      Auslastung RAM nach dem Test
+	    </entry>
+	    <entry>
+	      134MB
+	    </entry>
+	  </row>
+	  <row>
+	    <entry>
+	      Spitzenauslastung RAM
+	    </entry>
+	    <entry>
+	      260MB
+	    </entry>
+	  </row>
+	</tbody>
+      </tgroup>
+    </table>
+
+    <mediaobject>
+      <imageobject>
+	<imagedata fileref="../images/jconsole_50_users.png" align="top"/>
+      </imageobject>
+      <caption align="bottom">
+	<para>
+	  Bildschirmfoto Test 1 - JConsole Heap Memory Usage
+	</para>
+      </caption>
+    </mediaobject>
+
+    <para>
+      Der Test lief ohne Fehler durch. Jedoch ist der verfügbare Speicher nach dem Test geringer, diesem Phenomen sollten
+      wir nachgehen - eventuel auf ein wachsendes Logfile zurückzuführen.
+    </para>
+
+  </sect1>
+
+  <sect1>
+    <title>Test 2: 100 Benutzer</title>
+
+
+    <table>
+      <title>Auslastung mit 100 Benutzer</title>
+      <tgroup cols="2" align="left" colsep="1" rowsep="1">
+	<colspec colnum="1" colwidth="*"/>
+	<colspec colnum="2" colwidth="*"/>
+	<thead>
+	  <row>
+	    <entry>Kondition</entry>
+	    <entry>Ergebnis</entry>
+	  </row>
+	</thead>
+	<tbody>
+	  <row>
+	    <entry>
+	      ein Durchlauf, alle Threads innerhalb 100 Sekunden gestartet.
+	    </entry>
+	    <entry>
+	      Erfolg 99%, Dauer 6min
+	    </entry>
+	  </row>
+	  <row>
+	    <entry>
+	      Auslastung RAM vor dem Test
+	    </entry>
+	    <entry>
+	      86MB
+	    </entry>
+	  </row>
+	  <row>
+	    <entry>
+	      Auslastung RAM nach dem Test
+	    </entry>
+	    <entry>
+	      144MB
+	    </entry>
+	  </row>
+	  <row>
+	    <entry>
+	      Spitzenauslastung RAM
+	    </entry>
+	    <entry>
+	      358MB
+	    </entry>
+	  </row>
+	</tbody>
+      </tgroup>
+    </table>
+
+    <mediaobject>
+      <imageobject>
+	<imagedata fileref="../images/jconsole_100_users.png" align="top"/>
+      </imageobject>
+      <caption align="bottom">
+	<para>
+	  Bildschirmfoto Test 2 - JConsole Heap Memory Usage
+	</para>
+      </caption>
+    </mediaobject>
+
+    <para>
+      Der Fehler ist kritisch, weil der eAssessment Test konnte nicht abgeschickt werden. Er hat aber hat nichts mit
+      der Speicherauslastung zu tun, sondern mit der Synchronisation von gleichzeitigen Abläufen.
+    </para>
+
+  </sect1>
+
+  <sect1>
+    <title>Test 3: 200 Benutzer</title>
+
+
+    <table>
+      <title>Auslastung mit 200 Benutzer</title>
+      <tgroup cols="2" align="left" colsep="1" rowsep="1">
+	<colspec colnum="1" colwidth="*"/>
+	<colspec colnum="2" colwidth="*"/>
+	<thead>
+	  <row>
+	    <entry>Kondition</entry>
+	    <entry>Ergebnis</entry>
+	  </row>
+	</thead>
+	<tbody>
+	  <row>
+	    <entry>
+	      ein Durchlauf, alle Threads innerhalb 200 Sekunden gestartet.
+	    </entry>
+	    <entry>
+	      Erfolg 98%, Dauer 14min
+	    </entry>
+	  </row>
+	  <row>
+	    <entry>
+	      Auslastung RAM vor dem Test
+	    </entry>
+	    <entry>
+	      87MB
+	    </entry>
+	  </row>
+	  <row>
+	    <entry>
+	      Auslastung RAM nach dem Test
+	    </entry>
+	    <entry>
+	      172MB
+	    </entry>
+	  </row>
+	  <row>
+	    <entry>
+	      Spitzenauslastung RAM
+	    </entry>
+	    <entry>
+	      437MB
+	    </entry>
+	  </row>
+	</tbody>
+      </tgroup>
+    </table>
+
+    <mediaobject>
+      <imageobject>
+	<imagedata fileref="../images/jconsole_200_users.png" align="top"/>
+      </imageobject>
+      <caption align="bottom">
+	<para>
+	  Bildschirmfoto Test 3 - JConsole Heap Memory Usage
+	</para>
+      </caption>
+    </mediaobject>
+
+    <para>
+      Es traten viermal synchronisations Probleme auf, die selben wie oben.
+    </para>
+
+  </sect1>
+
+  <sect1>
+    <title>Test 4: 200 Benutzer</title>
+
+
+    <table>
+      <title>Auslastung mit 200 Benutzer à 50 Sekunden</title>
+      <tgroup cols="2" align="left" colsep="1" rowsep="1">
+	<colspec colnum="1" colwidth="*"/>
+	<colspec colnum="2" colwidth="*"/>
+	<thead>
+	  <row>
+	    <entry>Kondition</entry>
+	    <entry>Ergebnis</entry>
+	  </row>
+	</thead>
+	<tbody>
+	  <row>
+	    <entry>
+	      ein Durchlauf, alle Threads innerhalb 50 Sekunden gestartet.
+	    </entry>
+	    <entry>
+	      Erfolg 72%, Dauer 10min
+	    </entry>
+	  </row>
+	  <row>
+	    <entry>
+	      Auslastung RAM vor dem Test
+	    </entry>
+	    <entry>
+	      87MB
+	    </entry>
+	  </row>
+	  <row>
+	    <entry>
+	      Auslastung RAM nach dem Test
+	    </entry>
+	    <entry>
+	      172MB
+	    </entry>
+	  </row>
+	  <row>
+	    <entry>
+	      Spitzenauslastung RAM
+	    </entry>
+	    <entry>
+	      437MB
+	    </entry>
+	  </row>
+	</tbody>
+      </tgroup>
+    </table>
+
+    <mediaobject>
+      <imageobject>
+	<imagedata fileref="../images/jconsole_200_users_a_50s.png" align="top"/>
+      </imageobject>
+      <caption align="bottom">
+	<para>
+	  Bildschirmfoto Test 4 - JConsole Heap Memory Usage
+	</para>
+      </caption>
+    </mediaobject>
+
+    <para>
+      Es traten dreimal synchronisations Probleme auf, die selben wie oben. Zudem konnten 52 Benutzer den Test erst gar nicht
+      starten. Dieses Verhalten ist wahrscheinlich auf Leistungsprobleme der CPU zurückzuführen, da die Exception
+      <emphasis>org.olat.logging.DBRuntimeException</emphasis> geworfen wird, aufgrund einer Datenbank Timeout. Das heisst
+      ich bin an die grenzen des Computers gekommen und nicht an die von OpenOLAT LMS.
+    </para>
+
+  </sect1>
+
+</chapter>

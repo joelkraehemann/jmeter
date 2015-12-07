@@ -1,0 +1,60 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Postprozessoren</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="openolat LMS - JMeter Loadtests"><link rel="up" href="bk02ch03.html" title="Kapitel 3. JMeter Loadtests"><link rel="prev" href="bk02ch03s05.html" title="Präprozessoren"><link rel="next" href="bk02ch03s07.html" title="Überprüfung"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Postprozessoren</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bk02ch03s05.html">Zurück</a> </td><th width="60%" align="center">Kapitel 3. JMeter Loadtests</th><td width="20%" align="right"> <a accesskey="n" href="bk02ch03s07.html">Weiter</a></td></tr></table><hr></div><div class="sect1" title="Postprozessoren"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idm2427584"></a>Postprozessoren</h2></div></div></div>
+    
+
+    <p>
+      Diese Prozessoren werden nach dem Samplerdurchgang ausgeführt. Diese Prozessoren erhalten die Antwort auf die
+      vom Sampler ausgeführte Anfrage.
+    </p>
+
+    <div class="sect2" title="XPath Extractor"><div class="titlepage"><div><div><h3 class="title"><a name="idp306256"></a>XPath Extractor</h3></div></div></div>
+      
+
+      <div class="mediaobject" align="top"><img src="../images/jmeter_xpath_extractor.png" align="top"><div class="caption">
+	  <p>
+	    Bildschirmfoto JMeter XPath Extractor
+	  </p>
+	</div></div>
+
+      <p>
+	XPath dient zum Auslesen von Elementen und Attributen von XML-Konformen Baumstrukturen. Dieser Postprozessor
+	hat die Option <span class="emphasis"><em>Use tidy</em></span>, was dazu führt einen tolerante Verarbeitung von XML durchzuführen
+	und ist somit anwendbar auf HTML.
+      </p>
+      
+      <p>
+	Der XPath Extractor erzeugt mehrere Referenzen die mittels dem entsprechendem Suffix angesprochen werden.
+	Nachstehende Tabelle zeigt die Suffixes anhand der angegebenen Referenz <span class="emphasis"><em>TEXT_INPUT_NAME_REF</em></span> und
+	dem aufgeführtem XPath Ausdruck. Die Indizien können weitergeführt werden und hören nicht bei 2 auf.
+      </p>
+
+    <div class="example"><a name="idp311968"></a><p class="title"><b>Beispiel 3.2. XPath Ausdruck</b></p><div class="example-contents">
+      
+      <pre class="programlisting">
+//input[@type='text']/@name
+      </pre>
+    </div></div><br class="example-break">
+
+      <div class="table"><a name="idp313760"></a><p class="title"><b>Tabelle 3.1. Suffix Übersicht</b></p><div class="table-contents">
+	
+	<table summary="Suffix Übersicht" border="1"><colgroup><col><col></colgroup><thead><tr><th align="left">Referenz</th><th align="left">Bedeutung</th></tr></thead><tbody><tr><td align="left">
+		TEXT_INPUT_NAME_REF_matchNr
+	      </td><td align="left">
+		Anzahl gefundener Elemente, die auf den XPath Ausdruck passen.
+	      </td></tr><tr><td align="left">
+		TEXT_INPUT_NAME_REF_1
+	      </td><td align="left">
+		Erstes Element, das auf den XPath Ausdruck passt.
+	      </td></tr><tr><td align="left">
+		TEXT_INPUT_NAME_REF_2
+	      </td><td align="left">
+		Zweites Element, das auf den XPath Ausdruck passt.
+	      </td></tr><tr><td align="left">
+		...
+	      </td><td align="left">
+		...
+	      </td></tr></tbody></table>
+      </div></div><br class="table-break">
+
+    </div>
+    
+  </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bk02ch03s05.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="bk02ch03.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="bk02ch03s07.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Präprozessoren </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Überprüfung</td></tr></table></div></body></html>

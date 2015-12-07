@@ -1,0 +1,274 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Kapitel 2. Paket com.­frentix.­restapi</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="openolat LMS - JMeter Loadtests"><link rel="up" href="bk03.html" title="JavaDoc Reference"><link rel="prev" href="bk03ch01.html" title="Kapitel 1. Paket com.­frentix"><link rel="next" href="bk03ch03.html" title="Kapitel 3. Paket com.­frentix.­restapi.­tool"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Kapitel 2. Paket com.­frentix.­restapi</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bk03ch01.html">Zurück</a> </td><th width="60%" align="center">JavaDoc Reference</th><td width="20%" align="right"> <a accesskey="n" href="bk03ch03.html">Weiter</a></td></tr></table><hr></div><div class="chapter" title="Kapitel 2. Paket com.­frentix.­restapi"><div class="titlepage"><div><div><h2 class="title"><a name="dbdoclet-PACKAGE-2"></a>Kapitel 2. Paket com.­frentix.­restapi</h2></div></div></div><div class="toc"><p><b>Inhaltsverzeichnis</b></p><dl><dt><span class="sect1"><a href="bk03ch02.html#dbdoclet-CLASS-2">Klasse RestConnection</a></span></dt><dd><dl><dt><span class="sect2"><a href="bk03ch02.html#idp569232">Syntax</a></span></dt><dt><span class="sect2"><a href="bk03ch02.html#dbdoclet-CONSTRUCTOR-2-1">RestConnection()</a></span></dt><dt><span class="sect2"><a href="bk03ch02.html#dbdoclet-CONSTRUCTOR-2-3">RestConnection(String, int, String, String, String, String)</a></span></dt><dt><span class="sect2"><a href="bk03ch02.html#dbdoclet-CONSTRUCTOR-2-2">RestConnection(URL)</a></span></dt><dt><span class="sect2"><a href="bk03ch02.html#dbdoclet-METHOD-2-3">addEntity(HttpEntityEnclosingRequestBase, NameValuePair...)</a></span></dt><dt><span class="sect2"><a href="bk03ch02.html#dbdoclet-METHOD-2-4">addJsonEntity(HttpEntityEnclosingRequestBase, Object)</a></span></dt><dt><span class="sect2"><a href="bk03ch02.html#dbdoclet-METHOD-2-5">addMultipart(HttpEntityEnclosingRequestBase, String, File)</a></span></dt><dt><span class="sect2"><a href="bk03ch02.html#dbdoclet-METHOD-2-16">applyProperties(Properties)</a></span></dt><dt><span class="sect2"><a href="bk03ch02.html#dbdoclet-METHOD-2-10">createDelete(URI, String, boolean)</a></span></dt><dt><span class="sect2"><a href="bk03ch02.html#dbdoclet-METHOD-2-8">createGet(URI, String, boolean)</a></span></dt><dt><span class="sect2"><a href="bk03ch02.html#dbdoclet-METHOD-2-9">createPost(URI, String, boolean)</a></span></dt><dt><span class="sect2"><a href="bk03ch02.html#dbdoclet-METHOD-2-6">createPut(URI, String, boolean)</a></span></dt><dt><span class="sect2"><a href="bk03ch02.html#dbdoclet-METHOD-2-7">createPut(URI, String, String, boolean)</a></span></dt><dt><span class="sect2"><a href="bk03ch02.html#dbdoclet-METHOD-2-11">execute(HttpUriRequest)</a></span></dt><dt><span class="sect2"><a href="bk03ch02.html#dbdoclet-METHOD-2-2">get(URI, Class&lt;T&gt;)</a></span></dt><dt><span class="sect2"><a href="bk03ch02.html#dbdoclet-METHOD-2-12">getBaseURI()</a></span></dt><dt><span class="sect2"><a href="bk03ch02.html#dbdoclet-METHOD-2-13">getContextURI()</a></span></dt><dt><span class="sect2"><a href="bk03ch02.html#dbdoclet-METHOD-2-1">login()</a></span></dt><dt><span class="sect2"><a href="bk03ch02.html#dbdoclet-METHOD-2-15">parse(HttpResponse, Class&lt;U&gt;)</a></span></dt><dt><span class="sect2"><a href="bk03ch02.html#dbdoclet-METHOD-2-14">stringuified(Object)</a></span></dt></dl></dd></dl></div>
+    
+    <p></p>
+    <div class="sect1" title="Klasse RestConnection"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="dbdoclet-CLASS-2"></a>Klasse RestConnection</h2></div></div></div>
+      
+      <a class="indexterm" name="idp567472"></a>
+      <a class="indexterm" name="idp567936"></a>
+      <p>Description: Manage a connection to the grizzly server used by the unit test with some helpers methods. Initial Date: 20 d√©c. 2011</p>
+      <div class="sect2" title="Syntax"><div class="titlepage"><div><div><h3 class="title"><a name="idp569232"></a>Syntax</h3></div></div></div>
+        
+        <pre class="classsynopsis"> <span class="ooclass">
+            <span class="modifier">public </span>
+            <span class="modifier">class </span>
+            <span class="classname">RestConnection</span>
+          </span> {<br>// Public Static Fields<code class="fieldsynopsis">  
+            <span class="modifier">public </span>
+            <span class="modifier">static </span>
+            <span class="modifier">final </span>
+            <span class="type">String </span>
+            <span class="varname">CONTEXT_PATH </span>
+            <span class="initializer">= "openolat"</span>
+          ;</code><br><code class="fieldsynopsis">  
+            <span class="modifier">public </span>
+            <span class="modifier">static </span>
+            <span class="modifier">final </span>
+            <span class="type">String </span>
+            <span class="varname">HOST </span>
+            <span class="initializer">= "localhost"</span>
+          ;</code><br><code class="fieldsynopsis">  
+            <span class="modifier">public </span>
+            <span class="modifier">static </span>
+            <span class="modifier">final </span>
+            <span class="type">String </span>
+            <span class="varname">LOGIN </span>
+            <span class="initializer">= "administrator"</span>
+          ;</code><br><code class="fieldsynopsis">  
+            <span class="modifier">public </span>
+            <span class="modifier">static </span>
+            <span class="modifier">final </span>
+            <span class="type">String </span>
+            <span class="varname">PASSWORD </span>
+            <span class="initializer">= "openolat"</span>
+          ;</code><br><code class="fieldsynopsis">  
+            <span class="modifier">public </span>
+            <span class="modifier">static </span>
+            <span class="modifier">final </span>
+            <span class="type">int </span>
+            <span class="varname">PORT </span>
+            <span class="initializer">= 9998</span>
+          ;</code><br><code class="fieldsynopsis">  
+            <span class="modifier">public </span>
+            <span class="modifier">static </span>
+            <span class="modifier">final </span>
+            <span class="type">String </span>
+            <span class="varname">PROTOCOL </span>
+            <span class="initializer">= "http"</span>
+          ;</code><br>// Public Constructors<code class="constructorsynopsis">  <span class="modifier">public </span><span class="methodname">RestConnection</span>();</code><br><code class="constructorsynopsis">  <span class="modifier">public </span><span class="methodname">RestConnection</span>(<span class="methodparam"><span class="type">String </span><span class="parameter">host</span></span>,<br>                        <span class="methodparam"><span class="type">int </span><span class="parameter">port</span></span>,<br>                        <span class="methodparam"><span class="type">String </span><span class="parameter">protocol</span></span>,<br>                        <span class="methodparam"><span class="type">String </span><span class="parameter">contextPath</span></span>,<br>                        <span class="methodparam"><span class="type">String </span><span class="parameter">login</span></span>,<br>                        <span class="methodparam"><span class="type">String </span><span class="parameter">password</span></span>);</code><br><code class="constructorsynopsis">  <span class="modifier">public </span><span class="methodname">RestConnection</span>(<span class="methodparam"><span class="type">URL </span><span class="parameter">url</span></span>);</code><br>// Public Methods<code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">addEntity</span>(<span class="methodparam"><span class="type">HttpEntityEnclosingRequestBase </span><span class="parameter">put</span></span>,<br>                        <span class="methodparam"><span class="type">NameValuePair[] </span><span class="parameter">pairs</span></span>)<br>    throws <span class="exceptionname">UnsupportedEncodingException</span>;</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">addJsonEntity</span>(<span class="methodparam"><span class="type">HttpEntityEnclosingRequestBase </span><span class="parameter">put</span></span>,<br>                            <span class="methodparam"><span class="type">Object </span><span class="parameter">obj</span></span>)<br>    throws <span class="exceptionname">UnsupportedEncodingException</span>;</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">addMultipart</span>(<span class="methodparam"><span class="type">HttpEntityEnclosingRequestBase </span><span class="parameter">post</span></span>,<br>                           <span class="methodparam"><span class="type">String </span><span class="parameter">filename</span></span>,<br>                           <span class="methodparam"><span class="type">File </span><span class="parameter">file</span></span>)<br>    throws <span class="exceptionname">UnsupportedEncodingException</span>;</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">applyProperties</span>(<span class="methodparam"><span class="type">Properties </span><span class="parameter">properties</span></span>);</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">HttpDelete </span><span class="methodname">createDelete</span>(<span class="methodparam"><span class="type">URI </span><span class="parameter">uri</span></span>,<br>                                 <span class="methodparam"><span class="type">String </span><span class="parameter">accept</span></span>,<br>                                 <span class="methodparam"><span class="type">boolean </span><span class="parameter">cookie</span></span>);</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">HttpGet </span><span class="methodname">createGet</span>(<span class="methodparam"><span class="type">URI </span><span class="parameter">uri</span></span>,<br>                           <span class="methodparam"><span class="type">String </span><span class="parameter">accept</span></span>,<br>                           <span class="methodparam"><span class="type">boolean </span><span class="parameter">cookie</span></span>);</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">HttpPost </span><span class="methodname">createPost</span>(<span class="methodparam"><span class="type">URI </span><span class="parameter">uri</span></span>,<br>                             <span class="methodparam"><span class="type">String </span><span class="parameter">accept</span></span>,<br>                             <span class="methodparam"><span class="type">boolean </span><span class="parameter">cookie</span></span>);</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">HttpPut </span><span class="methodname">createPut</span>(<span class="methodparam"><span class="type">URI </span><span class="parameter">uri</span></span>,<br>                           <span class="methodparam"><span class="type">String </span><span class="parameter">accept</span></span>,<br>                           <span class="methodparam"><span class="type">boolean </span><span class="parameter">cookie</span></span>);</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">HttpPut </span><span class="methodname">createPut</span>(<span class="methodparam"><span class="type">URI </span><span class="parameter">uri</span></span>,<br>                           <span class="methodparam"><span class="type">String </span><span class="parameter">accept</span></span>,<br>                           <span class="methodparam"><span class="type">String </span><span class="parameter">langage</span></span>,<br>                           <span class="methodparam"><span class="type">boolean </span><span class="parameter">cookie</span></span>);</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">HttpResponse </span><span class="methodname">execute</span>(<span class="methodparam"><span class="type">HttpUriRequest </span><span class="parameter">request</span></span>)<br>    throws <span class="exceptionname">IOException</span>, <span class="exceptionname">URISyntaxException</span>;</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">T </span><span class="methodname">get</span>(<span class="methodparam"><span class="type">URI </span><span class="parameter">uri</span></span>,<br>               <span class="methodparam"><span class="type">Class&lt;T&gt; </span><span class="parameter">cl</span></span>)<br>    throws <span class="exceptionname">IOException</span>, <span class="exceptionname">URISyntaxException</span>;</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">UriBuilder </span><span class="methodname">getBaseURI</span>()<br>    throws <span class="exceptionname">URISyntaxException</span>;</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">String </span><span class="methodname">getContextPath</span>();</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">UriBuilder </span><span class="methodname">getContextURI</span>()<br>    throws <span class="exceptionname">URISyntaxException</span>;</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">CookieStore </span><span class="methodname">getCookieStore</span>();</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">String </span><span class="methodname">getHost</span>();</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">String </span><span class="methodname">getLogin</span>();</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">String </span><span class="methodname">getPassword</span>();</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">int </span><span class="methodname">getPort</span>();</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">String </span><span class="methodname">getProtocol</span>();</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">String </span><span class="methodname">getSecurityToken</span>();</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">String </span><span class="methodname">getSecurityToken</span>(<span class="methodparam"><span class="type">HttpResponse </span><span class="parameter">response</span></span>);</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">boolean </span><span class="methodname">login</span>()<br>    throws <span class="exceptionname">IOException</span>, <span class="exceptionname">URISyntaxException</span>;</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">boolean </span><span class="methodname">login</span>(<span class="methodparam"><span class="type">String </span><span class="parameter">username</span></span>,<br>                       <span class="methodparam"><span class="type">String </span><span class="parameter">password</span></span>)<br>    throws <span class="exceptionname">IOException</span>, <span class="exceptionname">URISyntaxException</span>;</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">U </span><span class="methodname">parse</span>(<span class="methodparam"><span class="type">HttpResponse </span><span class="parameter">response</span></span>,<br>                 <span class="methodparam"><span class="type">Class&lt;U&gt; </span><span class="parameter">cl</span></span>);</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">setContextPath</span>(<span class="methodparam"><span class="type">String </span><span class="parameter">contextPath</span></span>);</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">setCredentials</span>(<span class="methodparam"><span class="type">String </span><span class="parameter">username</span></span>,<br>                             <span class="methodparam"><span class="type">String </span><span class="parameter">password</span></span>);</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">setHost</span>(<span class="methodparam"><span class="type">String </span><span class="parameter">host</span></span>);</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">setLogin</span>(<span class="methodparam"><span class="type">String </span><span class="parameter">login</span></span>);</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">setPassword</span>(<span class="methodparam"><span class="type">String </span><span class="parameter">password</span></span>);</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">setPort</span>(<span class="methodparam"><span class="type">int </span><span class="parameter">port</span></span>);</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">setProtocol</span>(<span class="methodparam"><span class="type">String </span><span class="parameter">protocol</span></span>);</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">shutdown</span>();</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">String </span><span class="methodname">stringuified</span>(<span class="methodparam"><span class="type">Object </span><span class="parameter">obj</span></span>);</code><br>}</pre>
+        <p><span class="bold"><strong>Methoden geerbt von java.lang.Object</strong></span>: <span class="simplelist"><code class="varname">clone</code>, <code class="varname">equals</code>, <code class="varname">finalize</code>, <code class="varname">getClass</code>, <code class="varname">hashCode</code>, <code class="varname">notify</code>, <code class="varname">notifyAll</code>, <code class="varname">toString</code>, <code class="varname">wait</code></span></p>
+        <div class="variablelist"><dl><dt><span class="term"><span class="emphasis"><em>Autor</em></span></span></dt><dd>
+              <p><span class="simplelist">srosse, stephane.rosse@frentix.com, http://www.frentix.com, jkraehemann, joel.kraehemann@frentix.com, http://www.frentix.com</span></p>
+            </dd></dl></div>
+        <div class="informalfigure">
+          <div class="mediaobject" align="center"><img src="./figures/com/frentix/restapi/RestConnection/ClassDiagram.png" align="middle"></div>
+        </div>
+      </div>
+      <div class="sect2" title="RestConnection()"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-CONSTRUCTOR-2-1"></a>RestConnection()<a class="indexterm" name="idp722064"></a><a class="indexterm" name="idp725952"></a></h3></div></div></div>
+        
+        <code class="constructorsynopsis"><span class="modifier">public </span><span class="methodname">RestConnection</span>();</code>
+        <p>Default constructor creates a new RestConnection instance.</p>
+      </div>
+      <div class="sect2" title="RestConnection(String, int, String, String, String, String)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-CONSTRUCTOR-2-3"></a>RestConnection(String, int, String, String, String, String)<a class="indexterm" name="idp730192"></a><a class="indexterm" name="idp730672"></a></h3></div></div></div>
+        
+        <code class="constructorsynopsis"><span class="modifier">public </span><span class="methodname">RestConnection</span>(<span class="methodparam"><span class="type">String </span><span class="parameter">host</span></span>,<br>                      <span class="methodparam"><span class="type">int </span><span class="parameter">port</span></span>,<br>                      <span class="methodparam"><span class="type">String </span><span class="parameter">protocol</span></span>,<br>                      <span class="methodparam"><span class="type">String </span><span class="parameter">contextPath</span></span>,<br>                      <span class="methodparam"><span class="type">String </span><span class="parameter">login</span></span>,<br>                      <span class="methodparam"><span class="type">String </span><span class="parameter">password</span></span>);</code>
+        <p>Creates a new RestConnection instance.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>host</p></td><td><p> remote host</p></td></tr><tr><td><p>port</p></td><td><p> the port to connect</p></td></tr><tr><td><p>protocol</p></td><td><p> the protocol to be used</p></td></tr><tr><td><p>contextPath</p></td><td><p> the default context path</p></td></tr><tr><td><p>login</p></td><td><p> credentials</p></td></tr><tr><td><p>password</p></td><td><p> credentials</p></td></tr></tbody></table>
+        </div>
+      </div>
+      <div class="sect2" title="RestConnection(URL)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-CONSTRUCTOR-2-2"></a>RestConnection(URL)<a class="indexterm" name="idp754848"></a><a class="indexterm" name="idp755232"></a></h3></div></div></div>
+        
+        <code class="constructorsynopsis"><span class="modifier">public </span><span class="methodname">RestConnection</span>(<span class="methodparam"><span class="type">URL </span><span class="parameter">url</span></span>);</code>
+        <p>Creates a new RestConnection instance.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>url</p></td><td><p> URL to remote location.</p></td></tr></tbody></table>
+        </div>
+      </div>
+      <div class="sect2" title="addEntity(HttpEntityEnclosingRequestBase, NameValuePair...)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-2-3"></a>addEntity(HttpEntityEnclosingRequestBase, NameValuePair...)<a class="indexterm" name="idp767584"></a><a class="indexterm" name="idp767968"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="type">void </span><span class="methodname">addEntity</span>(<span class="methodparam"><span class="type">HttpEntityEnclosingRequestBase </span><span class="parameter">put</span></span>,<br>                      <span class="methodparam"><span class="type">NameValuePair[] </span><span class="parameter">pairs</span></span>)<br>    throws <span class="exceptionname">UnsupportedEncodingException</span>;</code>
+        <p>Add an object</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>put</p></td><td><p> the PUT request</p></td></tr><tr><td><p>pairs</p></td><td><p> the names and corresponding values</p></td></tr></tbody></table>
+        </div>
+        <div class="variablelist" title="Exceptions"><p class="title"><b>Exceptions</b></p><dl><dt><span class="term"><code class="exceptionname">UnsupportedEncodingException</code></span></dt><dd>
+              <p>java.io.UnsupportedEncodingException</p>
+            </dd></dl></div>
+      </div>
+      <div class="sect2" title="addJsonEntity(HttpEntityEnclosingRequestBase, Object)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-2-4"></a>addJsonEntity(HttpEntityEnclosingRequestBase, Object)<a class="indexterm" name="idp786528"></a><a class="indexterm" name="idp786912"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="type">void </span><span class="methodname">addJsonEntity</span>(<span class="methodparam"><span class="type">HttpEntityEnclosingRequestBase </span><span class="parameter">put</span></span>,<br>                          <span class="methodparam"><span class="type">Object </span><span class="parameter">obj</span></span>)<br>    throws <span class="exceptionname">UnsupportedEncodingException</span>;</code>
+        <p>Add an object (application/json)</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>put</p></td><td><p> the PUT request</p></td></tr><tr><td><p>obj</p></td><td><p> the JSON</p></td></tr></tbody></table>
+        </div>
+        <div class="variablelist" title="Exceptions"><p class="title"><b>Exceptions</b></p><dl><dt><span class="term"><code class="exceptionname">UnsupportedEncodingException</code></span></dt><dd>
+              <p>java.io.UnsupportedEncodingException</p>
+            </dd></dl></div>
+      </div>
+      <div class="sect2" title="addMultipart(HttpEntityEnclosingRequestBase, String, File)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-2-5"></a>addMultipart(HttpEntityEnclosingRequestBase, String, File)<a class="indexterm" name="idp805472"></a><a class="indexterm" name="idp805856"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="type">void </span><span class="methodname">addMultipart</span>(<span class="methodparam"><span class="type">HttpEntityEnclosingRequestBase </span><span class="parameter">post</span></span>,<br>                         <span class="methodparam"><span class="type">String </span><span class="parameter">filename</span></span>,<br>                         <span class="methodparam"><span class="type">File </span><span class="parameter">file</span></span>)<br>    throws <span class="exceptionname">UnsupportedEncodingException</span>;</code>
+        <p>Attach file to POST request.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>post</p></td><td><p> the request</p></td></tr><tr><td><p>filename</p></td><td><p> the filename field</p></td></tr><tr><td><p>file</p></td><td><p> the file</p></td></tr></tbody></table>
+        </div>
+        <div class="variablelist" title="Exceptions"><p class="title"><b>Exceptions</b></p><dl><dt><span class="term"><code class="exceptionname">UnsupportedEncodingException</code></span></dt><dd>
+              <p>java.io.UnsupportedEncodingException</p>
+            </dd></dl></div>
+      </div>
+      <div class="sect2" title="applyProperties(Properties)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-2-16"></a>applyProperties(Properties)<a class="indexterm" name="idp826480"></a><a class="indexterm" name="idp826960"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="type">void </span><span class="methodname">applyProperties</span>(<span class="methodparam"><span class="type">Properties </span><span class="parameter">properties</span></span>);</code>
+        <p>Applies the given properties.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>properties</p></td><td><p> the Properties</p></td></tr></tbody></table>
+        </div>
+      </div>
+      <div class="sect2" title="createDelete(URI, String, boolean)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-2-10"></a>createDelete(URI, String, boolean)<a class="indexterm" name="idp839680"></a><a class="indexterm" name="idp840064"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="type">HttpDelete </span><span class="methodname">createDelete</span>(<span class="methodparam"><span class="type">URI </span><span class="parameter">uri</span></span>,<br>                               <span class="methodparam"><span class="type">String </span><span class="parameter">accept</span></span>,<br>                               <span class="methodparam"><span class="type">boolean </span><span class="parameter">cookie</span></span>);</code>
+        <p>HTTP DELETE method.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>uri</p></td><td><p></p></td></tr><tr><td><p>accept</p></td><td><p></p></td></tr><tr><td><p>cookie</p></td><td><p></p></td></tr><tr><td><p><span class="emphasis"><em>return</em></span></p></td><td><p></p></td></tr></tbody></table>
+        </div>
+      </div>
+      <div class="sect2" title="createGet(URI, String, boolean)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-2-8"></a>createGet(URI, String, boolean)<a class="indexterm" name="idp858512"></a><a class="indexterm" name="idp858976"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="type">HttpGet </span><span class="methodname">createGet</span>(<span class="methodparam"><span class="type">URI </span><span class="parameter">uri</span></span>,<br>                         <span class="methodparam"><span class="type">String </span><span class="parameter">accept</span></span>,<br>                         <span class="methodparam"><span class="type">boolean </span><span class="parameter">cookie</span></span>);</code>
+        <p>HTTP GET method.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>uri</p></td><td><p></p></td></tr><tr><td><p>accept</p></td><td><p></p></td></tr><tr><td><p>cookie</p></td><td><p></p></td></tr><tr><td><p><span class="emphasis"><em>return</em></span></p></td><td><p></p></td></tr></tbody></table>
+        </div>
+      </div>
+      <div class="sect2" title="createPost(URI, String, boolean)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-2-9"></a>createPost(URI, String, boolean)<a class="indexterm" name="idp877392"></a><a class="indexterm" name="idp877856"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="type">HttpPost </span><span class="methodname">createPost</span>(<span class="methodparam"><span class="type">URI </span><span class="parameter">uri</span></span>,<br>                           <span class="methodparam"><span class="type">String </span><span class="parameter">accept</span></span>,<br>                           <span class="methodparam"><span class="type">boolean </span><span class="parameter">cookie</span></span>);</code>
+        <p>HTTP POST method.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>uri</p></td><td><p></p></td></tr><tr><td><p>accept</p></td><td><p></p></td></tr><tr><td><p>cookie</p></td><td><p></p></td></tr><tr><td><p><span class="emphasis"><em>return</em></span></p></td><td><p></p></td></tr></tbody></table>
+        </div>
+      </div>
+      <div class="sect2" title="createPut(URI, String, boolean)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-2-6"></a>createPut(URI, String, boolean)<a class="indexterm" name="idp896288"></a><a class="indexterm" name="idp896752"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="type">HttpPut </span><span class="methodname">createPut</span>(<span class="methodparam"><span class="type">URI </span><span class="parameter">uri</span></span>,<br>                         <span class="methodparam"><span class="type">String </span><span class="parameter">accept</span></span>,<br>                         <span class="methodparam"><span class="type">boolean </span><span class="parameter">cookie</span></span>);</code>
+        <p>HTTP PUT method.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>uri</p></td><td><p></p></td></tr><tr><td><p>accept</p></td><td><p></p></td></tr><tr><td><p>cookie</p></td><td><p></p></td></tr><tr><td><p><span class="emphasis"><em>return</em></span></p></td><td><p></p></td></tr></tbody></table>
+        </div>
+      </div>
+      <div class="sect2" title="createPut(URI, String, String, boolean)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-2-7"></a>createPut(URI, String, String, boolean)<a class="indexterm" name="idp915168"></a><a class="indexterm" name="idp915632"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="type">HttpPut </span><span class="methodname">createPut</span>(<span class="methodparam"><span class="type">URI </span><span class="parameter">uri</span></span>,<br>                         <span class="methodparam"><span class="type">String </span><span class="parameter">accept</span></span>,<br>                         <span class="methodparam"><span class="type">String </span><span class="parameter">langage</span></span>,<br>                         <span class="methodparam"><span class="type">boolean </span><span class="parameter">cookie</span></span>);</code>
+        <p>HTTP PUT method.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>uri</p></td><td><p></p></td></tr><tr><td><p>accept</p></td><td><p></p></td></tr><tr><td><p>langage</p></td><td><p></p></td></tr><tr><td><p>cookie</p></td><td><p></p></td></tr><tr><td><p><span class="emphasis"><em>return</em></span></p></td><td><p></p></td></tr></tbody></table>
+        </div>
+      </div>
+      <div class="sect2" title="execute(HttpUriRequest)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-2-11"></a>execute(HttpUriRequest)<a class="indexterm" name="idp936400"></a><a class="indexterm" name="idp936784"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="type">HttpResponse </span><span class="methodname">execute</span>(<span class="methodparam"><span class="type">HttpUriRequest </span><span class="parameter">request</span></span>)<br>    throws <span class="exceptionname">IOException</span>, <span class="exceptionname">URISyntaxException</span>;</code>
+        <p>Execute request.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>request</p></td><td><p> the request</p></td></tr><tr><td><p><span class="emphasis"><em>return</em></span></p></td><td><p> the HttpResponse</p></td></tr></tbody></table>
+        </div>
+        <div class="variablelist" title="Exceptions"><p class="title"><b>Exceptions</b></p><dl><dt><span class="term"><code class="exceptionname">IOException</code></span></dt><dd>
+              <p>java.io.IOException</p>
+            </dd><dt><span class="term"><code class="exceptionname">URISyntaxException</code></span></dt><dd>
+              <p>java.net.URISyntaxException</p>
+            </dd></dl></div>
+      </div>
+      <div class="sect2" title="get(URI, Class&lt;T&gt;)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-2-2"></a>get(URI, Class&lt;T&gt;)<a class="indexterm" name="idp956720"></a><a class="indexterm" name="idp957184"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="type">T </span><span class="methodname">get</span>(<span class="methodparam"><span class="type">URI </span><span class="parameter">uri</span></span>,<br>             <span class="methodparam"><span class="type">Class&lt;T&gt; </span><span class="parameter">cl</span></span>)<br>    throws <span class="exceptionname">IOException</span>, <span class="exceptionname">URISyntaxException</span>;</code>
+        <p>HTTP GET method.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>uri</p></td><td><p> the resource</p></td></tr><tr><td><p>cl</p></td><td><p> the vo to send</p></td></tr><tr><td><p><span class="emphasis"><em>return</em></span></p></td><td><p> the retrieved vo</p></td></tr></tbody></table>
+        </div>
+        <div class="variablelist" title="Exceptions"><p class="title"><b>Exceptions</b></p><dl><dt><span class="term"><code class="exceptionname">IOException</code></span></dt><dd>
+              <p>java.io.IOException</p>
+            </dd><dt><span class="term"><code class="exceptionname">URISyntaxException</code></span></dt><dd>
+              <p>java.net.URISyntaxException</p>
+            </dd></dl></div>
+      </div>
+      <div class="sect2" title="getBaseURI()"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-2-12"></a>getBaseURI()<a class="indexterm" name="idp979312"></a><a class="indexterm" name="idp979776"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="type">UriBuilder </span><span class="methodname">getBaseURI</span>()<br>    throws <span class="exceptionname">URISyntaxException</span>;</code>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p><span class="emphasis"><em>return</em></span></p></td><td><p> http://localhost:9998</p></td></tr></tbody></table>
+        </div>
+      </div>
+      <div class="sect2" title="getContextURI()"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-2-13"></a>getContextURI()<a class="indexterm" name="idp1008256"></a><a class="indexterm" name="idp1008640"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="type">UriBuilder </span><span class="methodname">getContextURI</span>()<br>    throws <span class="exceptionname">URISyntaxException</span>;</code>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p><span class="emphasis"><em>return</em></span></p></td><td><p> http://localhost:9998/olat</p></td></tr></tbody></table>
+        </div>
+      </div>
+      <div class="sect2" title="login()"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-2-1"></a>login()<a class="indexterm" name="idp1020976"></a><a class="indexterm" name="idp1021360"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="type">boolean </span><span class="methodname">login</span>()<br>    throws <span class="exceptionname">IOException</span>, <span class="exceptionname">URISyntaxException</span>;</code>
+        <p>Login to RESTful webservice.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p><span class="emphasis"><em>return</em></span></p></td><td><p></p></td></tr></tbody></table>
+        </div>
+        <div class="variablelist" title="Exceptions"><p class="title"><b>Exceptions</b></p><dl><dt><span class="term"><code class="exceptionname">IOException</code></span></dt><dd>
+              <p>java.io.IOException</p>
+            </dd><dt><span class="term"><code class="exceptionname">URISyntaxException</code></span></dt><dd>
+              <p>java.net.URISyntaxException</p>
+            </dd></dl></div>
+      </div>
+      <div class="sect2" title="parse(HttpResponse, Class&lt;U&gt;)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-2-15"></a>parse(HttpResponse, Class&lt;U&gt;)<a class="indexterm" name="idp1038880"></a><a class="indexterm" name="idp1039360"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="type">U </span><span class="methodname">parse</span>(<span class="methodparam"><span class="type">HttpResponse </span><span class="parameter">response</span></span>,<br>               <span class="methodparam"><span class="type">Class&lt;U&gt; </span><span class="parameter">cl</span></span>);</code>
+        <p>Parses the response.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>response</p></td><td><p> the HttpResponse</p></td></tr><tr><td><p>cl</p></td><td><p> the VO's class</p></td></tr><tr><td><p><span class="emphasis"><em>return</em></span></p></td><td><p> the parsed VO</p></td></tr></tbody></table>
+        </div>
+      </div>
+      <div class="sect2" title="stringuified(Object)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-2-14"></a>stringuified(Object)<a class="indexterm" name="idp1056032"></a><a class="indexterm" name="idp1056496"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="type">String </span><span class="methodname">stringuified</span>(<span class="methodparam"><span class="type">Object </span><span class="parameter">obj</span></span>);</code>
+        <p>Make string representation of a JSON object.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>obj</p></td><td><p></p></td></tr><tr><td><p><span class="emphasis"><em>return</em></span></p></td><td><p></p></td></tr></tbody></table>
+        </div>
+      </div>
+    </div>
+  </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bk03ch01.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="bk03.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="bk03ch03.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Kapitel 1. Paket com.­frentix </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Kapitel 3. Paket com.­frentix.­restapi.­tool</td></tr></table></div></body></html>

@@ -1,0 +1,17 @@
+==== Prerequisites ====
+- There should be a SMTP server on localhost therefore a user openolat with password openolat.
+- jdk-1.7 installed
+- tomcat7 installed
+- mysql-server-5.5 installed
+
+==== MySQL ====
+$ mysql -uroot -p
+mysql> grant all privileges on openolat.* to openolat@localhost identified by 'openolat';
+mysql> create database openolat CHARSET 'utf8';
+$ mysql -uopenolat -popenolat openolat < setupDatabase.sql
+
+==== tomcat7 ====
+- configured to listen on port 80
+
+==== openolat-lms-8.4 ====
+- ./config/olat.local.properties must be placed in webapps classpath e.g. </var/lib/tomcat7/webapps/openolat-lms-8.4-SNAPSHOT/WEB-INF/classes/olat.local.properties>

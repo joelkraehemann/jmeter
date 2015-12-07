@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding="utf-8"?>
+<book xmlns="http://docbook.org/ns/docbook"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" lang="de">
+  <title>openolat LMS - JMeter Loadtests</title>
+  <subtitle>IPA Dokumentation</subtitle>
+
+  <info>
+      <legalnotice>
+	<para>
+	  Copyright (C)  frentix GmbH.
+	</para>
+      </legalnotice>
+    <author>
+      <personname>
+	<firstname>Joël</firstname>
+	<surname>Krähemann</surname>
+      </personname>
+    </author>
+  </info>
+
+  <!-- documentation -->
+  <!-- foreword -->
+  <xi:include href="jmeterLoadtests/preface.xml"/>
+
+  <!-- introduction -->
+  <xi:include href="jmeterLoadtests/chap1.xml"/>
+
+  <!-- installation -->
+  <xi:include href="jmeterLoadtests/chap2.xml"/>
+
+  <!-- tests -->
+  <xi:include href="jmeterLoadtests/chap3.xml"/>
+
+  <!-- results -->
+  <xi:include href="jmeterLoadtests/chap4.xml"/>
+  
+  <!-- reflection -->
+  <xi:include href="jmeterLoadtests/chap5.xml"/>
+
+  <!-- appendix -->
+  <!-- timetable -->
+  <xi:include href="jmeterLoadtests/appa.xml"/>
+
+  <!-- glossary -->
+  <xi:include href="jmeterLoadtests/appc.xml"/>
+
+  <!-- resources
+  <xi:include href="jmeterLoadtests/appd.xml"/>
+ -->
+
+  <!-- literature -->
+  <xi:include href="jmeterLoadtests/biblio.xml"/>
+
+</book>

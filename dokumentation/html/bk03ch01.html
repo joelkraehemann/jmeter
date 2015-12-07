@@ -1,0 +1,72 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Kapitel 1. Paket com.­frentix</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="openolat LMS - JMeter Loadtests"><link rel="up" href="bk03.html" title="JavaDoc Reference"><link rel="prev" href="bk03.html" title="JavaDoc Reference"><link rel="next" href="bk03ch02.html" title="Kapitel 2. Paket com.­frentix.­restapi"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Kapitel 1. Paket com.­frentix</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bk03.html">Zurück</a> </td><th width="60%" align="center">JavaDoc Reference</th><td width="20%" align="right"> <a accesskey="n" href="bk03ch02.html">Weiter</a></td></tr></table><hr></div><div class="chapter" title="Kapitel 1. Paket com.­frentix"><div class="titlepage"><div><div><h2 class="title"><a name="dbdoclet-PACKAGE-1"></a>Kapitel 1. Paket com.­frentix</h2></div></div></div><div class="toc"><p><b>Inhaltsverzeichnis</b></p><dl><dt><span class="sect1"><a href="bk03ch01.html#dbdoclet-CLASS-1">Klasse Resttool</a></span></dt><dd><dl><dt><span class="sect2"><a href="bk03ch01.html#idp512192">Syntax</a></span></dt><dt><span class="sect2"><a href="bk03ch01.html#dbdoclet-METHOD-1-1">printUsage()</a></span></dt></dl></dd></dl></div>
+    
+    <p></p>
+    <div class="sect1" title="Klasse Resttool"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="dbdoclet-CLASS-1"></a>Klasse Resttool</h2></div></div></div>
+      
+      <a class="indexterm" name="idp510304"></a>
+      <a class="indexterm" name="idp510912"></a>
+      <p>You may import or query repository entries with Resttool as well generate, create or query users of an openolat LMS instance.</p>
+      <div class="sect2" title="Syntax"><div class="titlepage"><div><div><h3 class="title"><a name="idp512192"></a>Syntax</h3></div></div></div>
+        
+        <pre class="classsynopsis"> <span class="ooclass">
+            <span class="modifier">public </span>
+            <span class="modifier">class </span>
+            <span class="classname">Resttool</span>
+          </span> {<br>// Public Static Fields<code class="fieldsynopsis">  
+            <span class="modifier">public </span>
+            <span class="modifier">static </span>
+            <span class="modifier">final </span>
+            <span class="type">String </span>
+            <span class="varname">CREATE_USER_USAGE </span>
+            <span class="initializer">= "-i user.csv -o user.csv"</span>
+          ;</code><br><code class="fieldsynopsis">  
+            <span class="modifier">public </span>
+            <span class="modifier">static </span>
+            <span class="modifier">final </span>
+            <span class="type">String </span>
+            <span class="varname">GENERATE_USER_USAGE </span>
+            <span class="initializer">= "-g user count -o user.csv"</span>
+          ;</code><br><code class="fieldsynopsis">  
+            <span class="modifier">public </span>
+            <span class="modifier">static </span>
+            <span class="modifier">final </span>
+            <span class="type">String </span>
+            <span class="varname">IMPORT_REPOSITORY_ENTRY_USAGE </span>
+            <span class="initializer">= "-i repositoryEntry.zip -o repositoryEntry.csv"</span>
+          ;</code><br><code class="fieldsynopsis">  
+            <span class="modifier">public </span>
+            <span class="modifier">static </span>
+            <span class="modifier">final </span>
+            <span class="type">String </span>
+            <span class="varname">QUERY_REPOSITORY_ENTRY_USAGE </span>
+            <span class="initializer">= "-q repository -o repositoryEntry.csv"</span>
+          ;</code><br><code class="fieldsynopsis">  
+            <span class="modifier">public </span>
+            <span class="modifier">static </span>
+            <span class="modifier">final </span>
+            <span class="type">String </span>
+            <span class="varname">QUERY_USER_USAGE </span>
+            <span class="initializer">= "-q user -o user.csv"</span>
+          ;</code><br><code class="fieldsynopsis">  
+            <span class="modifier">public </span>
+            <span class="modifier">static </span>
+            <span class="modifier">final </span>
+            <span class="type">String </span>
+            <span class="varname">RESTTOOL_INVOKE </span>
+            <span class="initializer">= "java -jar Resttool.jar"</span>
+          ;</code><br>// Public Constructors<code class="constructorsynopsis">  <span class="modifier">public </span><span class="methodname">Resttool</span>();</code><br>// Public Static Methods<code class="methodsynopsis">  <span class="modifier">public </span><span class="modifier">static </span><span class="type">void </span><span class="methodname">main</span>(<span class="methodparam"><span class="type">String[] </span><span class="parameter">args</span></span>)<br>    throws <span class="exceptionname">NumberFormatException</span>, <span class="exceptionname">IOException</span>, <span class="exceptionname">URISyntaxException</span>;</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="modifier">static </span><span class="type">void </span><span class="methodname">printUsage</span>();</code><br>}</pre>
+        <p><span class="bold"><strong>Methoden geerbt von java.lang.Object</strong></span>: <span class="simplelist"><code class="varname">clone</code>, <code class="varname">equals</code>, <code class="varname">finalize</code>, <code class="varname">getClass</code>, <code class="varname">hashCode</code>, <code class="varname">notify</code>, <code class="varname">notifyAll</code>, <code class="varname">toString</code>, <code class="varname">wait</code></span></p>
+        <div class="variablelist"><dl><dt><span class="term"><span class="emphasis"><em>Autor</em></span></span></dt><dd>
+              <p><span class="simplelist">jkraehemann, joel.kraehemann@frentix.com, http://www.frentix.com</span></p>
+            </dd></dl></div>
+        <div class="informalfigure">
+          <div class="mediaobject" align="center"><img src="./figures/com/frentix/Resttool/ClassDiagram.png" align="middle"></div>
+        </div>
+      </div>
+      <div class="sect2" title="printUsage()"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-1-1"></a>printUsage()<a class="indexterm" name="idp559792"></a><a class="indexterm" name="idp560176"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="modifier">static </span><span class="type">void </span><span class="methodname">printUsage</span>();</code>
+        <p>Shows sample usage on console.</p>
+      </div>
+    </div>
+  </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bk03.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="bk03.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="bk03ch02.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">JavaDoc Reference </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Kapitel 2. Paket com.­frentix.­restapi</td></tr></table></div></body></html>

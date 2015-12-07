@@ -1,0 +1,20 @@
+creationDate, userName, actionCrudType, actionVerb, actionObject, parentResName, targetResName
+2012-10-22 13:26:17.0, jkraehemann, r, launch, course, , Kurs OO-370
+2012-10-22 13:26:17.0, jkraehemann, r, launch, node, Kurs OO-370, Kurs OO-370
+2012-10-22 13:26:23.0, jkraehemann, r, open, resource, Wiki, Wiki OO-370
+2012-10-22 13:26:24.0, jkraehemann, r, launch, node, Wiki, Wiki OO-370
+2012-10-22 13:27:14.0, jkraehemann, e, close, resource, Wiki, Wiki OO-370
+2012-10-22 13:27:14.0, jkraehemann, e, exit, course, , Kurs OO-370
+2012-10-22 13:28:09.0, jkraehemann, r, launch, course, , Kurs OO-370
+2012-10-22 13:28:09.0, jkraehemann, r, launch, node, Kurs OO-370, Kurs OO-370
+2012-10-22 13:29:06.0, fxuser, r, launch, course, , Kurs OO-370
+2012-10-22 13:29:06.0, fxuser, r, launch, node, Kurs OO-370, Kurs OO-370
+2012-10-22 13:29:08.0, fxuser, r, open, resource, Wiki, Wiki OO-370
+2012-10-22 13:29:08.0, fxuser, r, launch, node, Wiki, Wiki OO-370
+2012-10-22 13:36:15.0, fxuser, e, close, resource, Wiki, Wiki OO-370
+2012-10-22 13:36:15.0, fxuser, r, launch, node, Kurs OO-370, Kurs OO-370
+2012-10-22 13:36:19.0, fxuser, e, exit, course, , Kurs OO-370
+2012-10-22 13:36:20.0, fxuser, r, launch, course, , Kurs OO-370
+2012-10-22 13:36:20.0, fxuser, r, launch, node, Kurs OO-370, Kurs OO-370
+2012-10-22 13:38:03.0, administrator, r, launch, course, , Kurs OO-370
+2012-10-22 13:38:03.0, administrator, r, launch, node, Kurs OO-370, Kurs OO-370

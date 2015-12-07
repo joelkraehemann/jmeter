@@ -1,0 +1,39 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Test 4: 200 Benutzer</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="openolat LMS - JMeter Loadtests"><link rel="up" href="bk02ch04.html" title="Kapitel 4. Auswertung"><link rel="prev" href="bk02ch04s05.html" title="Test 3: 200 Benutzer"><link rel="next" href="bk02ch05.html" title="Kapitel 5. Reflexion"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Test 4: 200 Benutzer</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bk02ch04s05.html">Zurück</a> </td><th width="60%" align="center">Kapitel 4. Auswertung</th><td width="20%" align="right"> <a accesskey="n" href="bk02ch05.html">Weiter</a></td></tr></table><hr></div><div class="sect1" title="Test 4: 200 Benutzer"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp411504"></a>Test 4: 200 Benutzer</h2></div></div></div>
+    
+
+
+    <div class="table"><a name="idp412240"></a><p class="title"><b>Tabelle 4.5. Auslastung mit 200 Benutzer à 50 Sekunden</b></p><div class="table-contents">
+      
+      <table summary="Auslastung mit 200 Benutzer à 50 Sekunden" border="1"><colgroup><col align="left"><col align="left"></colgroup><thead><tr><th align="left">Kondition</th><th align="left">Ergebnis</th></tr></thead><tbody><tr><td align="left">
+	      ein Durchlauf, alle Threads innerhalb 50 Sekunden gestartet.
+	    </td><td align="left">
+	      Erfolg 72%, Dauer 10min
+	    </td></tr><tr><td align="left">
+	      Auslastung RAM vor dem Test
+	    </td><td align="left">
+	      87MB
+	    </td></tr><tr><td align="left">
+	      Auslastung RAM nach dem Test
+	    </td><td align="left">
+	      172MB
+	    </td></tr><tr><td align="left">
+	      Spitzenauslastung RAM
+	    </td><td align="left">
+	      437MB
+	    </td></tr></tbody></table>
+    </div></div><br class="table-break">
+
+    <div class="mediaobject" align="top"><img src="../images/jconsole_200_users_a_50s.png" align="top"><div class="caption">
+	<p>
+	  Bildschirmfoto Test 4 - JConsole Heap Memory Usage
+	</p>
+      </div></div>
+
+    <p>
+      Es traten dreimal synchronisations Probleme auf, die selben wie oben. Zudem konnten 52 Benutzer den Test erst gar nicht
+      starten. Dieses Verhalten ist wahrscheinlich auf Leistungsprobleme der CPU zurückzuführen, da die Exception
+      <span class="emphasis"><em>org.olat.logging.DBRuntimeException</em></span> geworfen wird, aufgrund einer Datenbank Timeout. Das heisst
+      ich bin an die grenzen des Computers gekommen und nicht an die von OpenOLAT LMS.
+    </p>
+
+  </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bk02ch04s05.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="bk02ch04.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="bk02ch05.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Test 3: 200 Benutzer </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Kapitel 5. Reflexion</td></tr></table></div></body></html>

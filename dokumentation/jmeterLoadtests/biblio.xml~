@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding="utf-8"?>
+<bibliography xmlns="http://docbook.org/ns/docbook"
+	      xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0">
+  <title>Literatur</title>
+  
+  <bibliomixed>
+    <bibliomset relation="journal">
+      <title ><ulink url="http://jmeter.apache.org/usermanual/index.html">JMeter - User's Manual</ulink></title>.
+      <publishername>Apache Software Foundation</publishername>.
+      <pubdate>Stand 11.03.2012</pubdate></bibliomset>.
+  </bibliomixed>
+</bibliography>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding="utf-8"?>
+<set xmlns="http://docbook.org/ns/docbook"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0">
+  <title>openolat LMS - JMeter Loadtests</title>
+  <subtitle>IPA von Joël Krähemann</subtitle>
+
+  <xi:include href="quickStart.xml"/>
+  <xi:include href="jmeterLoadtests.xml"/>
+  <xi:include href="Reference.xml"/>
+
+</set>

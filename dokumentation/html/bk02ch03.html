@@ -1,0 +1,59 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Kapitel 3. JMeter Loadtests</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="openolat LMS - JMeter Loadtests"><link rel="up" href="bk02.html" title="openolat LMS - JMeter Loadtests"><link rel="prev" href="bk02ch02s05.html" title="JMeter"><link rel="next" href="bk02ch03s02.html" title="Logik Controller"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Kapitel 3. JMeter Loadtests</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bk02ch02s05.html">Zurück</a> </td><th width="60%" align="center">openolat LMS - JMeter Loadtests</th><td width="20%" align="right"> <a accesskey="n" href="bk02ch03s02.html">Weiter</a></td></tr></table><hr></div><div class="chapter" title="Kapitel 3. JMeter Loadtests"><div class="titlepage"><div><div><h2 class="title"><a name="idm2486576"></a>Kapitel 3. JMeter Loadtests</h2></div></div></div><div class="toc"><p><b>Inhaltsverzeichnis</b></p><dl><dt><span class="sect1"><a href="bk02ch03.html#idp251648">Threads (Users)</a></span></dt><dd><dl><dt><span class="sect2"><a href="bk02ch03.html#idp252800">Thread-Gruppe</a></span></dt></dl></dd><dt><span class="sect1"><a href="bk02ch03s02.html">Logik Controller</a></span></dt><dd><dl><dt><span class="sect2"><a href="bk02ch03s02.html#idp258656">If-Controller</a></span></dt><dt><span class="sect2"><a href="bk02ch03s02.html#idp263680">Loop-Controller</a></span></dt></dl></dd><dt><span class="sect1"><a href="bk02ch03s03.html">Konfigurations Elemente</a></span></dt><dd><dl><dt><span class="sect2"><a href="bk02ch03s03.html#idp269488">Benutzer Definierte Variablen</a></span></dt><dt><span class="sect2"><a href="bk02ch03s03.html#idp274336">CSV Einstellungen</a></span></dt><dt><span class="sect2"><a href="bk02ch03s03.html#idp279728">HTTP Managers</a></span></dt><dt><span class="sect2"><a href="bk02ch03s03.html#idp288016">Zähler (Counter)</a></span></dt></dl></dd><dt><span class="sect1"><a href="bk02ch03s04.html">Sampler</a></span></dt><dd><dl><dt><span class="sect2"><a href="bk02ch03s04.html#idp294224">HTTP Request</a></span></dt></dl></dd><dt><span class="sect1"><a href="bk02ch03s05.html">Präprozessoren</a></span></dt><dd><dl><dt><span class="sect2"><a href="bk02ch03s05.html#idp299984">JSR223 Präprozessor</a></span></dt></dl></dd><dt><span class="sect1"><a href="bk02ch03s06.html">Postprozessoren</a></span></dt><dd><dl><dt><span class="sect2"><a href="bk02ch03s06.html#idp306256">XPath Extractor</a></span></dt></dl></dd><dt><span class="sect1"><a href="bk02ch03s07.html">Überprüfung</a></span></dt><dd><dl><dt><span class="sect2"><a href="bk02ch03s07.html#idp324560">Versicherte Antwort</a></span></dt></dl></dd><dt><span class="sect1"><a href="bk02ch03s08.html">Listeners</a></span></dt><dd><dl><dt><span class="sect2"><a href="bk02ch03s08.html#idp329744">View Results Tree</a></span></dt></dl></dd><dt><span class="sect1"><a href="bk02ch03s09.html">Funktionsbausteine</a></span></dt><dd><dl><dt><span class="sect2"><a href="bk02ch03s09.html#idp335744">Random</a></span></dt></dl></dd></dl></div>
+  
+  <p>
+    JMeter ist eine Open Source Software veröffentlicht unter Apache License Version 2.0 und
+    ist somit frei verfügbar. Mit JMeter kann man automatisierte Tests von Netzwerk
+    Anwendungen durchführen. Es bietet für verschiedene Problemstellungen das passende Werkzeug,
+    wie zum Beispiel Konstrukte die aus der Software Programmierung kommen. Namentlich Variablen,
+    Bedingungen, Schleifen und Zähler. Man hat auch die Möglichkeit diverse Scriptsprachen zu
+    verwenden.
+  </p>
+  <p>
+    Es würde den Rahmen der Abschlussarbeit sprengen alle Komponenten von JMeter zu dokumentieren.
+    Deshalb gehe ich speziell auf die im eAssessment Loadtest verwendeten Elemente ein. Der Einfachheit wegen
+    verzichtete ich die unvollständig übersetzten Komponenten der <acronym class="acronym">GUI</acronym> einzudeutschen.
+  </p>
+
+  <div class="sect1" title="Threads (Users)"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp251648"></a>Threads (Users)</h2></div></div></div>
+    
+
+    <p>
+      Threads sind gleichzeitig ablaufende Handlungen, dabei hat jeder Thread seinen eigenen Geltungsbereich.
+    </p>
+
+    <div class="sect2" title="Thread-Gruppe"><div class="titlepage"><div><div><h3 class="title"><a name="idp252800"></a>Thread-Gruppe</h3></div></div></div>
+      
+
+      <div class="mediaobject" align="top"><img src="../images/jmeter_thread_groups.png" align="top"><div class="caption">
+	  <p>
+	    Bildschirmfoto JMeter Thread Gruppe
+	  </p>
+	</div></div>
+
+      <p>
+	Thread-Gruppen bietet einem die Möglichkeit Threads zu gruppieren, um diese anschliessend
+	mit Verzögerungen zu starten. Das <span class="emphasis"><em>Ramp up period</em></span> Feld gibt dabei an nach wie vielen
+	Sekunden alle Threads gestartet sein sollen.
+      </p>
+
+    </div>
+
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bk02ch02s05.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="bk02.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="bk02ch03s02.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">JMeter </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Logik Controller</td></tr></table></div></body></html>

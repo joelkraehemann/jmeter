@@ -1,0 +1,103 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Kapitel 4. Paket com.­frentix.­util</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="openolat LMS - JMeter Loadtests"><link rel="up" href="bk03.html" title="JavaDoc Reference"><link rel="prev" href="bk03ch03s03.html" title="Klasse User"><link rel="next" href="bk03apa.html" title="Anhang A. Attribute mit konstanten Werten"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Kapitel 4. Paket com.­frentix.­util</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bk03ch03s03.html">Zurück</a> </td><th width="60%" align="center">JavaDoc Reference</th><td width="20%" align="right"> <a accesskey="n" href="bk03apa.html">Weiter</a></td></tr></table><hr></div><div class="chapter" title="Kapitel 4. Paket com.­frentix.­util"><div class="titlepage"><div><div><h2 class="title"><a name="dbdoclet-PACKAGE-4"></a>Kapitel 4. Paket com.­frentix.­util</h2></div></div></div><div class="toc"><p><b>Inhaltsverzeichnis</b></p><dl><dt><span class="sect1"><a href="bk03ch04.html#dbdoclet-CLASS-6">Klasse CsvHelper</a></span></dt><dd><dl><dt><span class="sect2"><a href="bk03ch04.html#idp1404880">Syntax</a></span></dt><dt><span class="sect2"><a href="bk03ch04.html#dbdoclet-METHOD-6-1">readCsv(File, char)</a></span></dt><dt><span class="sect2"><a href="bk03ch04.html#dbdoclet-METHOD-6-6">writeCourseToCsv(File, char, boolean, CourseVO)</a></span></dt><dt><span class="sect2"><a href="bk03ch04.html#dbdoclet-METHOD-6-5">writeCourseToCsv(OutputStream, char, CourseVO)</a></span></dt><dt><span class="sect2"><a href="bk03ch04.html#dbdoclet-METHOD-6-4">writeUserToCsv(File, char, boolean, List&lt;UserVO&gt;)</a></span></dt><dt><span class="sect2"><a href="bk03ch04.html#dbdoclet-METHOD-6-3">writeUserToCsv(File, char, boolean, UserVO)</a></span></dt><dt><span class="sect2"><a href="bk03ch04.html#dbdoclet-METHOD-6-2">writeUserToCsv(OutputStream, char, UserVO)</a></span></dt></dl></dd></dl></div>
+    
+    <p></p>
+    <div class="sect1" title="Klasse CsvHelper"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="dbdoclet-CLASS-6"></a>Klasse CsvHelper</h2></div></div></div>
+      
+      <a class="indexterm" name="idp1403136"></a>
+      <a class="indexterm" name="idp1403648"></a>
+      <p>Some helper methods for handling comma separated values (CSV) files.</p>
+      <div class="sect2" title="Syntax"><div class="titlepage"><div><div><h3 class="title"><a name="idp1404880"></a>Syntax</h3></div></div></div>
+        
+        <pre class="classsynopsis"> <span class="ooclass">
+            <span class="modifier">public </span>
+            <span class="modifier">class </span>
+            <span class="classname">CsvHelper</span>
+          </span> {<br>// Public Constructors<code class="constructorsynopsis">  <span class="modifier">public </span><span class="methodname">CsvHelper</span>();</code><br>// Public Static Methods<code class="methodsynopsis">  <span class="modifier">public </span><span class="modifier">static </span><span class="type">String[] </span><span class="methodname">readCsv</span>(<span class="methodparam"><span class="type">File </span><span class="parameter">csvFile</span></span>,<br>                                 <span class="methodparam"><span class="type">char </span><span class="parameter">separator</span></span>)<br>    throws <span class="exceptionname">IOException</span>;</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="modifier">static </span><span class="type">void </span><span class="methodname">writeCourseToCsv</span>(<span class="methodparam"><span class="type">File </span><span class="parameter">csvFile</span></span>,<br>                                      <span class="methodparam"><span class="type">char </span><span class="parameter">separator</span></span>,<br>                                      <span class="methodparam"><span class="type">boolean </span><span class="parameter">append</span></span>,<br>                                      <span class="methodparam"><span class="type">CourseVO </span><span class="parameter">course</span></span>)<br>    throws <span class="exceptionname">IOException</span>;</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="modifier">static </span><span class="type">void </span><span class="methodname">writeCourseToCsv</span>(<span class="methodparam"><span class="type">OutputStream </span><span class="parameter">output</span></span>,<br>                                      <span class="methodparam"><span class="type">char </span><span class="parameter">separator</span></span>,<br>                                      <span class="methodparam"><span class="type">CourseVO </span><span class="parameter">course</span></span>)<br>    throws <span class="exceptionname">IOException</span>;</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="modifier">static </span><span class="type">void </span><span class="methodname">writeUserToCsv</span>(<span class="methodparam"><span class="type">File </span><span class="parameter">csvFile</span></span>,<br>                                    <span class="methodparam"><span class="type">char </span><span class="parameter">separator</span></span>,<br>                                    <span class="methodparam"><span class="type">boolean </span><span class="parameter">append</span></span>,<br>                                    <span class="methodparam"><span class="type">UserVO </span><span class="parameter">user</span></span>)<br>    throws <span class="exceptionname">IOException</span>;</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="modifier">static </span><span class="type">void </span><span class="methodname">writeUserToCsv</span>(<span class="methodparam"><span class="type">File </span><span class="parameter">csvFile</span></span>,<br>                                    <span class="methodparam"><span class="type">char </span><span class="parameter">separator</span></span>,<br>                                    <span class="methodparam"><span class="type">boolean </span><span class="parameter">append</span></span>,<br>                                    <span class="methodparam"><span class="type">List&lt;UserVO&gt; </span><span class="parameter">user</span></span>)<br>    throws <span class="exceptionname">IOException</span>;</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="modifier">static </span><span class="type">void </span><span class="methodname">writeUserToCsv</span>(<span class="methodparam"><span class="type">OutputStream </span><span class="parameter">output</span></span>,<br>                                    <span class="methodparam"><span class="type">char </span><span class="parameter">separator</span></span>,<br>                                    <span class="methodparam"><span class="type">UserVO </span><span class="parameter">user</span></span>)<br>    throws <span class="exceptionname">IOException</span>;</code><br>}</pre>
+        <p><span class="bold"><strong>Methoden geerbt von java.lang.Object</strong></span>: <span class="simplelist"><code class="varname">clone</code>, <code class="varname">equals</code>, <code class="varname">finalize</code>, <code class="varname">getClass</code>, <code class="varname">hashCode</code>, <code class="varname">notify</code>, <code class="varname">notifyAll</code>, <code class="varname">toString</code>, <code class="varname">wait</code></span></p>
+        <div class="variablelist"><dl><dt><span class="term"><span class="emphasis"><em>Autor</em></span></span></dt><dd>
+              <p><span class="simplelist">jkraehemann, joel.kraehemann@frentix.com, http://www.frentix.com</span></p>
+            </dd></dl></div>
+        <div class="informalfigure">
+          <div class="mediaobject" align="center"><img src="./figures/com/frentix/util/CsvHelper/ClassDiagram.png" align="middle"></div>
+        </div>
+      </div>
+      <div class="sect2" title="readCsv(File, char)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-6-1"></a>readCsv(File, char)<a class="indexterm" name="idp1458608"></a><a class="indexterm" name="idp1458864"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="modifier">static </span><span class="type">String[] </span><span class="methodname">readCsv</span>(<span class="methodparam"><span class="type">File </span><span class="parameter">csvFile</span></span>,<br>                               <span class="methodparam"><span class="type">char </span><span class="parameter">separator</span></span>)<br>    throws <span class="exceptionname">IOException</span>;</code>
+        <p>Reads a CSV file into a string array.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>csvFile</p></td><td><p> the file to be read</p></td></tr><tr><td><p>separator</p></td><td><p> the field separator</p></td></tr><tr><td><p><span class="emphasis"><em>return</em></span></p></td><td><p> a string array whereas each field has its own entry</p></td></tr></tbody></table>
+        </div>
+        <div class="variablelist" title="Exceptions"><p class="title"><b>Exceptions</b></p><dl><dt><span class="term"><code class="exceptionname">IOException</code></span></dt><dd>
+              <p>java.io.IOException</p>
+            </dd></dl></div>
+      </div>
+      <div class="sect2" title="writeCourseToCsv(File, char, boolean, CourseVO)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-6-6"></a>writeCourseToCsv(File, char, boolean, CourseVO)<a class="indexterm" name="idp1479424"></a><a class="indexterm" name="idp1479888"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="modifier">static </span><span class="type">void </span><span class="methodname">writeCourseToCsv</span>(<span class="methodparam"><span class="type">File </span><span class="parameter">csvFile</span></span>,<br>                                    <span class="methodparam"><span class="type">char </span><span class="parameter">separator</span></span>,<br>                                    <span class="methodparam"><span class="type">boolean </span><span class="parameter">append</span></span>,<br>                                    <span class="methodparam"><span class="type">CourseVO </span><span class="parameter">course</span></span>)<br>    throws <span class="exceptionname">IOException</span>;</code>
+        <p>Writes the course's attributes to CSV file you may specify whether to overwrite or to append the file.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>csvFile</p></td><td><p></p></td></tr><tr><td><p>separator</p></td><td><p></p></td></tr><tr><td><p>append</p></td><td><p></p></td></tr><tr><td><p>course</p></td><td><p></p></td></tr></tbody></table>
+        </div>
+        <div class="variablelist" title="Exceptions"><p class="title"><b>Exceptions</b></p><dl><dt><span class="term"><code class="exceptionname">IOException</code></span></dt><dd>
+              <p>java.io.IOException</p>
+            </dd></dl></div>
+      </div>
+      <div class="sect2" title="writeCourseToCsv(OutputStream, char, CourseVO)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-6-5"></a>writeCourseToCsv(OutputStream, char, CourseVO)<a class="indexterm" name="idp1502928"></a><a class="indexterm" name="idp1503344"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="modifier">static </span><span class="type">void </span><span class="methodname">writeCourseToCsv</span>(<span class="methodparam"><span class="type">OutputStream </span><span class="parameter">output</span></span>,<br>                                    <span class="methodparam"><span class="type">char </span><span class="parameter">separator</span></span>,<br>                                    <span class="methodparam"><span class="type">CourseVO </span><span class="parameter">course</span></span>)<br>    throws <span class="exceptionname">IOException</span>;</code>
+        <p>Writes the course's attributes to CSV output stream.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>output</p></td><td><p> the OutputStream</p></td></tr><tr><td><p>separator</p></td><td><p> the field separator</p></td></tr><tr><td><p>course</p></td><td><p> the CourseVO</p></td></tr></tbody></table>
+        </div>
+        <div class="variablelist" title="Exceptions"><p class="title"><b>Exceptions</b></p><dl><dt><span class="term"><code class="exceptionname">IOException</code></span></dt><dd>
+              <p>java.io.IOException</p>
+            </dd></dl></div>
+      </div>
+      <div class="sect2" title="writeUserToCsv(File, char, boolean, List&lt;UserVO&gt;)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-6-4"></a>writeUserToCsv(File, char, boolean, List&lt;UserVO&gt;)<a class="indexterm" name="idp1524640"></a><a class="indexterm" name="idp1525104"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="modifier">static </span><span class="type">void </span><span class="methodname">writeUserToCsv</span>(<span class="methodparam"><span class="type">File </span><span class="parameter">csvFile</span></span>,<br>                                  <span class="methodparam"><span class="type">char </span><span class="parameter">separator</span></span>,<br>                                  <span class="methodparam"><span class="type">boolean </span><span class="parameter">append</span></span>,<br>                                  <span class="methodparam"><span class="type">List&lt;UserVO&gt; </span><span class="parameter">user</span></span>)<br>    throws <span class="exceptionname">IOException</span>;</code>
+        <p>Writes the attributes of the users to CSV file you may specify whether to overwrite or to append the file.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>csvFile</p></td><td><p> the file to write</p></td></tr><tr><td><p>separator</p></td><td><p> the field separator</p></td></tr><tr><td><p>append</p></td><td><p> if false the file will be deleted first else the users will be append to end</p></td></tr><tr><td><p>user</p></td><td><p> the UserVOes</p></td></tr></tbody></table>
+        </div>
+        <div class="variablelist" title="Exceptions"><p class="title"><b>Exceptions</b></p><dl><dt><span class="term"><code class="exceptionname">IOException</code></span></dt><dd>
+              <p>java.io.IOException</p>
+            </dd></dl></div>
+      </div>
+      <div class="sect2" title="writeUserToCsv(File, char, boolean, UserVO)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-6-3"></a>writeUserToCsv(File, char, boolean, UserVO)<a class="indexterm" name="idp1548800"></a><a class="indexterm" name="idp1549184"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="modifier">static </span><span class="type">void </span><span class="methodname">writeUserToCsv</span>(<span class="methodparam"><span class="type">File </span><span class="parameter">csvFile</span></span>,<br>                                  <span class="methodparam"><span class="type">char </span><span class="parameter">separator</span></span>,<br>                                  <span class="methodparam"><span class="type">boolean </span><span class="parameter">append</span></span>,<br>                                  <span class="methodparam"><span class="type">UserVO </span><span class="parameter">user</span></span>)<br>    throws <span class="exceptionname">IOException</span>;</code>
+        <p>Writes the user's attributes to CSV file you may specify whether to overwrite or to append the file.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>csvFile</p></td><td><p> the file to write</p></td></tr><tr><td><p>separator</p></td><td><p> the field separator</p></td></tr><tr><td><p>append</p></td><td><p> if false the file will be deleted first else the user will be append to end</p></td></tr><tr><td><p>user</p></td><td><p> the UserVO</p></td></tr></tbody></table>
+        </div>
+        <div class="variablelist" title="Exceptions"><p class="title"><b>Exceptions</b></p><dl><dt><span class="term"><code class="exceptionname">IOException</code></span></dt><dd>
+              <p>java.io.IOException</p>
+            </dd></dl></div>
+      </div>
+      <div class="sect2" title="writeUserToCsv(OutputStream, char, UserVO)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-6-2"></a>writeUserToCsv(OutputStream, char, UserVO)<a class="indexterm" name="idp1572896"></a><a class="indexterm" name="idp1573280"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="modifier">static </span><span class="type">void </span><span class="methodname">writeUserToCsv</span>(<span class="methodparam"><span class="type">OutputStream </span><span class="parameter">output</span></span>,<br>                                  <span class="methodparam"><span class="type">char </span><span class="parameter">separator</span></span>,<br>                                  <span class="methodparam"><span class="type">UserVO </span><span class="parameter">user</span></span>)<br>    throws <span class="exceptionname">IOException</span>;</code>
+        <p>Writes the user's attributes to CSV ouput stream.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>output</p></td><td><p> the OuputStream</p></td></tr><tr><td><p>separator</p></td><td><p> the field separator</p></td></tr><tr><td><p>user</p></td><td><p> the UserVO</p></td></tr></tbody></table>
+        </div>
+        <div class="variablelist" title="Exceptions"><p class="title"><b>Exceptions</b></p><dl><dt><span class="term"><code class="exceptionname">IOException</code></span></dt><dd>
+              <p>java.io.IOException</p>
+            </dd></dl></div>
+      </div>
+    </div>
+  </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bk03ch03s03.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="bk03.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="bk03apa.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Klasse User </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Anhang A. Attribute mit konstanten Werten</td></tr></table></div></body></html>

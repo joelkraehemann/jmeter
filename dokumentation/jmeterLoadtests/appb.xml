@@ -1,0 +1,864 @@
+<?xml version='1.0' encoding="utf-8"?>
+<sect1>
+  <title>Journal</title>
+  <para>
+    Arbeiten, Zeitaufwand und Reflexion sind hier aufgeführt.
+  </para>
+
+  <table>
+    <title>Donnerstag 7. März</title>
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colnum="1" colwidth="2.2cm"/>
+      <colspec colnum="2" colwidth="2.2cm"/>
+      <colspec colnum="3" colwidth="*"/>
+      <colspec colnum="4" colwidth="*"/>
+      <thead>
+	<row>
+	  <entry>Schlüssel</entry>
+	  <entry>Aufwand[h]</entry>
+	  <entry>Tätigkeit</entry>
+	  <entry>Reflexion</entry>
+	</row>
+      </thead>
+      <tbody>
+	<row>
+	  <entry>
+	    -
+	  </entry>
+	  <entry>
+	    0.75
+	  </entry>
+	  <entry>
+	    Besprechung über den Ablauf der IPA mit Florian Gnägi. Es wurde der ist und soll Zustand der
+	    Testabdeckung besprochen. Der eAssessment Test soll umfangreich sein und der Einschreibebaustein
+	    für einen Kurs soll getestet werden.
+	  </entry>
+	  <entry>
+	    Der Login Test wurde bereits portiert und es steht allenfalls noch dessen Reimplementierung
+	    aus. Der Login Test benützt die Full-Page Refresh Schnittstelle von openolat er soll jedoch in
+	    Zukunft mit der Web 2.0 Schnittstelle funktionieren. Doch Priorität hat der eAssessment und der
+	    Einschreibe Test.
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    M01
+	  </entry>
+	  <entry>
+	    0.5
+	  </entry>
+	  <entry>
+	    Erstellen eines Zeitraffers auf einem A3 Blatt für interne Verwendung.
+	  </entry>
+	  <entry>
+	    Dieser soll auf Wunsch immer die nächsten zwei Tage geplant werden, damit der Verlauf besser
+	    Nachvollziehbar ist.
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    -
+	  </entry>
+	  <entry>
+	    0.25
+	  </entry>
+	  <entry>
+	    Scrum.
+	  </entry>
+	  <entry>
+	    -
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    M04
+	  </entry>
+	  <entry>
+	    1.0
+	  </entry>
+	  <entry>
+	    Ordner Struktur erstellen und vorhandene Ressourcen kopieren. Installieren von JMeter und die
+	    Konfiguration der Datenbank und des Servers festhalten, mit diverse READMEs als Produkt.
+	  </entry>
+	  <entry>
+	    Die READMEs werden in die Dokumentation miteinbezogen.
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    -
+	  </entry>
+	  <entry>
+	    3.0
+	  </entry>
+	  <entry>
+	    Dokumentenstruktur anlegen und Docbook XML Kenntnisse auffrischen.
+	  </entry>
+	  <entry>
+	    Ich habe mich für das Verfassen der Dokumentation für Docbook XML entschieden, da der Quick-Start Guide
+	    in einem internettauglichem Format gespeichert werden soll und um mich nicht mit zwei verschiedenen
+	    Textverarbeitungsprogrammen auseinandersetzen zu müssen.
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    -
+	  </entry>
+	  <entry>
+	    0.5
+	  </entry>
+	  <entry>
+	    Gespräch mit Herr U. Niederhäuser und Austausch betreffend Wegleitung.
+	  </entry>
+	  <entry>
+	    Allfällige Fragen mit Herr A. Knöpfli klären.
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    -
+	  </entry>
+	  <entry>
+	    0.5
+	  </entry>
+	  <entry>
+	    Smalltalk mit Anwesenden.
+	  </entry>
+	  <entry>
+	    -
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    -
+	  </entry>
+	  <entry>
+	    1.0
+	  </entry>
+	  <entry>
+	    Gespräch mit Herr U. Niederhäuser, F. Gnägi und A. Knöpfli.
+	  </entry>
+	  <entry>
+	    Während den geplanten 80 Stunde sollte auch Zeit für die Präsentation da sein.
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    -
+	  </entry>
+	  <entry>
+	    0.5
+	  </entry>
+	  <entry>
+	    Journal führen.
+	  </entry>
+	  <entry>
+	    -
+	  </entry>
+	</row>
+      </tbody>
+    </tgroup>
+  </table>
+
+  <table>
+    <title>Montag 11. März</title>
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colnum="1" colwidth="2.2cm"/>
+      <colspec colnum="2" colwidth="2.2cm"/>
+      <colspec colnum="3" colwidth="*"/>
+      <colspec colnum="4" colwidth="*"/>
+      <thead>
+	<row>
+	  <entry>Schlüssel</entry>
+	  <entry>Aufwand[h]</entry>
+	  <entry>Tätigkeit</entry>
+	  <entry>Reflexion</entry>
+	</row>
+      </thead>
+      <tbody>
+	<row>
+	  <entry>
+	    M01
+	  </entry>
+	  <entry>
+	    1.0
+	  </entry>
+	  <entry>
+	    Zeitplan Diagramm erstellen.
+	  </entry>
+	  <entry>
+	    Ich habe die Zeitplan Grafik mit SVG erstellt. Das ist zwar eine aufwendige Methode, aber bietet mir das
+	    Optimum an gestalterischer Freiheit.
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    -
+	  </entry>
+	  <entry>
+	    3.5
+	  </entry>
+	  <entry>
+	    Erstes Kapitel fertig stellen.
+	  </entry>
+	  <entry>
+	    -
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    M04
+	  </entry>
+	  <entry>
+	    2.0
+	  </entry>
+	  <entry>
+	    Kapitel 2 Struktur anlegen, Konfigurationen einbinden sowie Shell Kommandos festhalten.
+	  </entry>
+	  <entry>
+	    Weil die Planung noch nicht fertig war wurde parallel installiert und konfiguriert. Damit meine Erfahrungen
+	    getreu wiedergegeben werden können, habe ich die Dokumentation ebenfalls vorgezogen.
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    M03
+	  </entry>
+	  <entry>
+	    0.5
+	  </entry>
+	  <entry>
+	    Lesen der relevanten Seiten aus der JMeter Dokumentation.
+	  </entry>
+	  <entry>
+	    Ist sehr knapp beschrieben und ist viel weniger als erwartet.
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    M03
+	  </entry>
+	  <entry>
+	    1.0
+	  </entry>
+	  <entry>
+	    JMeter mit statischem Inhalt testen.
+	  </entry>
+	  <entry>
+	    Dafür verwendete ich meine private Homepage weedlight.ch. 
+	  </entry>
+	</row>
+      </tbody>
+    </tgroup>
+  </table>
+
+  <table>
+    <title>Dienstag 12. März</title>
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colnum="1" colwidth="2.2cm"/>
+      <colspec colnum="2" colwidth="2.2cm"/>
+      <colspec colnum="3" colwidth="*"/>
+      <colspec colnum="4" colwidth="*"/>
+      <thead>
+	<row>
+	  <entry>Schlüssel</entry>
+	  <entry>Aufwand[h]</entry>
+	  <entry>Tätigkeit</entry>
+	  <entry>Reflexion</entry>
+	</row>
+      </thead>
+      <tbody>
+	<row>
+	  <entry>
+	    M03
+	  </entry>
+	  <entry>
+	    2.0
+	  </entry>
+	  <entry>
+	    JMeter mit statischem Inhalt testen.
+	  </entry>
+	  <entry>
+	    Ich habe mit XPath erfolgreich einen Link ausgelesen und diesen in einer Variable weiterverwendet. Die XPath
+	    Implementation scheint sich aber zu bisher Bekannten zu unterscheiden - evtl. Versionsunterschied. Hat sich
+	    bis jetzt nur beim Gruppieren bemerkbar gemacht.
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    M04
+	  </entry>
+	  <entry>
+	    2.0
+	  </entry>
+	  <entry>
+	    Dokumentation ausführen und Konfiguration anpassen.
+	  </entry>
+	  <entry>
+	    -
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    -
+	  </entry>
+	  <entry>
+	    3
+	  </entry>
+	  <entry>
+	    Stromausfall!
+	  </entry>
+	  <entry>
+	    Wegen Stromausfall war das Arbeiten unmöglich, um 17.15 Uhr Abbruch weil Behebung nicht absehbar schien.
+	  </entry>
+	</row>
+      </tbody>
+    </tgroup>
+  </table>
+
+  <table>
+    <title>Mittwoch 13. März</title>
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colnum="1" colwidth="2.2cm"/>
+      <colspec colnum="2" colwidth="2.2cm"/>
+      <colspec colnum="3" colwidth="*"/>
+      <colspec colnum="4" colwidth="*"/>
+      <thead>
+	<row>
+	  <entry>Schlüssel</entry>
+	  <entry>Aufwand[h]</entry>
+	  <entry>Tätigkeit</entry>
+	  <entry>Reflexion</entry>
+	</row>
+      </thead>
+      <tbody>
+	<row>
+	  <entry>
+	    M04
+	  </entry>
+	  <entry>
+	    2.0
+	  </entry>
+	  <entry>
+	    Dokumentation ausführen und Konfiguration anpassen.
+	  </entry>
+	  <entry>
+	    Im Hinblick zu meinem nächsten Arbeitsschritt fiel mir ein, dass in <filename>olat.local.properties</filename>
+	    der RESTful Webservice eingeschaltet sein muss. Das Glossar habe ich in diesem Arbeitsschritt begonnen.
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    M02
+	  </entry>
+	  <entry>
+	    0.5
+	  </entry>
+	  <entry>
+	    Journal führen.
+	  </entry>
+	  <entry>
+	    Obwohl ich für gestern das Journal nachträglich führen muss, ist es authentisch wiedergegeben. 
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    -
+	  </entry>
+	  <entry>
+	    0.25
+	  </entry>
+	  <entry>
+	    Kommunikation.
+	  </entry>
+	  <entry>
+	    Mail schreiben wegen Arbeitsausfall und Stand der IPA übermitteln. 
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    M05.01 &amp; M05.02
+	  </entry>
+	  <entry>
+	    5.75
+	  </entry>
+	  <entry>
+	    Restclient implementieren in Java. Skeleton der Klassen sowie API-Dokumentation erstellen.
+	  </entry>
+	  <entry>
+	    Ich habe noch nie so ausführlich dokumentiert, aber das Ausführen macht Spass. Des weiteren habe ich mir
+	    das <application>javadoc</application> Doclet dbdoclet angeschaut. Dies ist ein Softwarepaket, das mit
+	    einer GUI kommt, aber die nicht funktioniert.
+	  </entry>
+	</row>
+      </tbody>
+    </tgroup>
+  </table>
+
+  <table>
+    <title>Donnerstag 14. März</title>
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colnum="1" colwidth="2.2cm"/>
+      <colspec colnum="2" colwidth="2.2cm"/>
+      <colspec colnum="3" colwidth="*"/>
+      <colspec colnum="4" colwidth="*"/>
+      <thead>
+	<row>
+	  <entry>Schlüssel</entry>
+	  <entry>Aufwand[h]</entry>
+	  <entry>Tätigkeit</entry>
+	  <entry>Reflexion</entry>
+	</row>
+      </thead>
+      <tbody>
+	<row>
+	  <entry>
+	    M05.01 &amp; M05.02
+	  </entry>
+	  <entry>
+	    3.5
+	  </entry>
+	  <entry>
+	    API-Dokumentation ergänzen, Properties Datei anwenden und die <function>generateUser</function> sowie
+	    <function>importCourse</function> Methoden implementieren. CsvHelper Klasse implementieren.
+	  </entry>
+	  <entry>
+	    Mit dem Aufrufen von <application>javadoc</application> und dem dbdoclet war ich heute erfolgreich und
+	    habe diese meiner Dokumentation hinzugefügt.
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    M06
+	  </entry>
+	  <entry>
+	    1.25
+	  </entry>
+	  <entry>
+	    Umfangreicher eAssessement Test erstellen.
+	  </entry>
+	  <entry>
+	    Ich habe in der angegebenen Zeit nur 18 Fragen verteilt auf 6 Sektionen geschafft. Dafür habe ich etwas
+	    menschenleserliches, was mir bei der Fehlersuche im JMeter Test wahrscheinlich hilfreich sein könnte.
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    M05.01 &amp; M05.02
+	  </entry>
+	  <entry>
+	    1.5
+	  </entry>
+	  <entry>
+	    REST-API Pfad Probleme ausfindig machen und beheben.
+	  </entry>
+	  <entry>
+	    Die RestConnection Klasse erhielt kein Security Token gab, aber beim Login Status Code 200 zurück. Das machte
+	    das Aufspüren des Fehlers enorm aufwendig. Die Fehlerursache lag in einer Methode, die ich nicht geschrieben
+	    habe. Der Hauptentwickler wies mich jedoch darauf hin, dass ich auf einer richtigen Openolat Instanz andere
+	    Pfade und Ports habe, als in den Selenium Tests.
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    M07
+	  </entry>
+	  <entry>
+	    1.25
+	  </entry>
+	  <entry>
+	    Loadtest erstellen für eAssessment Test.
+	  </entry>
+	  <entry>
+	    Erfolgreicher Import des eAssessment Tests über RESTful Webservice, CSV Datei scheint in Ordnung zu sein.
+	    Generieren der Benutzer und deren Attribute in eine CSV Datei schreiben verlief ohne Probleme. Der Login
+	    mit JMeter und den 100 Benutzer war erfolgreich.
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    M02
+	  </entry>
+	  <entry>
+	    0.5
+	  </entry>
+	  <entry>
+	    Journal führen.
+	  </entry>
+	  <entry>
+	    -
+	  </entry>
+	</row>
+      </tbody>
+    </tgroup>
+  </table>
+
+  <table>
+    <title>Samstag 16. März</title>
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colnum="1" colwidth="2.2cm"/>
+      <colspec colnum="2" colwidth="2.2cm"/>
+      <colspec colnum="3" colwidth="*"/>
+      <colspec colnum="4" colwidth="*"/>
+      <thead>
+	<row>
+	  <entry>Schlüssel</entry>
+	  <entry>Aufwand[h]</entry>
+	  <entry>Tätigkeit</entry>
+	  <entry>Reflexion</entry>
+	</row>
+      </thead>
+      <tbody>
+	<row>
+	  <entry>
+	    -
+	  </entry>
+	  <entry>
+	    <emphasis role="strike">1.5</emphasis>
+	  </entry>
+	  <entry>
+	    Nachforschungen bezüglich Konvertierungstool für Docbook XML Publikation.
+	  </entry>
+	  <entry>
+	    Das Evaluieren fiel auf dblatex als PDF Generierungswerkzeug. Ich bitte
+	    darum diese Zeit nicht für die IPA anzurechnen, da ich Docbook XML auch für ein anderes FOSS Projekt
+	    einsetze.
+	  </entry>
+	</row>
+      </tbody>
+    </tgroup>
+  </table>
+
+  <table>
+    <title>Montag 18. März</title>
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colnum="1" colwidth="2.2cm"/>
+      <colspec colnum="2" colwidth="2.2cm"/>
+      <colspec colnum="3" colwidth="*"/>
+      <colspec colnum="4" colwidth="*"/>
+      <thead>
+	<row>
+	  <entry>Schlüssel</entry>
+	  <entry>Aufwand[h]</entry>
+	  <entry>Tätigkeit</entry>
+	  <entry>Reflexion</entry>
+	</row>
+      </thead>
+      <tbody>
+	<row>
+	  <entry>
+	    M07
+	  </entry>
+	  <entry>
+	    7.75
+	  </entry>
+	  <entry>
+	    JMeter Loadtest implementieren.
+	  </entry>
+	  <entry>
+	    Ich hatte heute diverse XPath Probleme, die ich jedoch lösen konnte. Diese war sehr Zeitraubend,
+	    dafür habe ich etwas dazu gelernt. Des weiteren musste ich herausfinden, dass im For-Controller die
+	    HTTP-Requests des vorangehenden Http-Sampler nicht verfügbar sind. Dies schliesse ich darauf zurück, dass
+	    ich bei jedem XPath-Postcontroller keine Daten erhielt. Morgen werde ich viel dokumentieren können.
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    M02
+	  </entry>
+	  <entry>
+	    0.25
+	  </entry>
+	  <entry>
+	    Journal führen.
+	  </entry>
+	  <entry>
+	    -
+	  </entry>
+	</row>
+      </tbody>
+    </tgroup>
+  </table>
+
+  <table>
+    <title>Dienstag 19. März</title>
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colnum="1" colwidth="2.2cm"/>
+      <colspec colnum="2" colwidth="2.2cm"/>
+      <colspec colnum="3" colwidth="*"/>
+      <colspec colnum="4" colwidth="*"/>
+      <thead>
+	<row>
+	  <entry>Schlüssel</entry>
+	  <entry>Aufwand[h]</entry>
+	  <entry>Tätigkeit</entry>
+	  <entry>Reflexion</entry>
+	</row>
+      </thead>
+      <tbody>
+	<row>
+	  <entry>
+	    M07
+	  </entry>
+	  <entry>
+	    6.75
+	  </entry>
+	  <entry>
+	    JMeter Loadtest implementieren.
+	  </entry>
+	  <entry>
+	    Es gab weitere Probleme mit XPath, deshalb werde ich einen Patch für JMeter schreiben.
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    -
+	  </entry>
+	  <entry>
+	    1.0
+	  </entry>
+	  <entry>
+	    Treffen mit A. Knöpfli
+	  </entry>
+	  <entry>
+	    Inputs betreffend Dokument Aufbau nach Wegleitung zur Kenntnis genommen. Es machte Spass einem
+	    Aussenstehenden die Arbeit zu zeigen.
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    M02
+	  </entry>
+	  <entry>
+	    0.25
+	  </entry>
+	  <entry>
+	    Journal führen.
+	  </entry>
+	  <entry>
+	    -
+	  </entry>
+	</row>
+      </tbody>
+    </tgroup>
+  </table>
+
+  <table>
+    <title>Mittwoch 20. März</title>
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colnum="1" colwidth="2.2cm"/>
+      <colspec colnum="2" colwidth="2.2cm"/>
+      <colspec colnum="3" colwidth="*"/>
+      <colspec colnum="4" colwidth="*"/>
+      <thead>
+	<row>
+	  <entry>Schlüssel</entry>
+	  <entry>Aufwand[h]</entry>
+	  <entry>Tätigkeit</entry>
+	  <entry>Reflexion</entry>
+	</row>
+      </thead>
+      <tbody>
+	<row>
+	  <entry>
+	    M07
+	  </entry>
+	  <entry>
+	    7.75
+	  </entry>
+	  <entry>
+	    JMeter Loadtest implementieren.
+	  </entry>
+	  <entry>
+	    Beim Erstellen des Patches war es unumgänglich den Quellcode anzuschauen, dabei viel mir
+	    auf, dass mittels einem bestimmten Suffix auch die Anzahl Treffer ausgelesen werden können.
+	    Also war die Mühe nicht umsonst, weil vorhergegangene Recherchen erfolglos gewesen sind.
+	    Ich habe heute das Ausfüllen aller Fragetypen fertig gestellt. Weiteres habe ich mit der
+	    Dokumentation von JMeter begonnen.
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    M02
+	  </entry>
+	  <entry>
+	    0.25
+	  </entry>
+	  <entry>
+	    Journal führen.
+	  </entry>
+	  <entry>
+	    -
+	  </entry>
+	</row>
+      </tbody>
+    </tgroup>
+  </table>
+
+  <table>
+    <title>Donnerstag 21. März</title>
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colnum="1" colwidth="2.2cm"/>
+      <colspec colnum="2" colwidth="2.2cm"/>
+      <colspec colnum="3" colwidth="*"/>
+      <colspec colnum="4" colwidth="*"/>
+      <thead>
+	<row>
+	  <entry>Schlüssel</entry>
+	  <entry>Aufwand[h]</entry>
+	  <entry>Tätigkeit</entry>
+	  <entry>Reflexion</entry>
+	</row>
+      </thead>
+      <tbody>
+	<row>
+	  <entry>
+	    M07
+	  </entry>
+	  <entry>
+	    4.75
+	  </entry>
+	  <entry>
+	    JMeter Loadtest dokumentieren.
+	  </entry>
+	  <entry>
+	    Ich habe die Dokumentation am Stück geschrieben. Danach hatte ich die Mittagspause absolut
+	    nötig. Ich habe jemanden der mit JMeter Erfahrungen hat, angefragt ob er das darauf bezogene Kapitel
+	    gegenlesen würde.
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    M08
+	  </entry>
+	  <entry>
+	    3.0
+	  </entry>
+	  <entry>
+	    Auswerten der JMeter Tests.
+	  </entry>
+	  <entry>
+	    Ich machte mir Gedanken über eine automatisierte Generierung von Testdaten und habe Recherchen bezüglich
+	    Überwachungswerkzeuge angestellt. Dabei musste ich feststellen, dass ich ein weiteres Tool benötige, um
+	    die Last des Betriebssystem zu überwachen. Ich traf die Entscheidung eine kleine RMI Anwendung zu Programmieren,
+	    die über das Wochenende Server Neustarts durchführt, bei einem Crash das System neu aufsetzt und die
+	    Testbedingungen anpasst.
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    M02
+	  </entry>
+	  <entry>
+	    0.25
+	  </entry>
+	  <entry>
+	    Journal führen.
+	  </entry>
+	  <entry>
+	    -
+	  </entry>
+	</row>
+      </tbody>
+    </tgroup>
+  </table>
+
+
+  <table>
+    <title>Montag 25. März</title>
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colnum="1" colwidth="2.2cm"/>
+      <colspec colnum="2" colwidth="2.2cm"/>
+      <colspec colnum="3" colwidth="*"/>
+      <colspec colnum="4" colwidth="*"/>
+      <thead>
+	<row>
+	  <entry>Schlüssel</entry>
+	  <entry>Aufwand[h]</entry>
+	  <entry>Tätigkeit</entry>
+	  <entry>Reflexion</entry>
+	</row>
+      </thead>
+      <tbody>
+	<row>
+	  <entry>
+	    M08
+	  </entry>
+	  <entry>
+	    8.0
+	  </entry>
+	  <entry>
+	    Auswerten der JMeter Tests.
+	  </entry>
+	  <entry>
+	    Ideen von einer verteilten Reconfigurationssoftware haben wir vorerst verworfen. Vier Tests durchführen und
+	    dokumentieren.
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    -
+	  </entry>
+	  <entry>
+	    1.5
+	  </entry>
+	  <entry>
+	    Dokumentation bereinigen.
+	  </entry>
+	  <entry>
+	    Rechtschreibfehler beheben und Glossar fertigstellen.
+	  </entry>
+	</row>
+	<row>
+	  <entry>
+	    M02
+	  </entry>
+	  <entry>
+	    0.25
+	  </entry>
+	  <entry>
+	    Journal führen.
+	  </entry>
+	  <entry>
+	    -
+	  </entry>
+	</row>
+      </tbody>
+    </tgroup>
+  </table>
+
+  <table>
+    <title>Dienstag 26. März</title>
+    <tgroup cols="4" align="left" colsep="1" rowsep="1">
+      <colspec colnum="1" colwidth="2.2cm"/>
+      <colspec colnum="2" colwidth="2.2cm"/>
+      <colspec colnum="3" colwidth="*"/>
+      <colspec colnum="4" colwidth="*"/>
+      <thead>
+	<row>
+	  <entry>Schlüssel</entry>
+	  <entry>Aufwand[h]</entry>
+	  <entry>Tätigkeit</entry>
+	  <entry>Reflexion</entry>
+	</row>
+      </thead>
+      <tbody>
+	<row>
+	  <entry>
+	    -
+	  </entry>
+	  <entry>
+	    1.5
+	  </entry>
+	  <entry>
+	    Quick-Start Guide schreiben.
+	  </entry>
+	  <entry>
+	    Anhand der Dokumentation eine Kurzübersicht auf Englisch verfassen.
+	  </entry>
+	</row>
+      </tbody>
+    </tgroup>
+  </table>
+
+</sect1>

@@ -1,0 +1,56 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Resttool</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="openolat LMS - JMeter Loadtests"><link rel="up" href="bk02ch04.html" title="Kapitel 4. Auswertung"><link rel="prev" href="bk02ch04.html" title="Kapitel 4. Auswertung"><link rel="next" href="bk02ch04s03.html" title="Test 1: 50 Benutzer"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Resttool</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bk02ch04.html">Zurück</a> </td><th width="60%" align="center">Kapitel 4. Auswertung</th><td width="20%" align="right"> <a accesskey="n" href="bk02ch04s03.html">Weiter</a></td></tr></table><hr></div><div class="sect1" title="Resttool"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp359936"></a>Resttool</h2></div></div></div>
+    
+
+    <p>
+      Ausführbare JAR Datei erstellen:
+    </p>
+
+    <pre class="programlisting">
+#!/bin/bash
+
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+mvn clean package
+mvn assembly:assembly
+
+    </pre>
+
+    <p>
+      Generieren der Testbenutzer:
+    </p>
+
+    <pre class="programlisting">
+#!/bin/bash
+
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+/usr/lib/jvm/java-7-openjdk-amd64/bin/java -jar target/resttool-1.0-SNAPSHOT-jar-with-dependencies.jar -g user 500 -o user.csv
+
+    </pre>
+
+    <p>
+      Import des eAssessment Kurses:
+    </p>
+
+    <pre class="programlisting">
+#!/bin/bash
+
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+/usr/lib/jvm/java-7-openjdk-amd64/bin/java -jar target/resttool-1.0-SNAPSHOT-jar-with-dependencies.jar -i eAssessment_Course.zip -o course.csv
+
+    </pre>
+
+    <p>
+      Da das Resttool nicht automatisiert die Benutzungsbedingungen annehmen kann, müssen wir noch in der Administration
+      Site dies mittels der Bulkaufgabe machen. Dabei stellen wir die Standardsprache zudem auf Deutsch. Ausserdem muss
+      in JMeter im <span class="emphasis"><em>open eAssessment test</em></span> Sampler die Repository Entry ID auf den importierten Kurs
+      angepasst werden, welche Sie aus course.csv entnehmen können.
+    </p>
+
+    <pre class="programlisting">
+#!/bin/bash
+
+# zweite Spalte ausgeben - Benutzernamen auflisten
+awk -F ',' '{print $2}' user.csv
+
+    </pre>
+
+  </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bk02ch04.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="bk02ch04.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="bk02ch04s03.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Kapitel 4. Auswertung </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Test 1: 50 Benutzer</td></tr></table></div></body></html>

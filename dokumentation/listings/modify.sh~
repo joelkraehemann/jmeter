@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd ~/Downloads
+
+# download Groovy
+wget -c http://repo1.maven.org/maven2/org/codehaus/groovy/groovy-all/2.1.1/groovy-all-2.1.1.jar

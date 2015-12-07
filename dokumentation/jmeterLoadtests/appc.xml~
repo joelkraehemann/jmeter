@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding="utf-8"?>
+<appendix>
+  <title>Glossar</title>
+
+  <glossary xmlns="http://docbook.org/ns/docbook" version="5.0">
+    <para>
+      In diesem Glossar werden Abkürzungen sowie Fachbegriffe ausgeführt.
+    </para>
+
+    <glossdiv><title>A</title>
+
+    <glossentry id="ajax"><glossterm>Asynchronous JavaScript and XML</glossterm>
+    <acronym>AJAX</acronym>
+    <glossdef>
+      <para>
+	AJAX ist das Feauture eines Browsers, das JavaScript ermöglicht zu einem beliebigen Zeitpunkt Daten an einen Webserver
+	zu schicken und die Antwort abzuwarten, um dann z.B. das DOM zu bearbeiten. Zur Kommunikation wird entweder JSON oder
+	XML eingesetzt.
+      </para>
+    </glossdef>
+    </glossentry>
+    </glossdiv>
+
+    <glossdiv><title>C</title>
+
+    <glossentry id="csv"><glossterm>Comma Separated Values</glossterm>
+    <acronym>CSV</acronym>
+    <glossdef>
+      <para>
+	-
+      </para>
+    </glossdef>
+    </glossentry>
+    </glossdiv>
+
+    <glossdiv><title>G</title>
+
+    <glossentry id="gui"><glossterm>Graphical User Interface</glossterm>
+    <acronym>GUI</acronym>
+    <glossdef>
+      <para>
+	-
+      </para>
+    </glossdef>
+    </glossentry>
+    </glossdiv>
+
+    <glossdiv><title>H</title>
+
+    <glossentry id="html"><glossterm>Hyper Text Markup Language</glossterm>
+    <acronym>HTML</acronym>
+    <glossdef>
+      <para>
+	-
+      </para>
+    </glossdef>
+    </glossentry>
+
+    <glossentry id="http"><glossterm>Hyper Text Transport Protocol</glossterm>
+    <acronym>HTTP</acronym>
+    <glossdef>
+      <para>
+	-
+      </para>
+    </glossdef>
+    </glossentry>
+    </glossdiv>
+
+    <glossdiv><title>J</title>
+    
+    <glossentry id="jre"><glossterm>Java Runtime Environment</glossterm>
+    <acronym>JRE</acronym>
+    <glossdef>
+      <para>
+	-
+      </para>
+    </glossdef>
+    </glossentry>
+    </glossdiv>
+
+    <glossdiv><title>L</title>
+
+    <glossentry id="lms"><glossterm>Learning Management System</glossterm>
+    <acronym>LMS</acronym>
+    <glossdef>
+      <para>
+	-
+      </para>
+    </glossdef>
+    </glossentry>
+    </glossdiv>
+
+    <glossdiv><title>O</title>
+
+    <glossentry id="oss"><glossterm>Open Source Software</glossterm>
+    <acronym>OSS</acronym>
+    <glossdef>
+      <para>
+	-
+      </para>
+      </glossdef>
+    </glossentry>
+    </glossdiv>
+
+    <glossdiv><title>S</title>
+
+    <glossentry id="sql"><glossterm>Structured Query Language</glossterm>
+    <acronym>SQL</acronym>
+    <glossdef>
+      <para>
+	-
+      </para>
+    </glossdef>
+    </glossentry>
+    </glossdiv>
+
+    <glossdiv><title>W</title>
+
+    <glossentry id="war"><glossterm>Web Archive</glossterm>
+    <acronym>WAR</acronym>
+    <glossdef>
+      <para>
+	-
+      </para>
+    </glossdef>
+    </glossentry>
+    </glossdiv>
+    
+  </glossary>
+</appendix>

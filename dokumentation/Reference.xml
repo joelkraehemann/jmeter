@@ -1,0 +1,2527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book version="5.0" xml:lang="de" xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink">
+  <title>JavaDoc Reference</title>
+  <info>
+    <date>14. März 2013</date>
+    <abstract>
+      <para></para>
+    </abstract>
+  </info>
+  <chapter xml:id="dbdoclet-PACKAGE-1" xreflabel="com.frentix">
+    <title>Paket com.­frentix</title>
+    <para></para>
+    <sect1 xml:id="dbdoclet-CLASS-1" xreflabel="com.frentix.Resttool">
+      <title>Klasse Resttool</title>
+      <indexterm><primary>Resttool</primary></indexterm>
+      <indexterm><primary>Classes</primary><secondary>Resttool</secondary></indexterm>
+      <para>You may import or query repository entries with Resttool as well generate, create or query users of an openolat LMS instance.</para>
+      <sect2>
+        <title>Syntax</title>
+        <classsynopsis class="class" language="java">
+          <ooclass>
+            <modifier>public</modifier>
+            <modifier>class</modifier>
+            <classname>Resttool</classname>
+          </ooclass>
+          <classsynopsisinfo role="comment">// Public Static Fields</classsynopsisinfo>
+          <fieldsynopsis language="java">
+            <modifier>public</modifier>
+            <modifier>static</modifier>
+            <modifier>final</modifier>
+            <type>String</type>
+            <varname>CREATE_USER_USAGE</varname>
+            <initializer>&quot;-i user.csv -o user.csv&quot;</initializer>
+          </fieldsynopsis>
+          <fieldsynopsis language="java">
+            <modifier>public</modifier>
+            <modifier>static</modifier>
+            <modifier>final</modifier>
+            <type>String</type>
+            <varname>GENERATE_USER_USAGE</varname>
+            <initializer>&quot;-g user count -o user.csv&quot;</initializer>
+          </fieldsynopsis>
+          <fieldsynopsis language="java">
+            <modifier>public</modifier>
+            <modifier>static</modifier>
+            <modifier>final</modifier>
+            <type>String</type>
+            <varname>IMPORT_REPOSITORY_ENTRY_USAGE</varname>
+            <initializer>&quot;-i repositoryEntry.zip -o repositoryEntry.csv&quot;</initializer>
+          </fieldsynopsis>
+          <fieldsynopsis language="java">
+            <modifier>public</modifier>
+            <modifier>static</modifier>
+            <modifier>final</modifier>
+            <type>String</type>
+            <varname>QUERY_REPOSITORY_ENTRY_USAGE</varname>
+            <initializer>&quot;-q repository -o repositoryEntry.csv&quot;</initializer>
+          </fieldsynopsis>
+          <fieldsynopsis language="java">
+            <modifier>public</modifier>
+            <modifier>static</modifier>
+            <modifier>final</modifier>
+            <type>String</type>
+            <varname>QUERY_USER_USAGE</varname>
+            <initializer>&quot;-q user -o user.csv&quot;</initializer>
+          </fieldsynopsis>
+          <fieldsynopsis language="java">
+            <modifier>public</modifier>
+            <modifier>static</modifier>
+            <modifier>final</modifier>
+            <type>String</type>
+            <varname>RESTTOOL_INVOKE</varname>
+            <initializer>&quot;java -jar Resttool.jar&quot;</initializer>
+          </fieldsynopsis>
+          <classsynopsisinfo role="comment">// Public Constructors</classsynopsisinfo>
+          <constructorsynopsis language="java">
+            <modifier>public</modifier>
+            <methodname>Resttool</methodname>
+            <void/>
+          </constructorsynopsis>
+          <classsynopsisinfo role="comment">// Public Static Methods</classsynopsisinfo>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <modifier>static</modifier>
+            <type>void</type>
+            <methodname>main</methodname>
+            <methodparam><type>String[]</type><parameter>args</parameter></methodparam>
+            <exceptionname>NumberFormatException</exceptionname>
+            <exceptionname>IOException</exceptionname>
+            <exceptionname>URISyntaxException</exceptionname>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <modifier>static</modifier>
+            <type>void</type>
+            <methodname>printUsage</methodname>
+            <void/>
+          </methodsynopsis>
+        </classsynopsis>
+        <para><emphasis role="bold">Methoden geerbt von java.lang.Object</emphasis>: <simplelist type="inline"><member><varname>clone</varname></member><member><varname>equals</varname></member><member><varname>finalize</varname></member><member><varname>getClass</varname></member><member><varname>hashCode</varname></member><member><varname>notify</varname></member><member><varname>notifyAll</varname></member><member><varname>toString</varname></member><member><varname>wait</varname></member></simplelist></para>
+        <variablelist>
+          <varlistentry>
+            <term><emphasis>Autor</emphasis></term>
+            <listitem>
+              <para><simplelist type="inline"><member>jkraehemann, joel.kraehemann@frentix.com, http://www.frentix.com</member></simplelist></para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+        <informalfigure>
+          <mediaobject>
+            <imageobject role="html">
+              <imagedata align="center" fileref="./figures/com/frentix/Resttool/ClassDiagram.png" format="PNG" scalefit="1"/>
+            </imageobject>
+            <imageobject role="fo">
+              <imagedata align="center" contentdepth="100%" fileref="./figures/com/frentix/Resttool/ClassDiagram.png" format="PNG" scalefit="1" width="100%"/>
+            </imageobject>
+          </mediaobject>
+        </informalfigure>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-1-1" xreflabel="printUsage()">
+        <title>printUsage()<indexterm><primary>printUsage</primary></indexterm><indexterm><primary>Methods</primary><secondary>printUsage</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <modifier>static</modifier>
+          <type>void</type>
+          <methodname>printUsage</methodname>
+          <void/>
+        </methodsynopsis>
+        <para>Shows sample usage on console.</para>
+      </sect2>
+    </sect1>
+  </chapter>
+  <chapter xml:id="dbdoclet-PACKAGE-2" xreflabel="com.frentix.restapi">
+    <title>Paket com.­frentix.­restapi</title>
+    <para></para>
+    <sect1 xml:id="dbdoclet-CLASS-2" xreflabel="com.frentix.restapi.RestConnection">
+      <title>Klasse RestConnection</title>
+      <indexterm><primary>RestConnection</primary></indexterm>
+      <indexterm><primary>Classes</primary><secondary>RestConnection</secondary></indexterm>
+      <para>Description: Manage a connection to the grizzly server used by the unit test with some helpers methods. Initial Date: 20 d√©c. 2011</para>
+      <sect2>
+        <title>Syntax</title>
+        <classsynopsis class="class" language="java">
+          <ooclass>
+            <modifier>public</modifier>
+            <modifier>class</modifier>
+            <classname>RestConnection</classname>
+          </ooclass>
+          <classsynopsisinfo role="comment">// Public Static Fields</classsynopsisinfo>
+          <fieldsynopsis language="java">
+            <modifier>public</modifier>
+            <modifier>static</modifier>
+            <modifier>final</modifier>
+            <type>String</type>
+            <varname>CONTEXT_PATH</varname>
+            <initializer>&quot;openolat&quot;</initializer>
+          </fieldsynopsis>
+          <fieldsynopsis language="java">
+            <modifier>public</modifier>
+            <modifier>static</modifier>
+            <modifier>final</modifier>
+            <type>String</type>
+            <varname>HOST</varname>
+            <initializer>&quot;localhost&quot;</initializer>
+          </fieldsynopsis>
+          <fieldsynopsis language="java">
+            <modifier>public</modifier>
+            <modifier>static</modifier>
+            <modifier>final</modifier>
+            <type>String</type>
+            <varname>LOGIN</varname>
+            <initializer>&quot;administrator&quot;</initializer>
+          </fieldsynopsis>
+          <fieldsynopsis language="java">
+            <modifier>public</modifier>
+            <modifier>static</modifier>
+            <modifier>final</modifier>
+            <type>String</type>
+            <varname>PASSWORD</varname>
+            <initializer>&quot;openolat&quot;</initializer>
+          </fieldsynopsis>
+          <fieldsynopsis language="java">
+            <modifier>public</modifier>
+            <modifier>static</modifier>
+            <modifier>final</modifier>
+            <type>int</type>
+            <varname>PORT</varname>
+            <initializer>9998</initializer>
+          </fieldsynopsis>
+          <fieldsynopsis language="java">
+            <modifier>public</modifier>
+            <modifier>static</modifier>
+            <modifier>final</modifier>
+            <type>String</type>
+            <varname>PROTOCOL</varname>
+            <initializer>&quot;http&quot;</initializer>
+          </fieldsynopsis>
+          <classsynopsisinfo role="comment">// Public Constructors</classsynopsisinfo>
+          <constructorsynopsis language="java">
+            <modifier>public</modifier>
+            <methodname>RestConnection</methodname>
+            <void/>
+          </constructorsynopsis>
+          <constructorsynopsis language="java">
+            <modifier>public</modifier>
+            <methodname>RestConnection</methodname>
+            <methodparam><type>String</type><parameter>host</parameter></methodparam>
+            <methodparam><type>int</type><parameter>port</parameter></methodparam>
+            <methodparam><type>String</type><parameter>protocol</parameter></methodparam>
+            <methodparam><type>String</type><parameter>contextPath</parameter></methodparam>
+            <methodparam><type>String</type><parameter>login</parameter></methodparam>
+            <methodparam><type>String</type><parameter>password</parameter></methodparam>
+          </constructorsynopsis>
+          <constructorsynopsis language="java">
+            <modifier>public</modifier>
+            <methodname>RestConnection</methodname>
+            <methodparam><type>URL</type><parameter>url</parameter></methodparam>
+          </constructorsynopsis>
+          <classsynopsisinfo role="comment">// Public Methods</classsynopsisinfo>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>addEntity</methodname>
+            <methodparam><type>HttpEntityEnclosingRequestBase</type><parameter>put</parameter></methodparam>
+            <methodparam><type>NameValuePair[]</type><parameter>pairs</parameter></methodparam>
+            <exceptionname>UnsupportedEncodingException</exceptionname>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>addJsonEntity</methodname>
+            <methodparam><type>HttpEntityEnclosingRequestBase</type><parameter>put</parameter></methodparam>
+            <methodparam><type>Object</type><parameter>obj</parameter></methodparam>
+            <exceptionname>UnsupportedEncodingException</exceptionname>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>addMultipart</methodname>
+            <methodparam><type>HttpEntityEnclosingRequestBase</type><parameter>post</parameter></methodparam>
+            <methodparam><type>String</type><parameter>filename</parameter></methodparam>
+            <methodparam><type>File</type><parameter>file</parameter></methodparam>
+            <exceptionname>UnsupportedEncodingException</exceptionname>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>applyProperties</methodname>
+            <methodparam><type>Properties</type><parameter>properties</parameter></methodparam>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>HttpDelete</type>
+            <methodname>createDelete</methodname>
+            <methodparam><type>URI</type><parameter>uri</parameter></methodparam>
+            <methodparam><type>String</type><parameter>accept</parameter></methodparam>
+            <methodparam><type>boolean</type><parameter>cookie</parameter></methodparam>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>HttpGet</type>
+            <methodname>createGet</methodname>
+            <methodparam><type>URI</type><parameter>uri</parameter></methodparam>
+            <methodparam><type>String</type><parameter>accept</parameter></methodparam>
+            <methodparam><type>boolean</type><parameter>cookie</parameter></methodparam>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>HttpPost</type>
+            <methodname>createPost</methodname>
+            <methodparam><type>URI</type><parameter>uri</parameter></methodparam>
+            <methodparam><type>String</type><parameter>accept</parameter></methodparam>
+            <methodparam><type>boolean</type><parameter>cookie</parameter></methodparam>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>HttpPut</type>
+            <methodname>createPut</methodname>
+            <methodparam><type>URI</type><parameter>uri</parameter></methodparam>
+            <methodparam><type>String</type><parameter>accept</parameter></methodparam>
+            <methodparam><type>boolean</type><parameter>cookie</parameter></methodparam>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>HttpPut</type>
+            <methodname>createPut</methodname>
+            <methodparam><type>URI</type><parameter>uri</parameter></methodparam>
+            <methodparam><type>String</type><parameter>accept</parameter></methodparam>
+            <methodparam><type>String</type><parameter>langage</parameter></methodparam>
+            <methodparam><type>boolean</type><parameter>cookie</parameter></methodparam>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>HttpResponse</type>
+            <methodname>execute</methodname>
+            <methodparam><type>HttpUriRequest</type><parameter>request</parameter></methodparam>
+            <exceptionname>IOException</exceptionname>
+            <exceptionname>URISyntaxException</exceptionname>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>T</type>
+            <methodname>get</methodname>
+            <methodparam><type>URI</type><parameter>uri</parameter></methodparam>
+            <methodparam><type>Class&lt;T&gt;</type><parameter>cl</parameter></methodparam>
+            <exceptionname>IOException</exceptionname>
+            <exceptionname>URISyntaxException</exceptionname>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>UriBuilder</type>
+            <methodname>getBaseURI</methodname>
+            <void/>
+            <exceptionname>URISyntaxException</exceptionname>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>String</type>
+            <methodname>getContextPath</methodname>
+            <void/>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>UriBuilder</type>
+            <methodname>getContextURI</methodname>
+            <void/>
+            <exceptionname>URISyntaxException</exceptionname>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>CookieStore</type>
+            <methodname>getCookieStore</methodname>
+            <void/>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>String</type>
+            <methodname>getHost</methodname>
+            <void/>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>String</type>
+            <methodname>getLogin</methodname>
+            <void/>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>String</type>
+            <methodname>getPassword</methodname>
+            <void/>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>int</type>
+            <methodname>getPort</methodname>
+            <void/>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>String</type>
+            <methodname>getProtocol</methodname>
+            <void/>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>String</type>
+            <methodname>getSecurityToken</methodname>
+            <void/>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>String</type>
+            <methodname>getSecurityToken</methodname>
+            <methodparam><type>HttpResponse</type><parameter>response</parameter></methodparam>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>boolean</type>
+            <methodname>login</methodname>
+            <void/>
+            <exceptionname>IOException</exceptionname>
+            <exceptionname>URISyntaxException</exceptionname>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>boolean</type>
+            <methodname>login</methodname>
+            <methodparam><type>String</type><parameter>username</parameter></methodparam>
+            <methodparam><type>String</type><parameter>password</parameter></methodparam>
+            <exceptionname>IOException</exceptionname>
+            <exceptionname>URISyntaxException</exceptionname>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>U</type>
+            <methodname>parse</methodname>
+            <methodparam><type>HttpResponse</type><parameter>response</parameter></methodparam>
+            <methodparam><type>Class&lt;U&gt;</type><parameter>cl</parameter></methodparam>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>setContextPath</methodname>
+            <methodparam><type>String</type><parameter>contextPath</parameter></methodparam>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>setCredentials</methodname>
+            <methodparam><type>String</type><parameter>username</parameter></methodparam>
+            <methodparam><type>String</type><parameter>password</parameter></methodparam>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>setHost</methodname>
+            <methodparam><type>String</type><parameter>host</parameter></methodparam>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>setLogin</methodname>
+            <methodparam><type>String</type><parameter>login</parameter></methodparam>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>setPassword</methodname>
+            <methodparam><type>String</type><parameter>password</parameter></methodparam>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>setPort</methodname>
+            <methodparam><type>int</type><parameter>port</parameter></methodparam>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>setProtocol</methodname>
+            <methodparam><type>String</type><parameter>protocol</parameter></methodparam>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>shutdown</methodname>
+            <void/>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>String</type>
+            <methodname>stringuified</methodname>
+            <methodparam><type>Object</type><parameter>obj</parameter></methodparam>
+          </methodsynopsis>
+        </classsynopsis>
+        <para><emphasis role="bold">Methoden geerbt von java.lang.Object</emphasis>: <simplelist type="inline"><member><varname>clone</varname></member><member><varname>equals</varname></member><member><varname>finalize</varname></member><member><varname>getClass</varname></member><member><varname>hashCode</varname></member><member><varname>notify</varname></member><member><varname>notifyAll</varname></member><member><varname>toString</varname></member><member><varname>wait</varname></member></simplelist></para>
+        <variablelist>
+          <varlistentry>
+            <term><emphasis>Autor</emphasis></term>
+            <listitem>
+              <para><simplelist type="inline"><member>srosse, stephane.rosse@frentix.com, http://www.frentix.com</member><member>jkraehemann, joel.kraehemann@frentix.com, http://www.frentix.com</member></simplelist></para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+        <informalfigure>
+          <mediaobject>
+            <imageobject role="html">
+              <imagedata align="center" fileref="./figures/com/frentix/restapi/RestConnection/ClassDiagram.png" format="PNG" scalefit="1"/>
+            </imageobject>
+            <imageobject role="fo">
+              <imagedata align="center" contentdepth="100%" fileref="./figures/com/frentix/restapi/RestConnection/ClassDiagram.png" format="PNG" scalefit="1" width="100%"/>
+            </imageobject>
+          </mediaobject>
+        </informalfigure>
+      </sect2>
+      <sect2 xml:id="dbdoclet-CONSTRUCTOR-2-1" xreflabel="RestConnection()">
+        <title>RestConnection()<indexterm><primary>RestConnection</primary></indexterm><indexterm><primary>Methods</primary><secondary>RestConnection</secondary></indexterm></title>
+        <constructorsynopsis language="java">
+          <modifier>public</modifier>
+          <methodname>RestConnection</methodname>
+          <void/>
+        </constructorsynopsis>
+        <para>Default constructor creates a new RestConnection instance.</para>
+      </sect2>
+      <sect2 xml:id="dbdoclet-CONSTRUCTOR-2-3" xreflabel="RestConnection(java.lang.String, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">
+        <title>RestConnection(String, int, String, String, String, String)<indexterm><primary>RestConnection</primary></indexterm><indexterm><primary>Methods</primary><secondary>RestConnection</secondary></indexterm></title>
+        <constructorsynopsis language="java">
+          <modifier>public</modifier>
+          <methodname>RestConnection</methodname>
+          <methodparam><type>String</type><parameter>host</parameter></methodparam>
+          <methodparam><type>int</type><parameter>port</parameter></methodparam>
+          <methodparam><type>String</type><parameter>protocol</parameter></methodparam>
+          <methodparam><type>String</type><parameter>contextPath</parameter></methodparam>
+          <methodparam><type>String</type><parameter>login</parameter></methodparam>
+          <methodparam><type>String</type><parameter>password</parameter></methodparam>
+        </constructorsynopsis>
+        <para>Creates a new RestConnection instance.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>host</para></entry>
+                <entry><para> remote host</para></entry>
+              </row>
+              <row>
+                <entry><para>port</para></entry>
+                <entry><para> the port to connect</para></entry>
+              </row>
+              <row>
+                <entry><para>protocol</para></entry>
+                <entry><para> the protocol to be used</para></entry>
+              </row>
+              <row>
+                <entry><para>contextPath</para></entry>
+                <entry><para> the default context path</para></entry>
+              </row>
+              <row>
+                <entry><para>login</para></entry>
+                <entry><para> credentials</para></entry>
+              </row>
+              <row>
+                <entry><para>password</para></entry>
+                <entry><para> credentials</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+      <sect2 xml:id="dbdoclet-CONSTRUCTOR-2-2" xreflabel="RestConnection(java.net.URL)">
+        <title>RestConnection(URL)<indexterm><primary>RestConnection</primary></indexterm><indexterm><primary>Methods</primary><secondary>RestConnection</secondary></indexterm></title>
+        <constructorsynopsis language="java">
+          <modifier>public</modifier>
+          <methodname>RestConnection</methodname>
+          <methodparam><type>URL</type><parameter>url</parameter></methodparam>
+        </constructorsynopsis>
+        <para>Creates a new RestConnection instance.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>url</para></entry>
+                <entry><para> URL to remote location.</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-2-3" xreflabel="addEntity(HttpEntityEnclosingRequestBase, NameValuePair...)">
+        <title>addEntity(HttpEntityEnclosingRequestBase, NameValuePair...)<indexterm><primary>addEntity</primary></indexterm><indexterm><primary>Methods</primary><secondary>addEntity</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <type>void</type>
+          <methodname>addEntity</methodname>
+          <methodparam><type>HttpEntityEnclosingRequestBase</type><parameter>put</parameter></methodparam>
+          <methodparam><type>NameValuePair[]</type><parameter>pairs</parameter></methodparam>
+          <exceptionname>UnsupportedEncodingException</exceptionname>
+        </methodsynopsis>
+        <para>Add an object</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>put</para></entry>
+                <entry><para> the PUT request</para></entry>
+              </row>
+              <row>
+                <entry><para>pairs</para></entry>
+                <entry><para> the names and corresponding values</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <variablelist>
+          <?dbfo list-presentation="blocks"?>
+          <title>Exceptions</title>
+          <varlistentry>
+            <term><exceptionname>UnsupportedEncodingException</exceptionname></term>
+            <listitem>
+              <para>java.io.UnsupportedEncodingException</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-2-4" xreflabel="addJsonEntity(HttpEntityEnclosingRequestBase, java.lang.Object)">
+        <title>addJsonEntity(HttpEntityEnclosingRequestBase, Object)<indexterm><primary>addJsonEntity</primary></indexterm><indexterm><primary>Methods</primary><secondary>addJsonEntity</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <type>void</type>
+          <methodname>addJsonEntity</methodname>
+          <methodparam><type>HttpEntityEnclosingRequestBase</type><parameter>put</parameter></methodparam>
+          <methodparam><type>Object</type><parameter>obj</parameter></methodparam>
+          <exceptionname>UnsupportedEncodingException</exceptionname>
+        </methodsynopsis>
+        <para>Add an object (application/json)</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>put</para></entry>
+                <entry><para> the PUT request</para></entry>
+              </row>
+              <row>
+                <entry><para>obj</para></entry>
+                <entry><para> the JSON</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <variablelist>
+          <?dbfo list-presentation="blocks"?>
+          <title>Exceptions</title>
+          <varlistentry>
+            <term><exceptionname>UnsupportedEncodingException</exceptionname></term>
+            <listitem>
+              <para>java.io.UnsupportedEncodingException</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-2-5" xreflabel="addMultipart(HttpEntityEnclosingRequestBase, java.lang.String, java.io.File)">
+        <title>addMultipart(HttpEntityEnclosingRequestBase, String, File)<indexterm><primary>addMultipart</primary></indexterm><indexterm><primary>Methods</primary><secondary>addMultipart</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <type>void</type>
+          <methodname>addMultipart</methodname>
+          <methodparam><type>HttpEntityEnclosingRequestBase</type><parameter>post</parameter></methodparam>
+          <methodparam><type>String</type><parameter>filename</parameter></methodparam>
+          <methodparam><type>File</type><parameter>file</parameter></methodparam>
+          <exceptionname>UnsupportedEncodingException</exceptionname>
+        </methodsynopsis>
+        <para>Attach file to POST request.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>post</para></entry>
+                <entry><para> the request</para></entry>
+              </row>
+              <row>
+                <entry><para>filename</para></entry>
+                <entry><para> the filename field</para></entry>
+              </row>
+              <row>
+                <entry><para>file</para></entry>
+                <entry><para> the file</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <variablelist>
+          <?dbfo list-presentation="blocks"?>
+          <title>Exceptions</title>
+          <varlistentry>
+            <term><exceptionname>UnsupportedEncodingException</exceptionname></term>
+            <listitem>
+              <para>java.io.UnsupportedEncodingException</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-2-16" xreflabel="applyProperties(java.util.Properties)">
+        <title>applyProperties(Properties)<indexterm><primary>applyProperties</primary></indexterm><indexterm><primary>Methods</primary><secondary>applyProperties</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <type>void</type>
+          <methodname>applyProperties</methodname>
+          <methodparam><type>Properties</type><parameter>properties</parameter></methodparam>
+        </methodsynopsis>
+        <para>Applies the given properties.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>properties</para></entry>
+                <entry><para> the Properties</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-2-10" xreflabel="createDelete(java.net.URI, java.lang.String, boolean)">
+        <title>createDelete(URI, String, boolean)<indexterm><primary>createDelete</primary></indexterm><indexterm><primary>Methods</primary><secondary>createDelete</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <type>HttpDelete</type>
+          <methodname>createDelete</methodname>
+          <methodparam><type>URI</type><parameter>uri</parameter></methodparam>
+          <methodparam><type>String</type><parameter>accept</parameter></methodparam>
+          <methodparam><type>boolean</type><parameter>cookie</parameter></methodparam>
+        </methodsynopsis>
+        <para>HTTP DELETE method.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>uri</para></entry>
+                <entry><para/></entry>
+              </row>
+              <row>
+                <entry><para>accept</para></entry>
+                <entry><para/></entry>
+              </row>
+              <row>
+                <entry><para>cookie</para></entry>
+                <entry><para/></entry>
+              </row>
+              <row>
+                <entry><para><emphasis>return</emphasis></para></entry>
+                <entry><para/></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-2-8" xreflabel="createGet(java.net.URI, java.lang.String, boolean)">
+        <title>createGet(URI, String, boolean)<indexterm><primary>createGet</primary></indexterm><indexterm><primary>Methods</primary><secondary>createGet</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <type>HttpGet</type>
+          <methodname>createGet</methodname>
+          <methodparam><type>URI</type><parameter>uri</parameter></methodparam>
+          <methodparam><type>String</type><parameter>accept</parameter></methodparam>
+          <methodparam><type>boolean</type><parameter>cookie</parameter></methodparam>
+        </methodsynopsis>
+        <para>HTTP GET method.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>uri</para></entry>
+                <entry><para/></entry>
+              </row>
+              <row>
+                <entry><para>accept</para></entry>
+                <entry><para/></entry>
+              </row>
+              <row>
+                <entry><para>cookie</para></entry>
+                <entry><para/></entry>
+              </row>
+              <row>
+                <entry><para><emphasis>return</emphasis></para></entry>
+                <entry><para/></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-2-9" xreflabel="createPost(java.net.URI, java.lang.String, boolean)">
+        <title>createPost(URI, String, boolean)<indexterm><primary>createPost</primary></indexterm><indexterm><primary>Methods</primary><secondary>createPost</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <type>HttpPost</type>
+          <methodname>createPost</methodname>
+          <methodparam><type>URI</type><parameter>uri</parameter></methodparam>
+          <methodparam><type>String</type><parameter>accept</parameter></methodparam>
+          <methodparam><type>boolean</type><parameter>cookie</parameter></methodparam>
+        </methodsynopsis>
+        <para>HTTP POST method.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>uri</para></entry>
+                <entry><para/></entry>
+              </row>
+              <row>
+                <entry><para>accept</para></entry>
+                <entry><para/></entry>
+              </row>
+              <row>
+                <entry><para>cookie</para></entry>
+                <entry><para/></entry>
+              </row>
+              <row>
+                <entry><para><emphasis>return</emphasis></para></entry>
+                <entry><para/></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-2-6" xreflabel="createPut(java.net.URI, java.lang.String, boolean)">
+        <title>createPut(URI, String, boolean)<indexterm><primary>createPut</primary></indexterm><indexterm><primary>Methods</primary><secondary>createPut</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <type>HttpPut</type>
+          <methodname>createPut</methodname>
+          <methodparam><type>URI</type><parameter>uri</parameter></methodparam>
+          <methodparam><type>String</type><parameter>accept</parameter></methodparam>
+          <methodparam><type>boolean</type><parameter>cookie</parameter></methodparam>
+        </methodsynopsis>
+        <para>HTTP PUT method.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>uri</para></entry>
+                <entry><para/></entry>
+              </row>
+              <row>
+                <entry><para>accept</para></entry>
+                <entry><para/></entry>
+              </row>
+              <row>
+                <entry><para>cookie</para></entry>
+                <entry><para/></entry>
+              </row>
+              <row>
+                <entry><para><emphasis>return</emphasis></para></entry>
+                <entry><para/></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-2-7" xreflabel="createPut(java.net.URI, java.lang.String, java.lang.String, boolean)">
+        <title>createPut(URI, String, String, boolean)<indexterm><primary>createPut</primary></indexterm><indexterm><primary>Methods</primary><secondary>createPut</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <type>HttpPut</type>
+          <methodname>createPut</methodname>
+          <methodparam><type>URI</type><parameter>uri</parameter></methodparam>
+          <methodparam><type>String</type><parameter>accept</parameter></methodparam>
+          <methodparam><type>String</type><parameter>langage</parameter></methodparam>
+          <methodparam><type>boolean</type><parameter>cookie</parameter></methodparam>
+        </methodsynopsis>
+        <para>HTTP PUT method.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>uri</para></entry>
+                <entry><para/></entry>
+              </row>
+              <row>
+                <entry><para>accept</para></entry>
+                <entry><para/></entry>
+              </row>
+              <row>
+                <entry><para>langage</para></entry>
+                <entry><para/></entry>
+              </row>
+              <row>
+                <entry><para>cookie</para></entry>
+                <entry><para/></entry>
+              </row>
+              <row>
+                <entry><para><emphasis>return</emphasis></para></entry>
+                <entry><para/></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-2-11" xreflabel="execute(HttpUriRequest)">
+        <title>execute(HttpUriRequest)<indexterm><primary>execute</primary></indexterm><indexterm><primary>Methods</primary><secondary>execute</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <type>HttpResponse</type>
+          <methodname>execute</methodname>
+          <methodparam><type>HttpUriRequest</type><parameter>request</parameter></methodparam>
+          <exceptionname>IOException</exceptionname>
+          <exceptionname>URISyntaxException</exceptionname>
+        </methodsynopsis>
+        <para>Execute request.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>request</para></entry>
+                <entry><para> the request</para></entry>
+              </row>
+              <row>
+                <entry><para><emphasis>return</emphasis></para></entry>
+                <entry><para> the HttpResponse</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <variablelist>
+          <?dbfo list-presentation="blocks"?>
+          <title>Exceptions</title>
+          <varlistentry>
+            <term><exceptionname>IOException</exceptionname></term>
+            <listitem>
+              <para>java.io.IOException</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><exceptionname>URISyntaxException</exceptionname></term>
+            <listitem>
+              <para>java.net.URISyntaxException</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-2-2" xreflabel="get(java.net.URI, java.lang.Class&lt;T&gt;)">
+        <title>get(URI, Class&lt;T&gt;)<indexterm><primary>get</primary></indexterm><indexterm><primary>Methods</primary><secondary>get</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <type>T</type>
+          <methodname>get</methodname>
+          <methodparam><type>URI</type><parameter>uri</parameter></methodparam>
+          <methodparam><type>Class&lt;T&gt;</type><parameter>cl</parameter></methodparam>
+          <exceptionname>IOException</exceptionname>
+          <exceptionname>URISyntaxException</exceptionname>
+        </methodsynopsis>
+        <para>HTTP GET method.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>uri</para></entry>
+                <entry><para> the resource</para></entry>
+              </row>
+              <row>
+                <entry><para>cl</para></entry>
+                <entry><para> the vo to send</para></entry>
+              </row>
+              <row>
+                <entry><para><emphasis>return</emphasis></para></entry>
+                <entry><para> the retrieved vo</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <variablelist>
+          <?dbfo list-presentation="blocks"?>
+          <title>Exceptions</title>
+          <varlistentry>
+            <term><exceptionname>IOException</exceptionname></term>
+            <listitem>
+              <para>java.io.IOException</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><exceptionname>URISyntaxException</exceptionname></term>
+            <listitem>
+              <para>java.net.URISyntaxException</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-2-12" xreflabel="getBaseURI()">
+        <title>getBaseURI()<indexterm><primary>getBaseURI</primary></indexterm><indexterm><primary>Methods</primary><secondary>getBaseURI</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <type>UriBuilder</type>
+          <methodname>getBaseURI</methodname>
+          <void/>
+          <exceptionname>URISyntaxException</exceptionname>
+        </methodsynopsis>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para><emphasis>return</emphasis></para></entry>
+                <entry><para> http://localhost:9998</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-2-13" xreflabel="getContextURI()">
+        <title>getContextURI()<indexterm><primary>getContextURI</primary></indexterm><indexterm><primary>Methods</primary><secondary>getContextURI</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <type>UriBuilder</type>
+          <methodname>getContextURI</methodname>
+          <void/>
+          <exceptionname>URISyntaxException</exceptionname>
+        </methodsynopsis>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para><emphasis>return</emphasis></para></entry>
+                <entry><para> http://localhost:9998/olat</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-2-1" xreflabel="login()">
+        <title>login()<indexterm><primary>login</primary></indexterm><indexterm><primary>Methods</primary><secondary>login</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <type>boolean</type>
+          <methodname>login</methodname>
+          <void/>
+          <exceptionname>IOException</exceptionname>
+          <exceptionname>URISyntaxException</exceptionname>
+        </methodsynopsis>
+        <para>Login to RESTful webservice.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para><emphasis>return</emphasis></para></entry>
+                <entry><para/></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <variablelist>
+          <?dbfo list-presentation="blocks"?>
+          <title>Exceptions</title>
+          <varlistentry>
+            <term><exceptionname>IOException</exceptionname></term>
+            <listitem>
+              <para>java.io.IOException</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><exceptionname>URISyntaxException</exceptionname></term>
+            <listitem>
+              <para>java.net.URISyntaxException</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-2-15" xreflabel="parse(HttpResponse, java.lang.Class&lt;U&gt;)">
+        <title>parse(HttpResponse, Class&lt;U&gt;)<indexterm><primary>parse</primary></indexterm><indexterm><primary>Methods</primary><secondary>parse</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <type>U</type>
+          <methodname>parse</methodname>
+          <methodparam><type>HttpResponse</type><parameter>response</parameter></methodparam>
+          <methodparam><type>Class&lt;U&gt;</type><parameter>cl</parameter></methodparam>
+        </methodsynopsis>
+        <para>Parses the response.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>response</para></entry>
+                <entry><para> the HttpResponse</para></entry>
+              </row>
+              <row>
+                <entry><para>cl</para></entry>
+                <entry><para> the VO&apos;s class</para></entry>
+              </row>
+              <row>
+                <entry><para><emphasis>return</emphasis></para></entry>
+                <entry><para> the parsed VO</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-2-14" xreflabel="stringuified(java.lang.Object)">
+        <title>stringuified(Object)<indexterm><primary>stringuified</primary></indexterm><indexterm><primary>Methods</primary><secondary>stringuified</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <type>String</type>
+          <methodname>stringuified</methodname>
+          <methodparam><type>Object</type><parameter>obj</parameter></methodparam>
+        </methodsynopsis>
+        <para>Make string representation of a JSON object.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>obj</para></entry>
+                <entry><para/></entry>
+              </row>
+              <row>
+                <entry><para><emphasis>return</emphasis></para></entry>
+                <entry><para/></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+    </sect1>
+  </chapter>
+  <chapter xml:id="dbdoclet-PACKAGE-3" xreflabel="com.frentix.restapi.tool">
+    <title>Paket com.­frentix.­restapi.­tool</title>
+    <para></para>
+    <sect1 xml:id="dbdoclet-CLASS-3" xreflabel="com.frentix.restapi.tool.Course">
+      <title>Klasse Course</title>
+      <indexterm><primary>Course</primary></indexterm>
+      <indexterm><primary>Classes</primary><secondary>Course</secondary></indexterm>
+      <para>Import or query courses via RESTful web service.</para>
+      <sect2>
+        <title>Syntax</title>
+        <classsynopsis class="class" language="java">
+          <ooclass>
+            <modifier>public</modifier>
+            <modifier>class</modifier>
+            <classname>Course</classname>
+          </ooclass>
+          <classsynopsisinfo role="comment">// Public Constructors</classsynopsisinfo>
+          <constructorsynopsis language="java">
+            <modifier>public</modifier>
+            <methodname>Course</methodname>
+            <methodparam><type>RestConnection</type><parameter>restConnection</parameter></methodparam>
+          </constructorsynopsis>
+          <classsynopsisinfo role="comment">// Public Methods</classsynopsisinfo>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>RestConnection</type>
+            <methodname>getRestConnection</methodname>
+            <void/>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>importCourse</methodname>
+            <methodparam><type>File</type><parameter>outputFile</parameter></methodparam>
+            <methodparam><type>File</type><parameter>inputFile</parameter></methodparam>
+            <exceptionname>IOException</exceptionname>
+            <exceptionname>URISyntaxException</exceptionname>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>queryCourse</methodname>
+            <methodparam><type>File</type><parameter>outputFile</parameter></methodparam>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>setRestConnection</methodname>
+            <methodparam><type>RestConnection</type><parameter>restConnection</parameter></methodparam>
+          </methodsynopsis>
+        </classsynopsis>
+        <para><emphasis role="bold">Methoden geerbt von java.lang.Object</emphasis>: <simplelist type="inline"><member><varname>clone</varname></member><member><varname>equals</varname></member><member><varname>finalize</varname></member><member><varname>getClass</varname></member><member><varname>hashCode</varname></member><member><varname>notify</varname></member><member><varname>notifyAll</varname></member><member><varname>toString</varname></member><member><varname>wait</varname></member></simplelist></para>
+        <variablelist>
+          <varlistentry>
+            <term><emphasis>Autor</emphasis></term>
+            <listitem>
+              <para><simplelist type="inline"><member>jkraehemann, joel.kraehemann@frentix.com, http://www.frentix.com</member></simplelist></para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+        <informalfigure>
+          <mediaobject>
+            <imageobject role="html">
+              <imagedata align="center" fileref="./figures/com/frentix/restapi/tool/Course/ClassDiagram.png" format="PNG" scalefit="1"/>
+            </imageobject>
+            <imageobject role="fo">
+              <imagedata align="center" contentdepth="100%" fileref="./figures/com/frentix/restapi/tool/Course/ClassDiagram.png" format="PNG" scalefit="1" width="100%"/>
+            </imageobject>
+          </mediaobject>
+        </informalfigure>
+      </sect2>
+      <sect2 xml:id="dbdoclet-CONSTRUCTOR-3-1" xreflabel="Course(com.frentix.restapi.RestConnection)">
+        <title>Course(RestConnection)<indexterm><primary>Course</primary></indexterm><indexterm><primary>Methods</primary><secondary>Course</secondary></indexterm></title>
+        <constructorsynopsis language="java">
+          <modifier>public</modifier>
+          <methodname>Course</methodname>
+          <methodparam><type>RestConnection</type><parameter>restConnection</parameter></methodparam>
+        </constructorsynopsis>
+        <para>Creates a new Course instance.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>restConnection</para></entry>
+                <entry><para> the RestConnection</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-3-1" xreflabel="importCourse(java.io.File, java.io.File)">
+        <title>importCourse(File, File)<indexterm><primary>importCourse</primary></indexterm><indexterm><primary>Methods</primary><secondary>importCourse</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <type>void</type>
+          <methodname>importCourse</methodname>
+          <methodparam><type>File</type><parameter>outputFile</parameter></methodparam>
+          <methodparam><type>File</type><parameter>inputFile</parameter></methodparam>
+          <exceptionname>IOException</exceptionname>
+          <exceptionname>URISyntaxException</exceptionname>
+        </methodsynopsis>
+        <para>Imports a course via RESTful web service.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>outputFile</para></entry>
+                <entry><para> the file to safe the course&apos;s attributes.</para></entry>
+              </row>
+              <row>
+                <entry><para>inputFile</para></entry>
+                <entry><para> the course as a ZIP file</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <variablelist>
+          <?dbfo list-presentation="blocks"?>
+          <title>Exceptions</title>
+          <varlistentry>
+            <term><exceptionname>IOException</exceptionname></term>
+            <listitem>
+              <para>java.io.IOException</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><exceptionname>URISyntaxExceptio</exceptionname></term>
+            <listitem>
+              <para></para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-3-2" xreflabel="queryCourse(java.io.File)">
+        <title>queryCourse(File)<indexterm><primary>queryCourse</primary></indexterm><indexterm><primary>Methods</primary><secondary>queryCourse</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <type>void</type>
+          <methodname>queryCourse</methodname>
+          <methodparam><type>File</type><parameter>outputFile</parameter></methodparam>
+        </methodsynopsis>
+        <para>Queries courses via RESTful web service.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>outputFile</para></entry>
+                <entry><para> the file to safe the queried courses</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+    </sect1>
+    <sect1 xml:id="dbdoclet-CLASS-4" xreflabel="com.frentix.restapi.tool.RepositoryEntry">
+      <title>Klasse RepositoryEntry</title>
+      <indexterm><primary>RepositoryEntry</primary></indexterm>
+      <indexterm><primary>Classes</primary><secondary>RepositoryEntry</secondary></indexterm>
+      <para>Import or query repository entries via RESTful web service.</para>
+      <sect2>
+        <title>Syntax</title>
+        <classsynopsis class="class" language="java">
+          <ooclass>
+            <modifier>public</modifier>
+            <modifier>class</modifier>
+            <classname>RepositoryEntry</classname>
+          </ooclass>
+          <classsynopsisinfo role="comment">// Public Constructors</classsynopsisinfo>
+          <constructorsynopsis language="java">
+            <modifier>public</modifier>
+            <methodname>RepositoryEntry</methodname>
+            <methodparam><type>RestConnection</type><parameter>restConnection</parameter></methodparam>
+          </constructorsynopsis>
+          <classsynopsisinfo role="comment">// Public Methods</classsynopsisinfo>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>RestConnection</type>
+            <methodname>getRestConnection</methodname>
+            <void/>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>importRepositoryEntry</methodname>
+            <methodparam><type>File</type><parameter>outputFile</parameter></methodparam>
+            <methodparam><type>File</type><parameter>inputFile</parameter></methodparam>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>queryRepositoryEntry</methodname>
+            <methodparam><type>File</type><parameter>outputFile</parameter></methodparam>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>setRestConnection</methodname>
+            <methodparam><type>RestConnection</type><parameter>restConnection</parameter></methodparam>
+          </methodsynopsis>
+        </classsynopsis>
+        <para><emphasis role="bold">Methoden geerbt von java.lang.Object</emphasis>: <simplelist type="inline"><member><varname>clone</varname></member><member><varname>equals</varname></member><member><varname>finalize</varname></member><member><varname>getClass</varname></member><member><varname>hashCode</varname></member><member><varname>notify</varname></member><member><varname>notifyAll</varname></member><member><varname>toString</varname></member><member><varname>wait</varname></member></simplelist></para>
+        <variablelist>
+          <varlistentry>
+            <term><emphasis>Autor</emphasis></term>
+            <listitem>
+              <para><simplelist type="inline"><member>jkraehemann, joel.kraehemann@frentix.com, http://www.frentix.com</member></simplelist></para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+        <informalfigure>
+          <mediaobject>
+            <imageobject role="html">
+              <imagedata align="center" fileref="./figures/com/frentix/restapi/tool/RepositoryEntry/ClassDiagram.png" format="PNG" scalefit="1"/>
+            </imageobject>
+            <imageobject role="fo">
+              <imagedata align="center" contentdepth="100%" fileref="./figures/com/frentix/restapi/tool/RepositoryEntry/ClassDiagram.png" format="PNG" scalefit="1" width="100%"/>
+            </imageobject>
+          </mediaobject>
+        </informalfigure>
+      </sect2>
+      <sect2 xml:id="dbdoclet-CONSTRUCTOR-4-1" xreflabel="RepositoryEntry(com.frentix.restapi.RestConnection)">
+        <title>RepositoryEntry(RestConnection)<indexterm><primary>RepositoryEntry</primary></indexterm><indexterm><primary>Methods</primary><secondary>RepositoryEntry</secondary></indexterm></title>
+        <constructorsynopsis language="java">
+          <modifier>public</modifier>
+          <methodname>RepositoryEntry</methodname>
+          <methodparam><type>RestConnection</type><parameter>restConnection</parameter></methodparam>
+        </constructorsynopsis>
+        <para>Creates a new RepositoryEntry instance.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>restConnection</para></entry>
+                <entry><para> the RestConnection</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-4-1" xreflabel="importRepositoryEntry(java.io.File, java.io.File)">
+        <title>importRepositoryEntry(File, File)<indexterm><primary>importRepositoryEntry</primary></indexterm><indexterm><primary>Methods</primary><secondary>importRepositoryEntry</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <type>void</type>
+          <methodname>importRepositoryEntry</methodname>
+          <methodparam><type>File</type><parameter>outputFile</parameter></methodparam>
+          <methodparam><type>File</type><parameter>inputFile</parameter></methodparam>
+        </methodsynopsis>
+        <para>Imports a repository entry via RESTful web service.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>outputFile</para></entry>
+                <entry><para> the file to safe the repository entry&apos;s attributes.</para></entry>
+              </row>
+              <row>
+                <entry><para>inputFile</para></entry>
+                <entry><para> the repository entry as a ZIP file</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-4-2" xreflabel="queryRepositoryEntry(java.io.File)">
+        <title>queryRepositoryEntry(File)<indexterm><primary>queryRepositoryEntry</primary></indexterm><indexterm><primary>Methods</primary><secondary>queryRepositoryEntry</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <type>void</type>
+          <methodname>queryRepositoryEntry</methodname>
+          <methodparam><type>File</type><parameter>outputFile</parameter></methodparam>
+        </methodsynopsis>
+        <para>Queries repository entries via RESTful web service.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>outputFile</para></entry>
+                <entry><para> the file to safe the queried repository entries</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+    </sect1>
+    <sect1 xml:id="dbdoclet-CLASS-5" xreflabel="com.frentix.restapi.tool.User">
+      <title>Klasse User</title>
+      <indexterm><primary>User</primary></indexterm>
+      <indexterm><primary>Classes</primary><secondary>User</secondary></indexterm>
+      <para>Generate, import or query users via RESTful web service. You may set the appropriate properties to configure parameters of user generation.</para>
+      <sect2>
+        <title>Syntax</title>
+        <classsynopsis class="class" language="java">
+          <ooclass>
+            <modifier>public</modifier>
+            <modifier>class</modifier>
+            <classname>User</classname>
+          </ooclass>
+          <classsynopsisinfo role="comment">// Public Static Fields</classsynopsisinfo>
+          <fieldsynopsis language="java">
+            <modifier>public</modifier>
+            <modifier>static</modifier>
+            <modifier>final</modifier>
+            <type>String</type>
+            <varname>GENERATE_USER_FIRSTNAME_PREFIX</varname>
+            <initializer>&quot;John&quot;</initializer>
+          </fieldsynopsis>
+          <fieldsynopsis language="java">
+            <modifier>public</modifier>
+            <modifier>static</modifier>
+            <modifier>final</modifier>
+            <type>String</type>
+            <varname>GENERATE_USER_LOGIN_PREFIX</varname>
+            <initializer>&quot;jmeter_&quot;</initializer>
+          </fieldsynopsis>
+          <fieldsynopsis language="java">
+            <modifier>public</modifier>
+            <modifier>static</modifier>
+            <modifier>final</modifier>
+            <type>String</type>
+            <varname>GENERATE_USER_SURNAME_PREFIX</varname>
+            <initializer>&quot;JMeter_&quot;</initializer>
+          </fieldsynopsis>
+          <classsynopsisinfo role="comment">// Public Constructors</classsynopsisinfo>
+          <constructorsynopsis language="java">
+            <modifier>public</modifier>
+            <methodname>User</methodname>
+            <methodparam><type>RestConnection</type><parameter>restConnection</parameter></methodparam>
+          </constructorsynopsis>
+          <constructorsynopsis language="java">
+            <modifier>public</modifier>
+            <methodname>User</methodname>
+            <methodparam><type>RestConnection</type><parameter>restConnection</parameter></methodparam>
+            <methodparam><type>String</type><parameter>generateUserFirstnamePrefix</parameter></methodparam>
+            <methodparam><type>String</type><parameter>generateUserSurnamePrefix</parameter></methodparam>
+            <methodparam><type>String</type><parameter>generateUserLoginPrefix</parameter></methodparam>
+          </constructorsynopsis>
+          <classsynopsisinfo role="comment">// Public Methods</classsynopsisinfo>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>applyProperties</methodname>
+            <methodparam><type>Properties</type><parameter>properties</parameter></methodparam>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>generateUser</methodname>
+            <methodparam><type>File</type><parameter>outputFile</parameter></methodparam>
+            <methodparam><type>int</type><parameter>count</parameter></methodparam>
+            <exceptionname>IOException</exceptionname>
+            <exceptionname>URISyntaxException</exceptionname>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>String</type>
+            <methodname>getGenerateUserFirstnamePrefix</methodname>
+            <void/>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>String</type>
+            <methodname>getGenerateUserLoginPrefix</methodname>
+            <void/>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>String</type>
+            <methodname>getGenerateUserSurnamePrefix</methodname>
+            <void/>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>RestConnection</type>
+            <methodname>getRestConnection</methodname>
+            <void/>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>importUser</methodname>
+            <methodparam><type>File</type><parameter>outputFile</parameter></methodparam>
+            <methodparam><type>File</type><parameter>inputFile</parameter></methodparam>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>queryUser</methodname>
+            <methodparam><type>File</type><parameter>outputFile</parameter></methodparam>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>setGenerateUserFirstnamePrefix</methodname>
+            <methodparam><type>String</type><parameter>generateUserFirstnamePrefix</parameter></methodparam>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>setGenerateUserLoginPrefix</methodname>
+            <methodparam><type>String</type><parameter>generateUserLoginPrefix</parameter></methodparam>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>setGenerateUserSurnamePrefix</methodname>
+            <methodparam><type>String</type><parameter>generateUserSurnamePrefix</parameter></methodparam>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <type>void</type>
+            <methodname>setRestConnection</methodname>
+            <methodparam><type>RestConnection</type><parameter>restConnection</parameter></methodparam>
+          </methodsynopsis>
+        </classsynopsis>
+        <para><emphasis role="bold">Methoden geerbt von java.lang.Object</emphasis>: <simplelist type="inline"><member><varname>clone</varname></member><member><varname>equals</varname></member><member><varname>finalize</varname></member><member><varname>getClass</varname></member><member><varname>hashCode</varname></member><member><varname>notify</varname></member><member><varname>notifyAll</varname></member><member><varname>toString</varname></member><member><varname>wait</varname></member></simplelist></para>
+        <variablelist>
+          <varlistentry>
+            <term><emphasis>Autor</emphasis></term>
+            <listitem>
+              <para><simplelist type="inline"><member>jkraehemann, joel.kraehemann@frentix.com, http://www.frentix.com</member></simplelist></para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+        <informalfigure>
+          <mediaobject>
+            <imageobject role="html">
+              <imagedata align="center" fileref="./figures/com/frentix/restapi/tool/User/ClassDiagram.png" format="PNG" scalefit="1"/>
+            </imageobject>
+            <imageobject role="fo">
+              <imagedata align="center" contentdepth="100%" fileref="./figures/com/frentix/restapi/tool/User/ClassDiagram.png" format="PNG" scalefit="1" width="100%"/>
+            </imageobject>
+          </mediaobject>
+        </informalfigure>
+      </sect2>
+      <sect2 xml:id="dbdoclet-CONSTRUCTOR-5-1" xreflabel="User(com.frentix.restapi.RestConnection)">
+        <title>User(RestConnection)<indexterm><primary>User</primary></indexterm><indexterm><primary>Methods</primary><secondary>User</secondary></indexterm></title>
+        <constructorsynopsis language="java">
+          <modifier>public</modifier>
+          <methodname>User</methodname>
+          <methodparam><type>RestConnection</type><parameter>restConnection</parameter></methodparam>
+        </constructorsynopsis>
+        <para>Creates a new User instance.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>restConnection</para></entry>
+                <entry><para> the RestConnection</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+      <sect2 xml:id="dbdoclet-CONSTRUCTOR-5-2" xreflabel="User(com.frentix.restapi.RestConnection, java.lang.String, java.lang.String, java.lang.String)">
+        <title>User(RestConnection, String, String, String)<indexterm><primary>User</primary></indexterm><indexterm><primary>Methods</primary><secondary>User</secondary></indexterm></title>
+        <constructorsynopsis language="java">
+          <modifier>public</modifier>
+          <methodname>User</methodname>
+          <methodparam><type>RestConnection</type><parameter>restConnection</parameter></methodparam>
+          <methodparam><type>String</type><parameter>generateUserFirstnamePrefix</parameter></methodparam>
+          <methodparam><type>String</type><parameter>generateUserSurnamePrefix</parameter></methodparam>
+          <methodparam><type>String</type><parameter>generateUserLoginPrefix</parameter></methodparam>
+        </constructorsynopsis>
+        <para>Creates a new User instance.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>restConnection</para></entry>
+                <entry><para> the RestConnection</para></entry>
+              </row>
+              <row>
+                <entry><para>generateUserFirstnamePrefix</para></entry>
+                <entry><para> prefix to be used</para></entry>
+              </row>
+              <row>
+                <entry><para>generateUserSurnamePrefix</para></entry>
+                <entry><para> prefix to be used</para></entry>
+              </row>
+              <row>
+                <entry><para>generateUserLoginPrefix</para></entry>
+                <entry><para> prefix to be used</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-5-4" xreflabel="applyProperties(java.util.Properties)">
+        <title>applyProperties(Properties)<indexterm><primary>applyProperties</primary></indexterm><indexterm><primary>Methods</primary><secondary>applyProperties</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <type>void</type>
+          <methodname>applyProperties</methodname>
+          <methodparam><type>Properties</type><parameter>properties</parameter></methodparam>
+        </methodsynopsis>
+        <para>Applies the given properties.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>properties</para></entry>
+                <entry><para> the Properties</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-5-1" xreflabel="generateUser(java.io.File, int)">
+        <title>generateUser(File, int)<indexterm><primary>generateUser</primary></indexterm><indexterm><primary>Methods</primary><secondary>generateUser</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <type>void</type>
+          <methodname>generateUser</methodname>
+          <methodparam><type>File</type><parameter>outputFile</parameter></methodparam>
+          <methodparam><type>int</type><parameter>count</parameter></methodparam>
+          <exceptionname>IOException</exceptionname>
+          <exceptionname>URISyntaxException</exceptionname>
+        </methodsynopsis>
+        <para>Generates users via RESTful web service.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>outputFile</para></entry>
+                <entry><para> the file to safe the generated user attributes</para></entry>
+              </row>
+              <row>
+                <entry><para>count</para></entry>
+                <entry><para> the count of users to be created</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <variablelist>
+          <?dbfo list-presentation="blocks"?>
+          <title>Exceptions</title>
+          <varlistentry>
+            <term><exceptionname>URISyntaxException</exceptionname></term>
+            <listitem>
+              <para>java.net.URISyntaxException</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><exceptionname>IOException</exceptionname></term>
+            <listitem>
+              <para>java.io.IOException</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+        <variablelist>
+          <varlistentry>
+            <term><emphasis>Siehe auch</emphasis></term>
+            <listitem>
+              <simplelist type="inline"><member><literal><link linkend="dbdoclet-CLASS-5"><xref linkend="dbdoclet-CLASS-5"/></link></literal></member><member><literal><link linkend="dbdoclet-CLASS-5"><xref linkend="dbdoclet-CLASS-5"/></link></literal></member><member><literal><link linkend="dbdoclet-CLASS-5"><xref linkend="dbdoclet-CLASS-5"/></link></literal></member></simplelist>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-5-2" xreflabel="importUser(java.io.File, java.io.File)">
+        <title>importUser(File, File)<indexterm><primary>importUser</primary></indexterm><indexterm><primary>Methods</primary><secondary>importUser</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <type>void</type>
+          <methodname>importUser</methodname>
+          <methodparam><type>File</type><parameter>outputFile</parameter></methodparam>
+          <methodparam><type>File</type><parameter>inputFile</parameter></methodparam>
+        </methodsynopsis>
+        <para>Imports users via RESTful web service.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>inputFile</para></entry>
+                <entry><para> the file containing the user&apos;s attributes.</para></entry>
+              </row>
+              <row>
+                <entry><para>outputFile</para></entry>
+                <entry><para/></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-5-3" xreflabel="queryUser(java.io.File)">
+        <title>queryUser(File)<indexterm><primary>queryUser</primary></indexterm><indexterm><primary>Methods</primary><secondary>queryUser</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <type>void</type>
+          <methodname>queryUser</methodname>
+          <methodparam><type>File</type><parameter>outputFile</parameter></methodparam>
+        </methodsynopsis>
+        <para>Queries existing users via RESTful web service.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>outputFile</para></entry>
+                <entry><para> the file to safe the queried user attributes.</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+      </sect2>
+    </sect1>
+  </chapter>
+  <chapter xml:id="dbdoclet-PACKAGE-4" xreflabel="com.frentix.util">
+    <title>Paket com.­frentix.­util</title>
+    <para></para>
+    <sect1 xml:id="dbdoclet-CLASS-6" xreflabel="com.frentix.util.CsvHelper">
+      <title>Klasse CsvHelper</title>
+      <indexterm><primary>CsvHelper</primary></indexterm>
+      <indexterm><primary>Classes</primary><secondary>CsvHelper</secondary></indexterm>
+      <para>Some helper methods for handling comma separated values (CSV) files.</para>
+      <sect2>
+        <title>Syntax</title>
+        <classsynopsis class="class" language="java">
+          <ooclass>
+            <modifier>public</modifier>
+            <modifier>class</modifier>
+            <classname>CsvHelper</classname>
+          </ooclass>
+          <classsynopsisinfo role="comment">// Public Constructors</classsynopsisinfo>
+          <constructorsynopsis language="java">
+            <modifier>public</modifier>
+            <methodname>CsvHelper</methodname>
+            <void/>
+          </constructorsynopsis>
+          <classsynopsisinfo role="comment">// Public Static Methods</classsynopsisinfo>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <modifier>static</modifier>
+            <type>String[]</type>
+            <methodname>readCsv</methodname>
+            <methodparam><type>File</type><parameter>csvFile</parameter></methodparam>
+            <methodparam><type>char</type><parameter>separator</parameter></methodparam>
+            <exceptionname>IOException</exceptionname>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <modifier>static</modifier>
+            <type>void</type>
+            <methodname>writeCourseToCsv</methodname>
+            <methodparam><type>File</type><parameter>csvFile</parameter></methodparam>
+            <methodparam><type>char</type><parameter>separator</parameter></methodparam>
+            <methodparam><type>boolean</type><parameter>append</parameter></methodparam>
+            <methodparam><type>CourseVO</type><parameter>course</parameter></methodparam>
+            <exceptionname>IOException</exceptionname>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <modifier>static</modifier>
+            <type>void</type>
+            <methodname>writeCourseToCsv</methodname>
+            <methodparam><type>OutputStream</type><parameter>output</parameter></methodparam>
+            <methodparam><type>char</type><parameter>separator</parameter></methodparam>
+            <methodparam><type>CourseVO</type><parameter>course</parameter></methodparam>
+            <exceptionname>IOException</exceptionname>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <modifier>static</modifier>
+            <type>void</type>
+            <methodname>writeUserToCsv</methodname>
+            <methodparam><type>File</type><parameter>csvFile</parameter></methodparam>
+            <methodparam><type>char</type><parameter>separator</parameter></methodparam>
+            <methodparam><type>boolean</type><parameter>append</parameter></methodparam>
+            <methodparam><type>UserVO</type><parameter>user</parameter></methodparam>
+            <exceptionname>IOException</exceptionname>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <modifier>static</modifier>
+            <type>void</type>
+            <methodname>writeUserToCsv</methodname>
+            <methodparam><type>File</type><parameter>csvFile</parameter></methodparam>
+            <methodparam><type>char</type><parameter>separator</parameter></methodparam>
+            <methodparam><type>boolean</type><parameter>append</parameter></methodparam>
+            <methodparam><type>List&lt;UserVO&gt;</type><parameter>user</parameter></methodparam>
+            <exceptionname>IOException</exceptionname>
+          </methodsynopsis>
+          <methodsynopsis language="java">
+            <modifier>public</modifier>
+            <modifier>static</modifier>
+            <type>void</type>
+            <methodname>writeUserToCsv</methodname>
+            <methodparam><type>OutputStream</type><parameter>output</parameter></methodparam>
+            <methodparam><type>char</type><parameter>separator</parameter></methodparam>
+            <methodparam><type>UserVO</type><parameter>user</parameter></methodparam>
+            <exceptionname>IOException</exceptionname>
+          </methodsynopsis>
+        </classsynopsis>
+        <para><emphasis role="bold">Methoden geerbt von java.lang.Object</emphasis>: <simplelist type="inline"><member><varname>clone</varname></member><member><varname>equals</varname></member><member><varname>finalize</varname></member><member><varname>getClass</varname></member><member><varname>hashCode</varname></member><member><varname>notify</varname></member><member><varname>notifyAll</varname></member><member><varname>toString</varname></member><member><varname>wait</varname></member></simplelist></para>
+        <variablelist>
+          <varlistentry>
+            <term><emphasis>Autor</emphasis></term>
+            <listitem>
+              <para><simplelist type="inline"><member>jkraehemann, joel.kraehemann@frentix.com, http://www.frentix.com</member></simplelist></para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+        <informalfigure>
+          <mediaobject>
+            <imageobject role="html">
+              <imagedata align="center" fileref="./figures/com/frentix/util/CsvHelper/ClassDiagram.png" format="PNG" scalefit="1"/>
+            </imageobject>
+            <imageobject role="fo">
+              <imagedata align="center" contentdepth="100%" fileref="./figures/com/frentix/util/CsvHelper/ClassDiagram.png" format="PNG" scalefit="1" width="100%"/>
+            </imageobject>
+          </mediaobject>
+        </informalfigure>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-6-1" xreflabel="readCsv(java.io.File, char)">
+        <title>readCsv(File, char)<indexterm><primary>readCsv</primary></indexterm><indexterm><primary>Methods</primary><secondary>readCsv</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <modifier>static</modifier>
+          <type>String[]</type>
+          <methodname>readCsv</methodname>
+          <methodparam><type>File</type><parameter>csvFile</parameter></methodparam>
+          <methodparam><type>char</type><parameter>separator</parameter></methodparam>
+          <exceptionname>IOException</exceptionname>
+        </methodsynopsis>
+        <para>Reads a CSV file into a string array.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>csvFile</para></entry>
+                <entry><para> the file to be read</para></entry>
+              </row>
+              <row>
+                <entry><para>separator</para></entry>
+                <entry><para> the field separator</para></entry>
+              </row>
+              <row>
+                <entry><para><emphasis>return</emphasis></para></entry>
+                <entry><para> a string array whereas each field has its own entry</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <variablelist>
+          <?dbfo list-presentation="blocks"?>
+          <title>Exceptions</title>
+          <varlistentry>
+            <term><exceptionname>IOException</exceptionname></term>
+            <listitem>
+              <para>java.io.IOException</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-6-6" xreflabel="writeCourseToCsv(java.io.File, char, boolean, CourseVO)">
+        <title>writeCourseToCsv(File, char, boolean, CourseVO)<indexterm><primary>writeCourseToCsv</primary></indexterm><indexterm><primary>Methods</primary><secondary>writeCourseToCsv</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <modifier>static</modifier>
+          <type>void</type>
+          <methodname>writeCourseToCsv</methodname>
+          <methodparam><type>File</type><parameter>csvFile</parameter></methodparam>
+          <methodparam><type>char</type><parameter>separator</parameter></methodparam>
+          <methodparam><type>boolean</type><parameter>append</parameter></methodparam>
+          <methodparam><type>CourseVO</type><parameter>course</parameter></methodparam>
+          <exceptionname>IOException</exceptionname>
+        </methodsynopsis>
+        <para>Writes the course&apos;s attributes to CSV file you may specify whether to overwrite or to append the file.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>csvFile</para></entry>
+                <entry><para/></entry>
+              </row>
+              <row>
+                <entry><para>separator</para></entry>
+                <entry><para/></entry>
+              </row>
+              <row>
+                <entry><para>append</para></entry>
+                <entry><para/></entry>
+              </row>
+              <row>
+                <entry><para>course</para></entry>
+                <entry><para/></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <variablelist>
+          <?dbfo list-presentation="blocks"?>
+          <title>Exceptions</title>
+          <varlistentry>
+            <term><exceptionname>IOException</exceptionname></term>
+            <listitem>
+              <para>java.io.IOException</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-6-5" xreflabel="writeCourseToCsv(java.io.OutputStream, char, CourseVO)">
+        <title>writeCourseToCsv(OutputStream, char, CourseVO)<indexterm><primary>writeCourseToCsv</primary></indexterm><indexterm><primary>Methods</primary><secondary>writeCourseToCsv</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <modifier>static</modifier>
+          <type>void</type>
+          <methodname>writeCourseToCsv</methodname>
+          <methodparam><type>OutputStream</type><parameter>output</parameter></methodparam>
+          <methodparam><type>char</type><parameter>separator</parameter></methodparam>
+          <methodparam><type>CourseVO</type><parameter>course</parameter></methodparam>
+          <exceptionname>IOException</exceptionname>
+        </methodsynopsis>
+        <para>Writes the course&apos;s attributes to CSV output stream.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>output</para></entry>
+                <entry><para> the OutputStream</para></entry>
+              </row>
+              <row>
+                <entry><para>separator</para></entry>
+                <entry><para> the field separator</para></entry>
+              </row>
+              <row>
+                <entry><para>course</para></entry>
+                <entry><para> the CourseVO</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <variablelist>
+          <?dbfo list-presentation="blocks"?>
+          <title>Exceptions</title>
+          <varlistentry>
+            <term><exceptionname>IOException</exceptionname></term>
+            <listitem>
+              <para>java.io.IOException</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-6-4" xreflabel="writeUserToCsv(java.io.File, char, boolean, java.util.List&lt;UserVO&gt;)">
+        <title>writeUserToCsv(File, char, boolean, List&lt;UserVO&gt;)<indexterm><primary>writeUserToCsv</primary></indexterm><indexterm><primary>Methods</primary><secondary>writeUserToCsv</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <modifier>static</modifier>
+          <type>void</type>
+          <methodname>writeUserToCsv</methodname>
+          <methodparam><type>File</type><parameter>csvFile</parameter></methodparam>
+          <methodparam><type>char</type><parameter>separator</parameter></methodparam>
+          <methodparam><type>boolean</type><parameter>append</parameter></methodparam>
+          <methodparam><type>List&lt;UserVO&gt;</type><parameter>user</parameter></methodparam>
+          <exceptionname>IOException</exceptionname>
+        </methodsynopsis>
+        <para>Writes the attributes of the users to CSV file you may specify whether to overwrite or to append the file.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>csvFile</para></entry>
+                <entry><para> the file to write</para></entry>
+              </row>
+              <row>
+                <entry><para>separator</para></entry>
+                <entry><para> the field separator</para></entry>
+              </row>
+              <row>
+                <entry><para>append</para></entry>
+                <entry><para> if false the file will be deleted first else the users will be append to end</para></entry>
+              </row>
+              <row>
+                <entry><para>user</para></entry>
+                <entry><para> the UserVOes</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <variablelist>
+          <?dbfo list-presentation="blocks"?>
+          <title>Exceptions</title>
+          <varlistentry>
+            <term><exceptionname>IOException</exceptionname></term>
+            <listitem>
+              <para>java.io.IOException</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-6-3" xreflabel="writeUserToCsv(java.io.File, char, boolean, UserVO)">
+        <title>writeUserToCsv(File, char, boolean, UserVO)<indexterm><primary>writeUserToCsv</primary></indexterm><indexterm><primary>Methods</primary><secondary>writeUserToCsv</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <modifier>static</modifier>
+          <type>void</type>
+          <methodname>writeUserToCsv</methodname>
+          <methodparam><type>File</type><parameter>csvFile</parameter></methodparam>
+          <methodparam><type>char</type><parameter>separator</parameter></methodparam>
+          <methodparam><type>boolean</type><parameter>append</parameter></methodparam>
+          <methodparam><type>UserVO</type><parameter>user</parameter></methodparam>
+          <exceptionname>IOException</exceptionname>
+        </methodsynopsis>
+        <para>Writes the user&apos;s attributes to CSV file you may specify whether to overwrite or to append the file.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>csvFile</para></entry>
+                <entry><para> the file to write</para></entry>
+              </row>
+              <row>
+                <entry><para>separator</para></entry>
+                <entry><para> the field separator</para></entry>
+              </row>
+              <row>
+                <entry><para>append</para></entry>
+                <entry><para> if false the file will be deleted first else the user will be append to end</para></entry>
+              </row>
+              <row>
+                <entry><para>user</para></entry>
+                <entry><para> the UserVO</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <variablelist>
+          <?dbfo list-presentation="blocks"?>
+          <title>Exceptions</title>
+          <varlistentry>
+            <term><exceptionname>IOException</exceptionname></term>
+            <listitem>
+              <para>java.io.IOException</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </sect2>
+      <sect2 xml:id="dbdoclet-METHOD-6-2" xreflabel="writeUserToCsv(java.io.OutputStream, char, UserVO)">
+        <title>writeUserToCsv(OutputStream, char, UserVO)<indexterm><primary>writeUserToCsv</primary></indexterm><indexterm><primary>Methods</primary><secondary>writeUserToCsv</secondary></indexterm></title>
+        <methodsynopsis language="java">
+          <modifier>public</modifier>
+          <modifier>static</modifier>
+          <type>void</type>
+          <methodname>writeUserToCsv</methodname>
+          <methodparam><type>OutputStream</type><parameter>output</parameter></methodparam>
+          <methodparam><type>char</type><parameter>separator</parameter></methodparam>
+          <methodparam><type>UserVO</type><parameter>user</parameter></methodparam>
+          <exceptionname>IOException</exceptionname>
+        </methodsynopsis>
+        <para>Writes the user&apos;s attributes to CSV ouput stream.</para>
+        <informaltable frame="all" role="parameter">
+          <?dbfo table-width="98%"?>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="3*"/>
+            <tbody>
+              <row>
+                <entry align="left" nameend="c2" namest="c1"><para>Parameter</para>                  <?dbfo bgcolor="#eeeeee"?>
+</entry>
+              </row>
+              <row>
+                <entry><para>output</para></entry>
+                <entry><para> the OuputStream</para></entry>
+              </row>
+              <row>
+                <entry><para>separator</para></entry>
+                <entry><para> the field separator</para></entry>
+              </row>
+              <row>
+                <entry><para>user</para></entry>
+                <entry><para> the UserVO</para></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <variablelist>
+          <?dbfo list-presentation="blocks"?>
+          <title>Exceptions</title>
+          <varlistentry>
+            <term><exceptionname>IOException</exceptionname></term>
+            <listitem>
+              <para>java.io.IOException</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </sect2>
+    </sect1>
+  </chapter>
+  <appendix>
+    <title>Attribute mit konstanten Werten</title>
+    <section>
+      <title>Paket com.frentix.*</title>
+      <table frame="all">
+        <title>Resttool</title>
+        <tgroup cols="2">
+          <colspec colname="c1" colwidth="1*"/>
+          <colspec colname="c2" colwidth="1*"/>
+          <tbody>
+            <row>
+              <entry><para>CREATE_USER_USAGE</para></entry>
+              <entry><para>&quot;-i user.csv -o user.csv&quot;</para></entry>
+            </row>
+            <row>
+              <entry><para>GENERATE_USER_USAGE</para></entry>
+              <entry><para>&quot;-g user count -o user.csv&quot;</para></entry>
+            </row>
+            <row>
+              <entry><para>IMPORT_REPOSITORY_ENTRY_USAGE</para></entry>
+              <entry><para>&quot;-i repositoryEntry.zip -o repositoryEntry.csv&quot;</para></entry>
+            </row>
+            <row>
+              <entry><para>QUERY_REPOSITORY_ENTRY_USAGE</para></entry>
+              <entry><para>&quot;-q repository -o repositoryEntry.csv&quot;</para></entry>
+            </row>
+            <row>
+              <entry><para>QUERY_USER_USAGE</para></entry>
+              <entry><para>&quot;-q user -o user.csv&quot;</para></entry>
+            </row>
+            <row>
+              <entry><para>RESTTOOL_INVOKE</para></entry>
+              <entry><para>&quot;java -jar Resttool.jar&quot;</para></entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>Paket com.frentix.restapi.*</title>
+      <table frame="all">
+        <title>RestConnection</title>
+        <tgroup cols="2">
+          <colspec colname="c1" colwidth="1*"/>
+          <colspec colname="c2" colwidth="1*"/>
+          <tbody>
+            <row>
+              <entry><para>CONTEXT_PATH</para></entry>
+              <entry><para>&quot;openolat&quot;</para></entry>
+            </row>
+            <row>
+              <entry><para>HOST</para></entry>
+              <entry><para>&quot;localhost&quot;</para></entry>
+            </row>
+            <row>
+              <entry><para>LOGIN</para></entry>
+              <entry><para>&quot;administrator&quot;</para></entry>
+            </row>
+            <row>
+              <entry><para>PASSWORD</para></entry>
+              <entry><para>&quot;openolat&quot;</para></entry>
+            </row>
+            <row>
+              <entry><para>PORT</para></entry>
+              <entry><para>9998</para></entry>
+            </row>
+            <row>
+              <entry><para>PROTOCOL</para></entry>
+              <entry><para>&quot;http&quot;</para></entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>Paket com.frentix.restapi.tool.*</title>
+      <table frame="all">
+        <title>User</title>
+        <tgroup cols="2">
+          <colspec colname="c1" colwidth="1*"/>
+          <colspec colname="c2" colwidth="1*"/>
+          <tbody>
+            <row>
+              <entry><para>GENERATE_USER_FIRSTNAME_PREFIX</para></entry>
+              <entry><para>&quot;John&quot;</para></entry>
+            </row>
+            <row>
+              <entry><para>GENERATE_USER_LOGIN_PREFIX</para></entry>
+              <entry><para>&quot;jmeter_&quot;</para></entry>
+            </row>
+            <row>
+              <entry><para>GENERATE_USER_SURNAME_PREFIX</para></entry>
+              <entry><para>&quot;JMeter_&quot;</para></entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </appendix>
+  <appendix>
+    <title>Statistiken</title>
+    <section>
+      <title>Gesamtsummen</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata depth="300px" fileref="././figures/statistics/Totals.png" width="500px"/>
+        </imageobject>
+      </mediaobject>
+      <informaltable frame="all" role="parameter">
+        <tgroup cols="2">
+          <colspec colname="c1" colwidth="4*"/>
+          <colspec colname="c2" colwidth="1*"/>
+          <tbody>
+            <row>
+              <entry align="left" nameend="c2" namest="c1"><para>Gesamtsummen</para>                <?dbfo bgcolor="#eeeeee"?>
+</entry>
+            </row>
+            <row>
+              <entry><para>Gesamtsummen Pakete</para></entry>
+              <entry><para>4</para></entry>
+            </row>
+            <row>
+              <entry><para>Gesamtsummen Klassen</para></entry>
+              <entry><para>6</para></entry>
+            </row>
+            <row>
+              <entry><para>Gesamtsummen Attribute</para></entry>
+              <entry><para>34</para></entry>
+            </row>
+            <row>
+              <entry><para>Gesamtsummen Methoden</para></entry>
+              <entry><para>63</para></entry>
+            </row>
+            <row>
+              <entry><para>Public Klassen</para></entry>
+              <entry><para>6</para></entry>
+            </row>
+            <row>
+              <entry><para>Public Attribute</para></entry>
+              <entry><para>15</para></entry>
+            </row>
+            <row>
+              <entry><para>Public Methoden</para></entry>
+              <entry><para>62</para></entry>
+            </row>
+            <row>
+              <entry><para>Protected Attribute</para></entry>
+              <entry><para>0</para></entry>
+            </row>
+            <row>
+              <entry><para>Protected Methoden</para></entry>
+              <entry><para>0</para></entry>
+            </row>
+            <row>
+              <entry><para>Package Klassen</para></entry>
+              <entry><para>0</para></entry>
+            </row>
+            <row>
+              <entry><para>Package Attribute</para></entry>
+              <entry><para>1</para></entry>
+            </row>
+            <row>
+              <entry><para>Package Methoden</para></entry>
+              <entry><para>0</para></entry>
+            </row>
+            <row>
+              <entry><para>Private Attribute</para></entry>
+              <entry><para>18</para></entry>
+            </row>
+            <row>
+              <entry><para>Private Methoden</para></entry>
+              <entry><para>1</para></entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </section>
+    <section>
+      <title>Klassen pro Package</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata depth="300px" fileref="././figures/statistics/ClassesPerPackage.png" width="500px"/>
+        </imageobject>
+      </mediaobject>
+      <informaltable frame="all" role="parameter">
+        <tgroup cols="2">
+          <colspec colname="c1" colwidth="4*"/>
+          <colspec colname="c2" colwidth="1*"/>
+          <tbody>
+            <row>
+              <entry align="left" nameend="c2" namest="c1"><para>Klassen pro Package</para>                <?dbfo bgcolor="#eeeeee"?>
+</entry>
+            </row>
+            <row>
+              <entry><para>com.frentix.restapi.tool</para></entry>
+              <entry><para>3</para></entry>
+            </row>
+            <row>
+              <entry><para>com.frentix</para></entry>
+              <entry><para>1</para></entry>
+            </row>
+            <row>
+              <entry><para>com.frentix.restapi</para></entry>
+              <entry><para>1</para></entry>
+            </row>
+            <row>
+              <entry><para>com.frentix.util</para></entry>
+              <entry><para>1</para></entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </section>
+  </appendix>
+  <index/>
+</book>
+

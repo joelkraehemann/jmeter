@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding="utf-8"?>
+<appendix>
+  <title>Glossar</title>
+
+  <glossary xmlns="http://docbook.org/ns/docbook" version="5.0">
+    <para>
+      In diesem Glossar werden Abkürzungen sowie Fachbegriffe ausgeführt.
+    </para>
+
+    <glossdiv><title>A</title>
+
+    <glossentry id="ajax"><glossterm>Asynchronous JavaScript and XML</glossterm>
+    <acronym>AJAX</acronym>
+    <glossdef>
+      <para>
+	AJAX ist das Feauture eines Browsers, das JavaScript ermöglicht zu einem beliebigen Zeitpunkt Daten an einen Webserver
+	zu schicken und die Antwort abzuwarten, um dann z.B. das DOM zu bearbeiten. Zur Kommunikation wird entweder JSON oder
+	XML eingesetzt.
+      </para>
+    </glossdef>
+    </glossentry>
+    </glossdiv>
+
+    <glossdiv><title>C</title>
+
+    <glossentry id="csv"><glossterm>Comma Separated Values</glossterm>
+    <acronym>CSV</acronym>
+    <glossdef>
+      <para>
+	CSV Dateien zeichnen sich durch ihre einfache und strikte Semantik aus. Sie werden als eine Tabelle interpretiert, wobei
+	ein Feldseparator Zeichen die Datei in Spalten gliedert. Felder mit Leerzeichen werden mittels Hochkomata begrenzt. Die
+	Zeilen der Datei entsprechen der Reihe einer Tabelle.
+      </para>
+    </glossdef>
+    </glossentry>
+    </glossdiv>
+
+    <glossdiv><title>G</title>
+
+    <glossentry id="gui"><glossterm>Graphical User Interface</glossterm>
+    <acronym>GUI</acronym>
+    <glossdef>
+      <para>
+	Das GUI ist eine Benutzeroberfläche eines Programmes die fensterbasiert aufgebaut ist. Typische Bedienelemente sind
+	Knöpfe, Schieber und Eingabefelder. Im Kontrast dazu gibt es Konsoleanwendungen die eingabebasiert bedient wird.
+      </para>
+    </glossdef>
+    </glossentry>
+    </glossdiv>
+
+    <glossdiv><title>H</title>
+
+    <glossentry id="html"><glossterm>Hyper Text Markup Language</glossterm>
+    <acronym>HTML</acronym>
+    <glossdef>
+      <para>
+	HTML ist eine seitenbeschreibungs Sprache, die Layout-, Formatier- und Meta-Elemente definiert. Diese Elemente nennt
+	man Tags und sind vorgegeben. Tags werden mit Spitzen Klammern begrenzt, wobei es Standalone- und Schliessende-Tags
+	gibt. Es ist ein Dateiformat das hauptsächlich seine Anwendung im World Wide Web findet und gilt als Standard.
+      </para>
+    </glossdef>
+    </glossentry>
+
+    <glossentry id="http"><glossterm>Hyper Text Transport Protocol</glossterm>
+    <acronym>HTTP</acronym>
+    <glossdef>
+      <para>
+	HTTP definiert die Kommunikation zwischen dem Client und Webserver. Es befindet sich auf der OSI-Modell
+	Schicht fünf bis sieben und ist somit ein Anwendungsprotokol. Der wohl verbreiteste Webserver wird von der Apache
+	Software Foundation unterhalten.
+      </para>
+    </glossdef>
+    </glossentry>
+    </glossdiv>
+
+    <glossdiv><title>J</title>
+    
+    <glossentry id="jre"><glossterm>Java Runtime Environment</glossterm>
+    <acronym>JRE</acronym>
+    <glossdef>
+      <para>
+	Zur JRE gehören die Laufzeitumgebung und die Virtuelle Maschine in der assemblierter Java Code abgearbeitet wird. Java
+	Programme lassen sich auf der entsprechende JRE plattformunabhänig ausführen.
+      </para>
+    </glossdef>
+    </glossentry>
+    </glossdiv>
+
+    <glossdiv><title>L</title>
+
+    <glossentry id="lms"><glossterm>Learning Management System</glossterm>
+    <acronym>LMS</acronym>
+    <glossdef>
+      <para>
+	Ein LMS ist eine Plattform auf der sich typischerweise Lerninhalte erstellen lässt, um sie zu präsentieren. eAssessment
+	Tests ist eines der interaktiven Lernmöglichkeit, die ein LMS implementieren kann.
+      </para>
+    </glossdef>
+    </glossentry>
+    </glossdiv>
+
+    <glossdiv><title>O</title>
+
+    <glossentry id="oss"><glossterm>Open Source Software</glossterm>
+    <acronym>OSS</acronym>
+    <glossdef>
+      <para>
+	Unter dem Begriff OSS versteht man Software deren Quellcode öffentlich zugänglich ist. Freie Software wird oftmals
+	fälschlicher Weise als Open Source bezeichnet, gilt aber klar zu unterscheiden bezüglich Lizenz. OSS hat Einschränkungen
+	bezüglich Modifizieren und Verteilen.
+      </para>
+      </glossdef>
+    </glossentry>
+    </glossdiv>
+
+    <glossdiv><title>S</title>
+
+    <glossentry id="sql"><glossterm>Structured Query Language</glossterm>
+    <acronym>SQL</acronym>
+    <glossdef>
+      <para>
+	SQL ist eine Scriptsprache für Datenbank Management Systeme. Mittels SQL lassen sich Datenbanken und Tabellen erstellen
+	oder verändern.
+      </para>
+    </glossdef>
+    </glossentry>
+    </glossdiv>
+
+    <glossdiv><title>W</title>
+
+    <glossentry id="war"><glossterm>Web Archive</glossterm>
+    <acronym>WAR</acronym>
+    <glossdef>
+      <para>
+	WAR Dateien enthalten ZIP-komprimierte Dateien. Es sind JAR Dateien die einem vorgegebenen Aufbau folgen. Typisch dafür
+	ist die <filename>Manifest</filename> Datei im Verzeichnis <filename>META-INF</filename> und der Web Applikations Ordner
+	<filename>WEB-INF</filename>.
+      </para>
+    </glossdef>
+    </glossentry>
+    </glossdiv>
+    
+  </glossary>
+</appendix>

@@ -1,0 +1,98 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Konfigurations Elemente</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="openolat LMS - JMeter Loadtests"><link rel="up" href="bk02ch03.html" title="Kapitel 3. JMeter Loadtests"><link rel="prev" href="bk02ch03s02.html" title="Logik Controller"><link rel="next" href="bk02ch03s04.html" title="Sampler"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Konfigurations Elemente</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bk02ch03s02.html">Zurück</a> </td><th width="60%" align="center">Kapitel 3. JMeter Loadtests</th><td width="20%" align="right"> <a accesskey="n" href="bk02ch03s04.html">Weiter</a></td></tr></table><hr></div><div class="sect1" title="Konfigurations Elemente"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp267904"></a>Konfigurations Elemente</h2></div></div></div>
+    
+
+    <p>
+      Mit Konfigurations Elementen kann man Standard Werte und Variablen definieren. Diese werden
+      am Anfang des Gültigkeitsbereiches verarbeitet, bevor irgendetwas verarbeitet oder generiert
+      wird. Es gibt verschiedene Namenskonzepte, aber am naheliegensten ist es das von Java zu übernehmen.
+      Global sichtbare Variablen in Upper-Case und kontextbezogene in Camel-Case.
+    </p>
+
+    <div class="sect2" title="Benutzer Definierte Variablen"><div class="titlepage"><div><div><h3 class="title"><a name="idp269488"></a>Benutzer Definierte Variablen</h3></div></div></div>
+      
+
+      <div class="mediaobject" align="top"><img src="../images/jmeter_variables.png" align="top"><div class="caption">
+	  <p>
+	    Bildschirmfoto JMeter Benutzer Definierte Variablen
+	  </p>
+	</div></div>
+
+      <p>
+	In diesem Konfigurations Element gibt man Konstanten an, die sich während der Laufzeit nicht ändern.
+	Es eignet sich Ideal um Textbausteine zu erstellen. Diese Variablen werden analog zu Referenzen aufgerufen.
+	${host} wäre demnach der Wert <span class="emphasis"><em>debian-openolat</em></span>. Manche Felder von JMeter erlauben keine
+	Variablen oder verlangen das Umschliessen mittels doppeltem Hochkomata.
+      </p>
+
+    </div>
+
+    <div class="sect2" title="CSV Einstellungen"><div class="titlepage"><div><div><h3 class="title"><a name="idp274336"></a>CSV Einstellungen</h3></div></div></div>
+      
+
+      <div class="mediaobject" align="top"><img src="../images/jmeter_csv.png" align="top"><div class="caption">
+	  <p>
+	    Bildschirmfoto JMeter CSV Einstellungen
+	  </p>
+	</div></div>
+
+      <p>
+	<acronym class="acronym">CSV</acronym> Dateien eignen sich gut um Tabellen auszulesen. Dabei kann man den <span class="emphasis"><em>Sharing
+	Mode</em></span> auf <span class="emphasis"><em>Current Thread Group</em></span> setzen, was dazu führt, dass jeder Thread
+	eine Zeile erhält. Die Spalten werden durch das Feld Variablenname ausgelesen und den angegeben Variablen
+	zugewiesen.
+      </p>
+
+    </div>
+
+    <div class="sect2" title="HTTP Managers"><div class="titlepage"><div><div><h3 class="title"><a name="idp279728"></a>HTTP Managers</h3></div></div></div>
+      
+
+      <div class="mediaobject" align="top"><img src="../images/jmeter_cookie_manager.png" align="top"><div class="caption">
+	  <p>
+	    Bildschirmfoto JMeter HTTP Cookie Manager
+	  </p>
+	</div></div>
+
+      <p>
+	Die diversen HTTP Managers die vorhanden sind, bieten einem die Möglichkeit das Standardverhalten des
+	HTTP Clients zu steuern. Es stehen folgende HTTP Managers zur Verfügung:
+      </p>
+
+      <div class="itemizedlist"><ul class="itemizedlist" type="bullet"><li class="listitem" style="list-style-type: disc">
+	  <p>
+	    HTTP Authorisierungs Manager
+	  </p>
+	</li><li class="listitem" style="list-style-type: disc">
+	  <p>
+	    HTTP Cache Manager
+	  </p>
+	</li><li class="listitem" style="list-style-type: disc">
+	  <p>
+	    HTTP Cookie Manager
+	  </p>
+	</li><li class="listitem" style="list-style-type: disc">
+	  <p>
+	    HTTP Header Manager
+	  </p>
+	</li></ul></div>
+
+    </div>
+
+    <div class="sect2" title="Zähler (Counter)"><div class="titlepage"><div><div><h3 class="title"><a name="idp288016"></a>Zähler (Counter)</h3></div></div></div>
+      
+
+      <div class="mediaobject" align="top"><img src="../images/jmeter_counter.png" align="top"><div class="caption">
+	  <p>
+	    Bildschirmfoto JMeter Zähler
+	  </p>
+	</div></div>
+
+      <p>
+	Mit Zähler inkrementiert man Variablen um die angegebene Zunahme. Die Option <span class="emphasis"><em>Zähler für jeden
+	Benutzer einzeln führen</em></span> hat den Effekt, dass jeder Benutzer (Thread) eine eigene Variable erhält.
+	<span class="emphasis"><em>Reset counter on each Thread Group Iteration</em></span> führt dazu, dass der Zähler nicht immer
+	weiter erhöht wird.
+      </p>
+    </div>
+
+  </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bk02ch03s02.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="bk02ch03.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="bk02ch03s04.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Logik Controller </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Sampler</td></tr></table></div></body></html>

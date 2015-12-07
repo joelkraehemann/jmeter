@@ -1,0 +1,105 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>JMeter</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="openolat LMS - JMeter Loadtests"><link rel="up" href="bk02ch02.html" title="Kapitel 2. Umgebung"><link rel="prev" href="bk02ch02s04.html" title="openolat LMS"><link rel="next" href="bk02ch03.html" title="Kapitel 3. JMeter Loadtests"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">JMeter</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bk02ch02s04.html">Zurück</a> </td><th width="60%" align="center">Kapitel 2. Umgebung</th><td width="20%" align="right"> <a accesskey="n" href="bk02ch03.html">Weiter</a></td></tr></table><hr></div><div class="sect1" title="JMeter"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp235056"></a>JMeter</h2></div></div></div>
+    
+    <p>
+      Im Start Script von JMeter passen wir noch das Maximum der RAM-Belegung an für einen reibungslosen Ablauf. Bitte beachten
+      Sie, dass man für den Loadtest noch <code class="filename">groovy-all.jar</code> benötigt und dieses in den <code class="filename">lib</code>
+      Unterordner von JMeter kopiert.
+    </p>
+
+    <div class="example"><a name="idp247200"></a><p class="title"><b>Beispiel 2.13. JMeter Start Script</b></p><div class="example-contents">
+      
+      <pre class="programlisting">
+#! /bin/sh
+
+##   Licensed to the Apache Software Foundation (ASF) under one or more
+##   contributor license agreements.  See the NOTICE file distributed with
+##   this work for additional information regarding copyright ownership.
+##   The ASF licenses this file to You under the Apache License, Version 2.0
+##   (the "License"); you may not use this file except in compliance with
+##   the License.  You may obtain a copy of the License at
+## 
+##       http://www.apache.org/licenses/LICENSE-2.0
+## 
+##   Unless required by applicable law or agreed to in writing, software
+##   distributed under the License is distributed on an "AS IS" BASIS,
+##   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+##   See the License for the specific language governing permissions and
+##   limitations under the License.
+
+##   ==============================================
+##   Environment variables:
+##   JVM_ARGS - optional java args, e.g. -Dprop=val
+##
+##   ==============================================
+
+
+# The following should be reasonably good values for most tests running
+# on Sun JVMs. Following is the analysis on which it is based. If it's total
+# gibberish to you, please study my article at
+# http://www.atg.com/portal/myatg/developer?paf_dm=full&amp;paf_gear_id=1100010&amp;detailArticle=true&amp;id=9606
+#
+# JMeter objects can generally be grouped into three life-length groups:
+#
+# - Per-sample objects (results, DOMs,...). An awful lot of those.
+#   Life length of milliseconds to a few seconds.
+#
+# - Per-run objects (threads, listener data structures,...). Not that many 
+#   of those unless we use the table or tree listeners on heavy runs.
+#   Life length of minutes to several hours, from creation to start of next run.
+#
+# - Per-work-session objects (test plans, GUIs,...).
+#   Life length: for the life of the JVM.
+
+# This is the base heap size -- you may increase or decrease it to fit your
+# system's memory availablity:
+HEAP="-Xms2048m -Xmx2048m"
+
+# There's an awful lot of per-sample objects allocated during test run, so we
+# need a large eden to avoid too frequent scavenges -- you'll need to tune this
+# down proportionally if you reduce the HEAP values above:
+NEW="-XX:NewSize=128m -XX:MaxNewSize=128m"
+
+# This ratio and target have been proven OK in tests with a specially high
+# amount of per-sample objects (the HtmlParserHTMLParser tests):
+# SURVIVOR="-XX:SurvivorRatio=8 -XX:TargetSurvivorRatio=50"
+
+# Think about it: trying to keep per-run objects in tenuring definitely
+# represents a cost, but where's the benefit? They won't disappear before
+# the test is over, and at that point we will no longer care about performance.
+#
+# So we will have JMeter do an explicit Full GC before starting a test run,
+# but then we won't make any effort (or spend any CPU) to keep objects
+# in tenuring longer than the life of per-sample objects -- which is hopefully
+# shorter than the period between two scavenges):
+#
+TENURING="-XX:MaxTenuringThreshold=2"
+
+# This evacuation ratio is OK (see the comments for SURVIVOR) during test
+# runs -- not so sure about operations that bring a lot of long-lived information into
+# memory in a short period of time, such as loading tests or listener data files.
+# Increase it if you experience OutOfMemory problems during those operations
+# without having gone through a lot of Full GC-ing just before the OOM:
+# EVACUATION="-XX:MaxLiveObjectEvacuationRatio=20%"
+
+# Avoid the RMI-induced Full GCs to run too frequently -- once every ten minutes
+# should be more than enough:
+RMIGC="-Dsun.rmi.dgc.client.gcInterval=600000 -Dsun.rmi.dgc.server.gcInterval=600000"
+
+# Increase MaxPermSize if you use a lot of Javascript in your Test Plan :
+PERM="-XX:PermSize=64m -XX:MaxPermSize=128m"
+
+# Finally, some tracing to help in case things go astray:
+#DEBUG="-verbose:gc -XX:+PrintTenuringDistribution"
+
+# Always dump on OOM (does not cost anything unless triggered)
+DUMP="-XX:+HeapDumpOnOutOfMemoryError"
+
+SERVER="-server"
+
+ARGS="$SERVER $DUMP $HEAP $NEW $SURVIVOR $TENURING $EVACUATION $RMIGC $PERM"
+
+java $ARGS $JVM_ARGS -jar "`dirname "$0"`/ApacheJMeter.jar" "$@"
+
+      </pre>
+    </div></div><br class="example-break">
+  </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bk02ch02s04.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="bk02ch02.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="bk02ch03.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">openolat LMS </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Kapitel 3. JMeter Loadtests</td></tr></table></div></body></html>

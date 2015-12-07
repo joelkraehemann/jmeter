@@ -1,0 +1,51 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Klasse RepositoryEntry</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="openolat LMS - JMeter Loadtests"><link rel="up" href="bk03ch03.html" title="Kapitel 3. Paket com.­frentix.­restapi.­tool"><link rel="prev" href="bk03ch03.html" title="Kapitel 3. Paket com.­frentix.­restapi.­tool"><link rel="next" href="bk03ch03s03.html" title="Klasse User"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Klasse RepositoryEntry</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bk03ch03.html">Zurück</a> </td><th width="60%" align="center">Kapitel 3. Paket com.­frentix.­restapi.­tool</th><td width="20%" align="right"> <a accesskey="n" href="bk03ch03s03.html">Weiter</a></td></tr></table><hr></div><div class="sect1" title="Klasse RepositoryEntry"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="dbdoclet-CLASS-4"></a>Klasse RepositoryEntry</h2></div></div></div>
+      
+      <a class="indexterm" name="idp1153872"></a>
+      <a class="indexterm" name="idp1154384"></a>
+      <p>Import or query repository entries via RESTful web service.</p>
+      <div class="sect2" title="Syntax"><div class="titlepage"><div><div><h3 class="title"><a name="idp1155536"></a>Syntax</h3></div></div></div>
+        
+        <pre class="classsynopsis"> <span class="ooclass">
+            <span class="modifier">public </span>
+            <span class="modifier">class </span>
+            <span class="classname">RepositoryEntry</span>
+          </span> {<br>// Public Constructors<code class="constructorsynopsis">  <span class="modifier">public </span><span class="methodname">RepositoryEntry</span>(<span class="methodparam"><span class="type">RestConnection </span><span class="parameter">restConnection</span></span>);</code><br>// Public Methods<code class="methodsynopsis">  <span class="modifier">public </span><span class="type">RestConnection </span><span class="methodname">getRestConnection</span>();</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">importRepositoryEntry</span>(<span class="methodparam"><span class="type">File </span><span class="parameter">outputFile</span></span>,<br>                                    <span class="methodparam"><span class="type">File </span><span class="parameter">inputFile</span></span>);</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">queryRepositoryEntry</span>(<span class="methodparam"><span class="type">File </span><span class="parameter">outputFile</span></span>);</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">setRestConnection</span>(<span class="methodparam"><span class="type">RestConnection </span><span class="parameter">restConnection</span></span>);</code><br>}</pre>
+        <p><span class="bold"><strong>Methoden geerbt von java.lang.Object</strong></span>: <span class="simplelist"><code class="varname">clone</code>, <code class="varname">equals</code>, <code class="varname">finalize</code>, <code class="varname">getClass</code>, <code class="varname">hashCode</code>, <code class="varname">notify</code>, <code class="varname">notifyAll</code>, <code class="varname">toString</code>, <code class="varname">wait</code></span></p>
+        <div class="variablelist"><dl><dt><span class="term"><span class="emphasis"><em>Autor</em></span></span></dt><dd>
+              <p><span class="simplelist">jkraehemann, joel.kraehemann@frentix.com, http://www.frentix.com</span></p>
+            </dd></dl></div>
+        <div class="informalfigure">
+          <div class="mediaobject" align="center"><img src="./figures/com/frentix/restapi/tool/RepositoryEntry/ClassDiagram.png" align="middle"></div>
+        </div>
+      </div>
+      <div class="sect2" title="RepositoryEntry(RestConnection)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-CONSTRUCTOR-4-1"></a>RepositoryEntry(RestConnection)<a class="indexterm" name="idp1188064"></a><a class="indexterm" name="idp1188448"></a></h3></div></div></div>
+        
+        <code class="constructorsynopsis"><span class="modifier">public </span><span class="methodname">RepositoryEntry</span>(<span class="methodparam"><span class="type">RestConnection </span><span class="parameter">restConnection</span></span>);</code>
+        <p>Creates a new RepositoryEntry instance.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>restConnection</p></td><td><p> the RestConnection</p></td></tr></tbody></table>
+        </div>
+      </div>
+      <div class="sect2" title="importRepositoryEntry(File, File)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-4-1"></a>importRepositoryEntry(File, File)<a class="indexterm" name="idp1200640"></a><a class="indexterm" name="idp1201136"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="type">void </span><span class="methodname">importRepositoryEntry</span>(<span class="methodparam"><span class="type">File </span><span class="parameter">outputFile</span></span>,<br>                                  <span class="methodparam"><span class="type">File </span><span class="parameter">inputFile</span></span>);</code>
+        <p>Imports a repository entry via RESTful web service.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>outputFile</p></td><td><p> the file to safe the repository entry's attributes.</p></td></tr><tr><td><p>inputFile</p></td><td><p> the repository entry as a ZIP file</p></td></tr></tbody></table>
+        </div>
+      </div>
+      <div class="sect2" title="queryRepositoryEntry(File)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-4-2"></a>queryRepositoryEntry(File)<a class="indexterm" name="idp1216288"></a><a class="indexterm" name="idp1216704"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="type">void </span><span class="methodname">queryRepositoryEntry</span>(<span class="methodparam"><span class="type">File </span><span class="parameter">outputFile</span></span>);</code>
+        <p>Queries repository entries via RESTful web service.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>outputFile</p></td><td><p> the file to safe the queried repository entries</p></td></tr></tbody></table>
+        </div>
+      </div>
+    </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bk03ch03.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="bk03ch03.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="bk03ch03s03.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Kapitel 3. Paket com.­frentix.­restapi.­tool </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Klasse User</td></tr></table></div></body></html>

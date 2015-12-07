@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding="utf-8"?>
+<appendix xmlns="http://docbook.org/ns/docbook"
+	  xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0">
+  <title>Ressourcen &amp; Literatur</title>
+
+  <bibliography>
+    <title>Bibliographie</title>
+
+    <bibliomixed>
+      <bibliomset relation="journal">
+	<title xlink:href="http://jmeter.apache.org/usermanual/index.html">User's Manual</title>.
+	<publishername>Apache Software Foundation</publishername>.
+	<pubdate>Stand 11.03.2012</pubdate>
+	</bibliomset>.
+    </bibliomixed>
+  </bibliography>
+
+</appendix>

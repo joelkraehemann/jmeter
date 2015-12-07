@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding="utf-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0">
+  <title>Reflexion</title>
+
+  <sect1>
+    <title>Verlauf</title>
+
+    <para>
+      Aufgrund meiner Programmiererfahrung konnte ich schnell den Einstieg in JMeter finden. Jedoch war ich zuerst
+      fixiert auf bekannte Strukturen und Geltungsbereiche. Worauf ich mich trotzdem gut einstellen konnte.
+    </para>
+
+    <para>
+      Das XPath Problem musste ich auf die harte Tour lernen, wie diese Ausdrücke realisiert wurden. Ich habe JMeter
+      praktisch fertig gepatcht, als ich in der letzte Zeile bemerkte, dass die Anzahl in generierte Referenzen gespeichert
+      wird. Ich verlor dabei etwa drei bis vier Stunden.
+    </para>
+
+    <para>
+      Meine Arbeit ist auf jedenfall ein Erfolg, da ich alles Umsetzen konnte. Zudem läuft der JMeter Loadtest unabhängig vom
+      eAssessment Test den ich wärend des Programmieren und Evaluieren verwendet habe. 
+    </para>
+  </sect1>
+
+  <sect1>
+    <title>Arbeitsmethodik</title>
+
+    <para>
+      Ich verwendete Docbook XML zur Formatierung der gesamten IPA. Recherchen führten mich zu hilfreichen Werkzeuge, wie z.B.
+      das <programname>javadoc</programname> Doclet <programname>dbdoclet</programname>, mit dem es sich ganz einfach aus Java
+      Kommentare eine API Referenz generieren lässt. Mittels <programname>dblatex</programname> generierte ich PDF Dateien.
+    </para>
+
+    <para>
+      Keinen WYSIWYG Editor zu verwenden gab mir Kontrolle über den Aufbau des Dokumentes und ersparte mir Mehraufwand. Dies nicht
+      zuletzt, da der mich begleitende Chefexperte mir Inputs betreffend Wegleitung gab. Ich konnte mit Verschieben einer Zeile
+      das ganze Journal ins erste Kapitel übernehmen. Ich würde diese Technologie wieder einsetzen, da ich nur Vorteile sehe.
+    </para>
+  </sect1>
+
+  <sect1>
+    <title>Kommunikation</title>
+
+    <para>
+      Ich hielt Rücksprache mit dem Hauptentwickler bezüglich Auswertung des JMeter Tests für kritische Programmparameter anzupassen.
+      Während des Verlaufs der Arbeit informierte ich meinen Fachvorgesetzten über den Stand der Arbeit.
+    </para>
+  </sect1>
+
+</chapter>

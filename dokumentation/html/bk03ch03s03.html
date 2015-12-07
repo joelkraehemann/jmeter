@@ -1,0 +1,110 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Klasse User</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="openolat LMS - JMeter Loadtests"><link rel="up" href="bk03ch03.html" title="Kapitel 3. Paket com.­frentix.­restapi.­tool"><link rel="prev" href="bk03ch03s02.html" title="Klasse RepositoryEntry"><link rel="next" href="bk03ch04.html" title="Kapitel 4. Paket com.­frentix.­util"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Klasse User</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bk03ch03s02.html">Zurück</a> </td><th width="60%" align="center">Kapitel 3. Paket com.­frentix.­restapi.­tool</th><td width="20%" align="right"> <a accesskey="n" href="bk03ch04.html">Weiter</a></td></tr></table><hr></div><div class="sect1" title="Klasse User"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="dbdoclet-CLASS-5"></a>Klasse User</h2></div></div></div>
+      
+      <a class="indexterm" name="idp1230080"></a>
+      <a class="indexterm" name="idp1230592"></a>
+      <p>Generate, import or query users via RESTful web service. You may set the appropriate properties to configure parameters of user generation.</p>
+      <div class="sect2" title="Syntax"><div class="titlepage"><div><div><h3 class="title"><a name="idp1231888"></a>Syntax</h3></div></div></div>
+        
+        <pre class="classsynopsis"> <span class="ooclass">
+            <span class="modifier">public </span>
+            <span class="modifier">class </span>
+            <span class="classname">User</span>
+          </span> {<br>// Public Static Fields<code class="fieldsynopsis">  
+            <span class="modifier">public </span>
+            <span class="modifier">static </span>
+            <span class="modifier">final </span>
+            <span class="type">String </span>
+            <span class="varname">GENERATE_USER_FIRSTNAME_PREFIX </span>
+            <span class="initializer">= "John"</span>
+          ;</code><br><code class="fieldsynopsis">  
+            <span class="modifier">public </span>
+            <span class="modifier">static </span>
+            <span class="modifier">final </span>
+            <span class="type">String </span>
+            <span class="varname">GENERATE_USER_LOGIN_PREFIX </span>
+            <span class="initializer">= "jmeter_"</span>
+          ;</code><br><code class="fieldsynopsis">  
+            <span class="modifier">public </span>
+            <span class="modifier">static </span>
+            <span class="modifier">final </span>
+            <span class="type">String </span>
+            <span class="varname">GENERATE_USER_SURNAME_PREFIX </span>
+            <span class="initializer">= "JMeter_"</span>
+          ;</code><br>// Public Constructors<code class="constructorsynopsis">  <span class="modifier">public </span><span class="methodname">User</span>(<span class="methodparam"><span class="type">RestConnection </span><span class="parameter">restConnection</span></span>);</code><br><code class="constructorsynopsis">  <span class="modifier">public </span><span class="methodname">User</span>(<span class="methodparam"><span class="type">RestConnection </span><span class="parameter">restConnection</span></span>,<br>              <span class="methodparam"><span class="type">String </span><span class="parameter">generateUserFirstnamePrefix</span></span>,<br>              <span class="methodparam"><span class="type">String </span><span class="parameter">generateUserSurnamePrefix</span></span>,<br>              <span class="methodparam"><span class="type">String </span><span class="parameter">generateUserLoginPrefix</span></span>);</code><br>// Public Methods<code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">applyProperties</span>(<span class="methodparam"><span class="type">Properties </span><span class="parameter">properties</span></span>);</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">generateUser</span>(<span class="methodparam"><span class="type">File </span><span class="parameter">outputFile</span></span>,<br>                           <span class="methodparam"><span class="type">int </span><span class="parameter">count</span></span>)<br>    throws <span class="exceptionname">IOException</span>, <span class="exceptionname">URISyntaxException</span>;</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">String </span><span class="methodname">getGenerateUserFirstnamePrefix</span>();</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">String </span><span class="methodname">getGenerateUserLoginPrefix</span>();</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">String </span><span class="methodname">getGenerateUserSurnamePrefix</span>();</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">RestConnection </span><span class="methodname">getRestConnection</span>();</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">importUser</span>(<span class="methodparam"><span class="type">File </span><span class="parameter">outputFile</span></span>,<br>                         <span class="methodparam"><span class="type">File </span><span class="parameter">inputFile</span></span>);</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">queryUser</span>(<span class="methodparam"><span class="type">File </span><span class="parameter">outputFile</span></span>);</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">setGenerateUserFirstnamePrefix</span>(<span class="methodparam"><span class="type">String </span><span class="parameter">generateUserFirstnamePrefix</span></span>);</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">setGenerateUserLoginPrefix</span>(<span class="methodparam"><span class="type">String </span><span class="parameter">generateUserLoginPrefix</span></span>);</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">setGenerateUserSurnamePrefix</span>(<span class="methodparam"><span class="type">String </span><span class="parameter">generateUserSurnamePrefix</span></span>);</code><br><code class="methodsynopsis">  <span class="modifier">public </span><span class="type">void </span><span class="methodname">setRestConnection</span>(<span class="methodparam"><span class="type">RestConnection </span><span class="parameter">restConnection</span></span>);</code><br>}</pre>
+        <p><span class="bold"><strong>Methoden geerbt von java.lang.Object</strong></span>: <span class="simplelist"><code class="varname">clone</code>, <code class="varname">equals</code>, <code class="varname">finalize</code>, <code class="varname">getClass</code>, <code class="varname">hashCode</code>, <code class="varname">notify</code>, <code class="varname">notifyAll</code>, <code class="varname">toString</code>, <code class="varname">wait</code></span></p>
+        <div class="variablelist"><dl><dt><span class="term"><span class="emphasis"><em>Autor</em></span></span></dt><dd>
+              <p><span class="simplelist">jkraehemann, joel.kraehemann@frentix.com, http://www.frentix.com</span></p>
+            </dd></dl></div>
+        <div class="informalfigure">
+          <div class="mediaobject" align="center"><img src="./figures/com/frentix/restapi/tool/User/ClassDiagram.png" align="middle"></div>
+        </div>
+      </div>
+      <div class="sect2" title="User(RestConnection)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-CONSTRUCTOR-5-1"></a>User(RestConnection)<a class="indexterm" name="idp1300992"></a><a class="indexterm" name="idp1301376"></a></h3></div></div></div>
+        
+        <code class="constructorsynopsis"><span class="modifier">public </span><span class="methodname">User</span>(<span class="methodparam"><span class="type">RestConnection </span><span class="parameter">restConnection</span></span>);</code>
+        <p>Creates a new User instance.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>restConnection</p></td><td><p> the RestConnection</p></td></tr></tbody></table>
+        </div>
+      </div>
+      <div class="sect2" title="User(RestConnection, String, String, String)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-CONSTRUCTOR-5-2"></a>User(RestConnection, String, String, String)<a class="indexterm" name="idp1313600"></a><a class="indexterm" name="idp1314064"></a></h3></div></div></div>
+        
+        <code class="constructorsynopsis"><span class="modifier">public </span><span class="methodname">User</span>(<span class="methodparam"><span class="type">RestConnection </span><span class="parameter">restConnection</span></span>,<br>            <span class="methodparam"><span class="type">String </span><span class="parameter">generateUserFirstnamePrefix</span></span>,<br>            <span class="methodparam"><span class="type">String </span><span class="parameter">generateUserSurnamePrefix</span></span>,<br>            <span class="methodparam"><span class="type">String </span><span class="parameter">generateUserLoginPrefix</span></span>);</code>
+        <p>Creates a new User instance.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>restConnection</p></td><td><p> the RestConnection</p></td></tr><tr><td><p>generateUserFirstnamePrefix</p></td><td><p> prefix to be used</p></td></tr><tr><td><p>generateUserSurnamePrefix</p></td><td><p> prefix to be used</p></td></tr><tr><td><p>generateUserLoginPrefix</p></td><td><p> prefix to be used</p></td></tr></tbody></table>
+        </div>
+      </div>
+      <div class="sect2" title="applyProperties(Properties)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-5-4"></a>applyProperties(Properties)<a class="indexterm" name="idp1333472"></a><a class="indexterm" name="idp1333936"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="type">void </span><span class="methodname">applyProperties</span>(<span class="methodparam"><span class="type">Properties </span><span class="parameter">properties</span></span>);</code>
+        <p>Applies the given properties.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>properties</p></td><td><p> the Properties</p></td></tr></tbody></table>
+        </div>
+      </div>
+      <div class="sect2" title="generateUser(File, int)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-5-1"></a>generateUser(File, int)<a class="indexterm" name="idp1346640"></a><a class="indexterm" name="idp1347104"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="type">void </span><span class="methodname">generateUser</span>(<span class="methodparam"><span class="type">File </span><span class="parameter">outputFile</span></span>,<br>                         <span class="methodparam"><span class="type">int </span><span class="parameter">count</span></span>)<br>    throws <span class="exceptionname">IOException</span>, <span class="exceptionname">URISyntaxException</span>;</code>
+        <p>Generates users via RESTful web service.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>outputFile</p></td><td><p> the file to safe the generated user attributes</p></td></tr><tr><td><p>count</p></td><td><p> the count of users to be created</p></td></tr></tbody></table>
+        </div>
+        <div class="variablelist" title="Exceptions"><p class="title"><b>Exceptions</b></p><dl><dt><span class="term"><code class="exceptionname">URISyntaxException</code></span></dt><dd>
+              <p>java.net.URISyntaxException</p>
+            </dd><dt><span class="term"><code class="exceptionname">IOException</code></span></dt><dd>
+              <p>java.io.IOException</p>
+            </dd></dl></div>
+        <div class="variablelist"><dl><dt><span class="term"><span class="emphasis"><em>Siehe auch</em></span></span></dt><dd>
+              <span class="simplelist"><code class="literal"><a class="link" href="bk03ch03s03.html" title="Klasse User"><a class="xref" href="bk03ch03s03.html" title="Klasse User">com.frentix.restapi.tool.User</a></a></code>, <code class="literal"><a class="link" href="bk03ch03s03.html" title="Klasse User"><a class="xref" href="bk03ch03s03.html" title="Klasse User">com.frentix.restapi.tool.User</a></a></code>, <code class="literal"><a class="link" href="bk03ch03s03.html" title="Klasse User"><a class="xref" href="bk03ch03s03.html" title="Klasse User">com.frentix.restapi.tool.User</a></a></code></span>
+            </dd></dl></div>
+      </div>
+      <div class="sect2" title="importUser(File, File)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-5-2"></a>importUser(File, File)<a class="indexterm" name="idp1373344"></a><a class="indexterm" name="idp1373728"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="type">void </span><span class="methodname">importUser</span>(<span class="methodparam"><span class="type">File </span><span class="parameter">outputFile</span></span>,<br>                       <span class="methodparam"><span class="type">File </span><span class="parameter">inputFile</span></span>);</code>
+        <p>Imports users via RESTful web service.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>inputFile</p></td><td><p> the file containing the user's attributes.</p></td></tr><tr><td><p>outputFile</p></td><td><p></p></td></tr></tbody></table>
+        </div>
+      </div>
+      <div class="sect2" title="queryUser(File)"><div class="titlepage"><div><div><h3 class="title"><a name="dbdoclet-METHOD-5-3"></a>queryUser(File)<a class="indexterm" name="idp1388320"></a><a class="indexterm" name="idp1388784"></a></h3></div></div></div>
+        
+        <code class="methodsynopsis"><span class="modifier">public </span><span class="type">void </span><span class="methodname">queryUser</span>(<span class="methodparam"><span class="type">File </span><span class="parameter">outputFile</span></span>);</code>
+        <p>Queries existing users via RESTful web service.</p>
+        <div class="informaltable">
+          
+          <table border="1"><colgroup><col class="c1"><col class="c2"></colgroup><tbody><tr><td colspan="2" align="left"><p>Parameter</p>                  
+</td></tr><tr><td><p>outputFile</p></td><td><p> the file to safe the queried user attributes.</p></td></tr></tbody></table>
+        </div>
+      </div>
+    </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bk03ch03s02.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="bk03ch03.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="bk03ch04.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Klasse RepositoryEntry </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Kapitel 4. Paket com.­frentix.­util</td></tr></table></div></body></html>

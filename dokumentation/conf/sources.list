@@ -1,0 +1,15 @@
+# 
+
+# deb cdrom:[Debian GNU/Linux 6.0.7 _Squeeze_ - Official amd64 CD Binary-1 20130223-14:06]/ squeeze main
+
+# deb cdrom:[Debian GNU/Linux 6.0.7 _Squeeze_ - Official amd64 CD Binary-1 20130223-14:06]/ squeeze main
+
+deb http://ftp.ch.debian.org/debian/ stable main contrib non-free
+deb-src http://ftp.ch.debian.org/debian/ stable main contrib non-free
+
+deb http://security.debian.org/ stable/updates main contrib non-free
+deb-src http://security.debian.org/ stable/updates main contrib non-free
+
+# testing repo
+deb http://ftp.ch.debian.org/debian/ testing main contrib non-free
+deb-src http://ftp.ch.debian.org/debian/ testing main contrib non-free

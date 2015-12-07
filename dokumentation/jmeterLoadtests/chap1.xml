@@ -1,0 +1,358 @@
+<?xml version='1.0' encoding="utf-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0">
+  <title>Einleitung</title>
+  <para>
+    In diesem Kapitel wird einen Überblick auf die Thematik verschafft und auf die Aufgabenstellung detailliert
+    eingegangen. Problemstellungen und Lösungsansätze sollen ersichtlich sein.
+  </para>
+  
+  <sect1>
+    <title>Ausgangslage</title>
+    <para>
+      Openolat ist ein eLearning Management System, welches über verschiedene Schnittstellen verfügt.
+      RESTful Webservice, webdav Dateitransfer, <acronym>AJAX</acronym> und statisches <acronym>HTML</acronym>
+      sind die Schnittstellen mit denen der Benutzer unter Umständen konfrontiert ist. Es läuft als Cluster-fähige
+      Webanwendung auf einem Java Servlet Container, getestet wurden Apache Tomcat und Oracle Glassfish.
+    </para>
+    <para>
+      Diese verteilte Anwendung gilt es zu optimieren. Damit dies erreicht werden kann, benötigt es Last auf der
+      entsprechenden Schnittstelle, um eventuelle Engpässe zu evaluieren. Apache JMeter scheint das ideale Werkzeug
+      zu sein, da es für frühere Versionen lauffähige JMeter Tests gab, die jedoch nicht mehr aktuell sind.
+    </para>
+  </sect1>
+
+  <sect1>
+    <title>Auftrag</title>
+    <para>
+      Die Aufgabenstellung ist vorgegeben und klar definiert. Jedoch lässt sie sich zeitlich nicht abschliessen, weil
+      Änderungen an Openolat können dazu führen, dass die Tests unbrauchbar werden. Des weiteren wird gewünscht, dass
+      weitere Elemente getestet werden, als in der Aufgabenstellung definiert sind, bekannte Tests sind als Kann-Kriterien
+      in denn Kriterienkatalog eingeflossen.
+    </para>
+    <para>
+      Der Login Test wurde bereits vor der IPA von einem anderen Mitarbeiter portiert, dies wurde dementsprechend im
+      Kriterienkatalog gestrichen.
+    </para>
+
+    <sect2>
+      <title>Aufgabenstellung</title>
+
+      <para>
+	Lieferobjekte / Resultate (welche Arbeit soll getan werden?)
+      </para>
+      <itemizedlist mark="bullet">
+	<listitem>
+	  <para>
+	    Installation und Konfiguration der Software Apache JMeter und OpenOLAT
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Login Testcase: Portierung eines bestehenden OLAT-Login JMeter Testcases auf die aktuellste Version von
+	    OpenOLAT
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    eAssessment Testcase: Aufbau eines neuen Testcases zur Simulation einer elektronischen Prüfungssituation:
+	    Login, Aufruf eines Kurses, Aufruf eines eAssessments, eAssessment durchführen, Logout
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Skript um Testbenutzer und Testressourcen (eAssessment, Kurs) vor Testdurchführung anzulegen
+	  </para>
+	</listitem>
+      </itemizedlist>
+
+      <para>
+	Prüfbaren/messbaren Ziele
+      </para>
+      <itemizedlist mark="bullet">
+	<listitem>
+	  <para>
+	    Der eAssessment Testcase läuft vollständig und fehlerfrei mit einem Testbenutzer durch
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Der eAssessment Testcase kann wiederholt und mit mehreren Testbenutzern gleichzeitig aufgerufen werden
+	  </para>
+	</listitem>
+      </itemizedlist>
+
+      <para>
+	Durchzuführende Tests
+      </para>
+      <itemizedlist mark="bullet">
+	<listitem>
+	  <para>
+	    Testdurchlauf mit 50 gleichzeitigen Benutzern, Überwachen von CPU- und Memoryauslastung
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Schrittweise Erhöhung der Last bis Testsystem beginnt Fehler zu produzieren oder die Hardware
+	    vollständig ausgelastet ist
+	  </para>
+	</listitem>
+      </itemizedlist>
+    </sect2>
+
+    <sect2>
+      <title>Kriterienkatalog</title>
+      <para>
+	Der Kriterienkatalog zeigt die Aufgabenstellung in Teilaufgaben gegliedert dar. Dabei wird zwischen Kann- und
+	Muss-Kriterien unterschieden. Die Zeit zum Dokumentieren ist nicht mit eingerechnet, ausgeschlossen API-Referenz
+	und Quellcode Kommentare. Sie beträgt etwa 40 bis 50 Prozent und ist somit deckungsgleich mit den verrichteten
+	Arbeiten. Auf die Kann-Kriterien wurde verzichtet da sie nicht zur eigentlichen Arbeit gehören.
+      </para>
+
+      <sect3>
+	<title>Muss-Kriterien</title>
+	<para>
+	  In der folgenden Tabelle werden Ziele aufgeführt, die zwingend erreicht werden müssen.
+	</para>
+
+	<table>
+	  <title>Muss-Kriterien</title>
+	  <tgroup cols="4" align="left" colsep="1" rowsep="1">
+	    <colspec colnum="1" colwidth="2.2cm"/>
+	    <colspec colnum="2" colwidth="2.2cm"/>
+	    <colspec colnum="3" colwidth="*"/>
+	    <colspec colnum="4" colwidth="*"/>
+	    <thead>
+	      <row>
+		<entry>Schlüssel</entry>
+		<entry>Aufwand[h]</entry>
+		<entry>Tätigkeit</entry>
+		<entry>Beschreibung</entry>
+	      </row>
+	    </thead>
+	    <tbody>
+	      <row>
+		<entry>
+		  M01
+		</entry>
+		<entry>
+		  2.0
+		</entry>
+		<entry>
+		  Zeitplan erstellen und nach verfolgen.
+		</entry>
+		<entry>
+		  Es soll ein 10 Arbeitstage dauernder Zeitplan erstellt werden. Mit dessen Hilfe der Abgabetermin
+		  eingehalten werden soll. Des weiteren sollen die Arbeitszeiten nachvollziehbar sein. Arbeitszeiten
+		  werden im Zeitplan und Journal festgehalten, als auch im Intervall-Zeitplan.
+		</entry>
+	      </row>
+	      <row>
+		<entry>
+		  M02
+		</entry>
+		<entry>
+		  5.0
+		</entry>
+		<entry>
+		  Journal führen.
+		</entry>
+		<entry>
+		  Die verrichteten Arbeiten sollen nachvollziehbar sein und bei nicht Erreichen der Zielsetzung soll
+		  es Aufschluss über die Ursache geben.
+		</entry>
+	      </row>
+	      <row>
+		<entry>
+		  M03
+		</entry>
+		<entry>
+		  6.0
+		</entry>
+		<entry>
+		  In JMeter einarbeiten.
+		</entry>
+		<entry>
+		  JMeter Dokumentation lesen und gegen statische Inhalte testen. Die Tests sind kurz zu halten und
+		  werden später nicht mehr benötigt, sie können jedoch als Hilfestellung verwendet werden.
+		</entry>
+	      </row>
+	      <row>
+		<entry>
+		  M04
+		</entry>
+		<entry>
+		  2.0
+		</entry>
+		<entry>
+		  Arbeitsumgebung aufsetzen und konfigurieren.
+		</entry>
+		<entry>
+		  Die Installation geschieht idealerweise einmalig. Gewisse Konfigurationen müssen allenfalls nachträglich
+		  erledigt werden oder im Test Kontext angepasst werden.
+		</entry>
+	      </row>
+	      <row>
+		<entry>
+		  M05.01
+		</entry>
+		<entry>
+		  3.0
+		</entry>
+		<entry>
+		  Java Programm für das Erstellen von Benutzern.
+		</entry>
+		<entry>
+		  Es soll der vorhandene REST-Client für das Erstellen von Benutzer erweitert werden. Die erstellten 
+		  Benutzer und deren Passwörter müssen in eine CSV Datei exportiert werden.
+		</entry>
+	      </row>
+	      <row>
+		<entry>
+		  M05.02
+		</entry>
+		<entry>
+		  2.0
+		</entry>
+		<entry>
+		  Java Programm für das importieren eines Kurses.
+		</entry>
+		<entry>
+		  Es soll der vorhandene REST-Client für das Importieren von Kursen erweitert werden. Die Repository Entry
+		  ID der importierten Kurse soll in eine CSV Datei gespeichert werden, damit man sie mit JMeter auslesen
+		  und verwenden kann.
+		</entry>
+	      </row>
+	      <row>
+		<entry>
+		  M06
+		</entry>
+		<entry>
+		  2.0
+		</entry>
+		<entry>
+		  Umfangreicher eAssessment Test erstellen.
+		</entry>
+		<entry>
+		  Eigens für den Loadtest soll ein eAssessment Test erstellt werden, der alle interaktiven und Layout
+		  Komponenten eines Tests beinhalten.
+		</entry>
+	      </row>
+	      <row>
+		<entry>
+		  M07
+		</entry>
+		<entry>
+		  14.0
+		</entry>
+		<entry>
+		  JMeter Loadtest für eAssessment Test erstellen.
+		</entry>
+		<entry>
+		  Der Test wird Programmierelemente beinhalten müssen, wie Bedingungen, Schleifen und Parser.
+		</entry>
+	      </row>
+	      <row>
+		<entry>
+		  M08
+		</entry>
+		<entry>
+		  10.5
+		</entry>
+		<entry>
+		  JMeter Testdurchläufe und Evaluieren mittels JConsole.
+		</entry>
+		<entry>
+		  Das Verhalten des Systems mit unterschiedlichen Konfigurationen testen und dokumentieren.
+		</entry>
+	      </row>
+	    </tbody>
+	  </tgroup>
+	</table>
+      </sect3>      
+
+    </sect2>
+
+    <sect2>
+      <title>Zeitplan</title>
+      <para>
+      </para>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="../images/timetable.svg" align="top"/>
+	</imageobject>
+	<caption align="bottom">
+	  <para>
+	    Grobe Zeitplanung im Raster.
+	  </para>
+	</caption>
+      </mediaobject>
+    </sect2>
+  </sect1>
+
+  <sect1>
+    <title>Vorkenntnisse</title>
+    <para>
+      Mit den folgenden Technologien kenne ich mich bereits aus.
+    </para>
+    <itemizedlist mark="bullet">
+      <listitem>
+	<para>
+	  maven
+	</para>
+      </listitem>
+      <listitem>
+	<para>
+	  eclipse
+	</para>
+      </listitem>
+      <listitem>
+	<para>
+	  JavaSE
+	</para>
+      </listitem>
+      <listitem>
+	<para>
+	  RESTful
+	</para>
+      </listitem>
+      <listitem>
+	<para>
+	  HTML/CSS
+	</para>
+      </listitem>
+      <listitem>
+	<para>
+	  XML/XPath
+	</para>
+      </listitem>
+      <listitem>
+	<para>
+	  openolat <acronym>LMS</acronym>
+	</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>
+      Es folgen Technologien von denen ich keine besondere Vorkenntnisse besitze.
+    </para>
+    <itemizedlist mark="bullet">
+      <listitem>
+	<para>
+	  JMeter
+	</para>
+      </listitem>
+      <listitem>
+	<para>
+	  JMX/JConsole
+	</para>
+      </listitem>
+    </itemizedlist>
+
+  </sect1>
+
+  <!-- journal -->
+<xi:include href="appb.xml"/>
+
+</chapter>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding="utf-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0">
+  <title>Running eAssessment Tests</title>
+
+  <para>
+    You may invoke the loadtests as following:
+  </para>
+
+  <programlisting language="bash">
+<xi:include href="../listings/jmeter_run.sh" parse="text" />
+  </programlisting>
+
+  <para>
+    It is assumed that your loadtest is located in <filename>~/Downloads/qti_test</filename> directory.
+  </para>
+
+</chapter>

@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding="utf-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0">
+  <title>Umgebung</title>
+  <para>
+    Es wird Vorausgesetzt, dass eine funktionsfähige Installation eines Unixartigen-Betriebssystem vorhanden ist. Hier
+    wird anhand einer Debian GNU/Linux "stable" Distribution erklärt, wie man die Arbeitsumgebung aufsetzt.
+  </para>
+
+  <sect1>
+    <title>Debian GNU/Linux</title>
+    <para>
+      Bevor wir das Testing Repository hinzufügen legen wir fest, dass das Standard Repository "stable" ist. Falls dies
+      unterlassen wird, werden Sie nach dem nächsten Upgrade eine "testing" Distribution haben.
+    </para>
+
+    <example>
+      <title>/etc/apt/apt.conf</title>
+      <literallayout>
+<xi:include href="../conf/apt.conf" parse="text" />
+      </literallayout>
+    </example>
+
+    <para>
+      Nachdem wir das Standard Repository definiert haben, ist es sicher das "testing" Repository hinzuzufügen.
+    </para>
+
+    <example>
+      <title>/etc/apt/sources.list</title>
+      <literallayout>
+<xi:include href="../conf/sources.list" parse="text" />
+      </literallayout>
+    </example>
+
+    <para>
+      Wenn jetzt in der Ausgabe ersichtlich ist, dass das testing Repository abgerufen wird, dann können wir mit der 
+      Installation fortfahren.
+    </para>
+
+    <example>
+      <title>Aktualisiere Paketdatenbank</title>
+      <programlisting language="bash">
+<xi:include href="../listings/apt-update.sh" parse="text" />
+      </programlisting>
+    </example>
+
+    <example>
+      <title>Installiere Software</title>
+      <programlisting language="bash">
+<xi:include href="../listings/apt-install.sh" parse="text" />
+      </programlisting>
+    </example>
+
+  </sect1>
+
+  <sect1>
+    <title>Apache Tomcat</title>
+    <para>
+      Apache Tomcat ist ein Java Servlet Container, das ist ein Webserver der unteranderem dynamische Seiten enthalten
+      kann. Dabei stehen einem die volle funktionalität des <acronym>JRE</acronym> zur Verfügung.
+    </para>
+
+    <para>
+      Wir konfigurieren Apache Tomcat so, dass er auf Port 80 horcht. Damit das möglich ist muss in der Konfigurationsdatei
+      <filename>/etc/default/tomcat7</filename> der Parameter <emphasis>AUTHBIND</emphasis> auf <emphasis>yes</emphasis>
+      gestellt sein. Desweiteren ändern wir die RAM-Belegungsparameter, damit die Java Virtual Machine mehr Arbeitsspeicher
+      zur Verfügung hat.
+    </para>
+
+    <example>
+      <title>/etc/default/tomcat7</title>
+      <literallayout>
+<xi:include href="../conf/tomcat7" parse="text" />
+      </literallayout>
+    </example>
+
+    <para>
+      In der Datei <filename>/etc/tomcat7/server.xml</filename> können wir nun das Attribut <emphasis>port</emphasis> auf
+      <emphasis>80</emphasis> setzen.
+    </para>
+
+    <example>
+      <title>/etc/tomcat7/server.xml</title>
+      <literallayout>
+<xi:include href="../conf/server.xml" parse="text" />
+      </literallayout>
+    </example>
+  </sect1>
+
+  <sect1>
+    <title>MySQL</title>
+    <para>
+      Openolat <acronym>LMS</acronym> benützt die Java Bibliothek Hibernate um mit den verschiedenen unterstützten
+      Datenbankimplementationen zu arbeiten. Für einen einfachen Setup verwenden wir jedoch MySQL.
+    </para>
+
+    <para>
+      Als erstes starten wir die interaktive Kommandoeingabe von mysql.
+    </para>
+
+    <example>
+      <title>Client starten</title>
+      <programlisting language="bash">
+<xi:include href="../listings/mysql-start.sh" parse="text" />
+      </programlisting>
+    </example>
+
+    <para>
+      Im MySQL-Client legen wir den Benutzer openolat an, den wir später für die Konfiguration von openolat LMS verwenden.
+    </para>
+
+    <example>
+      <title>openolat Datenbank Benutzer</title>
+      <programlisting language="sql">
+<xi:include href="../listings/mysql-grant.sql" parse="text" />
+      </programlisting>
+    </example>
+
+  </sect1>
+
+  <sect1>
+    <title>openolat LMS</title>
+    <para>
+      Openolat LMS ist <acronym>OSS</acronym> und kann dementsprechen an die individuellen Bedürfnisse angepasst werden.
+    </para>
+
+    <para>
+      Um eine <acronym>WAR</acronym> Datei mit der gesamten Webapplikation zu erhalten klonen wir das Mercurial Repository.
+      Danach können wir sie compilieren und verpacken.
+    </para>
+
+    <example>
+      <title>Mercurial Repository klonen</title>
+      <programlisting language="bash">
+<xi:include href="../listings/hg-clone.sh" parse="text" />
+      </programlisting>
+    </example>
+
+    <para>
+      Um die Tabellen der openolat LMS Datenbank anzulegen, führen wir das heruntergeladene <acronym>SQL</acronym> Script aus.
+    </para>
+
+    <example>
+      <title>MySQL Script ausführen</title>
+      <programlisting language="bash">
+<xi:include href="../listings/mysql-script.sh" parse="text" />
+      </programlisting>
+    </example>
+
+    <para>
+      Diese Konfigurationsdatei unterscheidet sich zur Beispiel Konfiguration indem, dass der Loadtest Modus und der RESTful
+      Webservice eingeschalten sind. Diese Konfigurationsdatei muss anschliessend nach <filename>src/main/java/</filename>
+      kopiert werden.
+    </para>
+
+    <example>
+      <title>olat.local.properties</title>
+      <literallayout>
+<xi:include href="../conf/olat.local.properties" parse="text" />
+      </literallayout>
+    </example>
+
+    <para>
+      Nun müssen wir nur noch openolat LMS compilieren und als Webarchive verpacken. Maven nimmt uns da sehr viel Arbeit ab.
+      Die <acronym>WAR</acronym> Datei muss dann von <filename>target/openolat-lms-8.4-SNAPSHOT.war</filename> nach
+      <filename>/var/lib/tomcat7/webapps</filename> kopiert werden, damit sie entfaltet wird.
+    </para>
+
+    <example>
+      <title>Maven Buildprozess</title>
+      <programlisting language="bash">
+<xi:include href="../listings/mvn-clean-package.sh" parse="text" />
+      </programlisting>
+    </example>
+  </sect1>
+
+  <sect1>
+    <title>JMeter</title>
+    <para>
+      Im Start Script von JMeter passen wir noch das Maximum der RAM-Belegung an für einen reibungslosen Ablauf. Bitte beachten
+      Sie, dass man für den Loadtest noch <filename>groovy-all.jar</filename> benötigt und dieses in den <filename>lib</filename>
+      Unterordner von JMeter kopiert.
+    </para>
+
+    <example>
+      <title>JMeter Start Script</title>
+      <programlisting language="bash">
+<xi:include href="../listings/jmeter" parse="text" />
+      </programlisting>
+    </example>
+  </sect1>
+</chapter>

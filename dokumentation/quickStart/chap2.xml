@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding="utf-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0">
+  <title>JMeter &amp; JConsole</title>
+  <para>
+    In this chapter you get the instructions to make JMeter and JConsole running.
+  </para>
+
+  <sect1>
+    <title>Download &amp; Install</title>
+
+  <programlisting language="bash">
+<xi:include href="../listings/install.sh" parse="text" />
+  </programlisting>
+  </sect1>
+
+  <sect1>
+    <title>Modify Installation</title>
+
+  <programlisting language="bash">
+<xi:include href="../listings/modify.sh" parse="text" />
+  </programlisting>
+  </sect1>
+
+
+  <sect1>
+    <title>Setup JSR223 Preprocessor</title>
+    
+    <para>
+      You have to change the absolute path to the appropriate java snippets located within your loadtest directory.
+      The following preprocessors were affected
+    </para>
+
+    <itemizedlist mark="bullet">
+      <listitem>
+	<para>
+	  fill in eAssessment answers
+	</para>
+      </listitem>
+    </itemizedlist>
+
+  </sect1>
+
+</chapter>

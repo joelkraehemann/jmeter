@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding="utf-8"?>
+<preface>
+  <title>Vorwort</title>
+  <para>
+    Dieses Dokument kam auf Grund meines Lehrabschlusses zustande, der eine Praktische Abschlussarbeit
+    vorsieht. Das Kapitel 1 gibt eine detailierte Einsicht in deren Umfang.
+  </para>
+  <para>
+    Meine Java Karriere begann Ende 2001 mit JavaSE-1.2, indem ich das Buch Goto Java 2 las und
+    umsetzte. Damals war auf meinem Computer Microsoft Windows 98 vorinstalliert und die Classpath
+    Probleme schienen unendlich. Zudem waren die Resourcen sehr begrenzt mit einer 6 GB Festplatte.
+    Deshalb blieb ich bei einfachen Texteditoren mit Syntax-Highlighting für einen längeren Zeitraum
+    und compilierte meine Programme vom Terminal aus.
+  </para>
+  <para>
+    Gut zwölf Jahre später darf ich für eine renomierte E-Learning Plattform openolat Workload-Tests
+    schreiben. Diese sind insofern wichtig um Engpässe im System zu erkennen und somit für die verfügbaren
+    Resourcen zu optimieren. Des weiteren können allfällige Memory-Leaks oder Dead-Locks erkennt werden.
+    Ich bewege mich also immer noch am Limit der Leistung.
+  </para>
+</preface>

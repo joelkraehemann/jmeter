@@ -1,0 +1,183 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Auftrag</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="openolat LMS - JMeter Loadtests"><link rel="up" href="bk02ch01.html" title="Kapitel 1. Einleitung"><link rel="prev" href="bk02ch01.html" title="Kapitel 1. Einleitung"><link rel="next" href="bk02ch01s03.html" title="Vorkenntnisse"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Auftrag</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bk02ch01.html">Zurück</a> </td><th width="60%" align="center">Kapitel 1. Einleitung</th><td width="20%" align="right"> <a accesskey="n" href="bk02ch01s03.html">Weiter</a></td></tr></table><hr></div><div class="sect1" title="Auftrag"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp30208"></a>Auftrag</h2></div></div></div>
+    
+    <p>
+      Die Aufgabenstellung ist vorgegeben und klar definiert. Jedoch lässt sie sich zeitlich nicht abschliessen, weil
+      Änderungen an Openolat können dazu führen, dass die Tests unbrauchbar werden. Des weiteren wird gewünscht, dass
+      weitere Elemente getestet werden, als in der Aufgabenstellung definiert sind, bekannte Tests sind als Kann-Kriterien
+      in denn Kriterienkatalog eingeflossen.
+    </p>
+    <p>
+      Der Login Test wurde bereits vor der IPA von einem anderen Mitarbeiter portiert, dies wurde dementsprechend im
+      Kriterienkatalog gestrichen.
+    </p>
+
+    <div class="sect2" title="Aufgabenstellung"><div class="titlepage"><div><div><h3 class="title"><a name="idp32448"></a>Aufgabenstellung</h3></div></div></div>
+      
+
+      <p>
+	Lieferobjekte / Resultate (welche Arbeit soll getan werden?)
+      </p>
+      <div class="itemizedlist"><ul class="itemizedlist" type="bullet"><li class="listitem" style="list-style-type: disc">
+	  <p>
+	    Installation und Konfiguration der Software Apache JMeter und OpenOLAT
+	  </p>
+	</li><li class="listitem" style="list-style-type: disc">
+	  <p>
+	    Login Testcase: Portierung eines bestehenden OLAT-Login JMeter Testcases auf die aktuellste Version von
+	    OpenOLAT
+	  </p>
+	</li><li class="listitem" style="list-style-type: disc">
+	  <p>
+	    eAssessment Testcase: Aufbau eines neuen Testcases zur Simulation einer elektronischen Prüfungssituation:
+	    Login, Aufruf eines Kurses, Aufruf eines eAssessments, eAssessment durchführen, Logout
+	  </p>
+	</li><li class="listitem" style="list-style-type: disc">
+	  <p>
+	    Skript um Testbenutzer und Testressourcen (eAssessment, Kurs) vor Testdurchführung anzulegen
+	  </p>
+	</li></ul></div>
+
+      <p>
+	Prüfbaren/messbaren Ziele
+      </p>
+      <div class="itemizedlist"><ul class="itemizedlist" type="bullet"><li class="listitem" style="list-style-type: disc">
+	  <p>
+	    Der eAssessment Testcase läuft vollständig und fehlerfrei mit einem Testbenutzer durch
+	  </p>
+	</li><li class="listitem" style="list-style-type: disc">
+	  <p>
+	    Der eAssessment Testcase kann wiederholt und mit mehreren Testbenutzern gleichzeitig aufgerufen werden
+	  </p>
+	</li></ul></div>
+
+      <p>
+	Durchzuführende Tests
+      </p>
+      <div class="itemizedlist"><ul class="itemizedlist" type="bullet"><li class="listitem" style="list-style-type: disc">
+	  <p>
+	    Testdurchlauf mit 50 gleichzeitigen Benutzern, Überwachen von CPU- und Memoryauslastung
+	  </p>
+	</li><li class="listitem" style="list-style-type: disc">
+	  <p>
+	    Schrittweise Erhöhung der Last bis Testsystem beginnt Fehler zu produzieren oder die Hardware
+	    vollständig ausgelastet ist
+	  </p>
+	</li></ul></div>
+    </div>
+
+    <div class="sect2" title="Kriterienkatalog"><div class="titlepage"><div><div><h3 class="title"><a name="idp42704"></a>Kriterienkatalog</h3></div></div></div>
+      
+      <p>
+	Der Kriterienkatalog zeigt die Aufgabenstellung in Teilaufgaben gegliedert dar. Dabei wird zwischen Kann- und
+	Muss-Kriterien unterschieden. Die Zeit zum Dokumentieren ist nicht mit eingerechnet, ausgeschlossen API-Referenz
+	und Quellcode Kommentare. Sie beträgt etwa 40 bis 50 Prozent und ist somit deckungsgleich mit den verrichteten
+	Arbeiten. Auf die Kann-Kriterien wurde verzichtet da sie nicht zur eigentlichen Arbeit gehören.
+      </p>
+
+      <div class="sect3" title="Muss-Kriterien"><div class="titlepage"><div><div><h4 class="title"><a name="idp44192"></a>Muss-Kriterien</h4></div></div></div>
+	
+	<p>
+	  In der folgenden Tabelle werden Ziele aufgeführt, die zwingend erreicht werden müssen.
+	</p>
+
+	<div class="table"><a name="idp45216"></a><p class="title"><b>Tabelle 1.1. Muss-Kriterien</b></p><div class="table-contents">
+	  
+	  <table summary="Muss-Kriterien" border="1"><colgroup><col align="left"><col align="left"><col align="left"><col align="left"></colgroup><thead><tr><th align="left">Schlüssel</th><th align="left">Aufwand[h]</th><th align="left">Tätigkeit</th><th align="left">Beschreibung</th></tr></thead><tbody><tr><td align="left">
+		  M01
+		</td><td align="left">
+		  2.0
+		</td><td align="left">
+		  Zeitplan erstellen und nach verfolgen.
+		</td><td align="left">
+		  Es soll ein 10 Arbeitstage dauernder Zeitplan erstellt werden. Mit dessen Hilfe der Abgabetermin
+		  eingehalten werden soll. Des weiteren sollen die Arbeitszeiten nachvollziehbar sein. Arbeitszeiten
+		  werden im Zeitplan und Journal festgehalten, als auch im Intervall-Zeitplan.
+		</td></tr><tr><td align="left">
+		  M02
+		</td><td align="left">
+		  5.0
+		</td><td align="left">
+		  Journal führen.
+		</td><td align="left">
+		  Die verrichteten Arbeiten sollen nachvollziehbar sein und bei nicht Erreichen der Zielsetzung soll
+		  es Aufschluss über die Ursache geben.
+		</td></tr><tr><td align="left">
+		  M03
+		</td><td align="left">
+		  6.0
+		</td><td align="left">
+		  In JMeter einarbeiten.
+		</td><td align="left">
+		  JMeter Dokumentation lesen und gegen statische Inhalte testen. Die Tests sind kurz zu halten und
+		  werden später nicht mehr benötigt, sie können jedoch als Hilfestellung verwendet werden.
+		</td></tr><tr><td align="left">
+		  M04
+		</td><td align="left">
+		  2.0
+		</td><td align="left">
+		  Arbeitsumgebung aufsetzen und konfigurieren.
+		</td><td align="left">
+		  Die Installation geschieht idealerweise einmalig. Gewisse Konfigurationen müssen allenfalls nachträglich
+		  erledigt werden oder im Test Kontext angepasst werden.
+		</td></tr><tr><td align="left">
+		  M05.01
+		</td><td align="left">
+		  3.0
+		</td><td align="left">
+		  Java Programm für das Erstellen von Benutzern.
+		</td><td align="left">
+		  Es soll der vorhandene REST-Client für das Erstellen von Benutzer erweitert werden. Die erstellten 
+		  Benutzer und deren Passwörter müssen in eine CSV Datei exportiert werden.
+		</td></tr><tr><td align="left">
+		  M05.02
+		</td><td align="left">
+		  2.0
+		</td><td align="left">
+		  Java Programm für das importieren eines Kurses.
+		</td><td align="left">
+		  Es soll der vorhandene REST-Client für das Importieren von Kursen erweitert werden. Die Repository Entry
+		  ID der importierten Kurse soll in eine CSV Datei gespeichert werden, damit man sie mit JMeter auslesen
+		  und verwenden kann.
+		</td></tr><tr><td align="left">
+		  M06
+		</td><td align="left">
+		  2.0
+		</td><td align="left">
+		  Umfangreicher eAssessment Test erstellen.
+		</td><td align="left">
+		  Eigens für den Loadtest soll ein eAssessment Test erstellt werden, der alle interaktiven und Layout
+		  Komponenten eines Tests beinhalten.
+		</td></tr><tr><td align="left">
+		  M07
+		</td><td align="left">
+		  14.0
+		</td><td align="left">
+		  JMeter Loadtest für eAssessment Test erstellen.
+		</td><td align="left">
+		  Der Test wird Programmierelemente beinhalten müssen, wie Bedingungen, Schleifen und Parser.
+		</td></tr><tr><td align="left">
+		  M08
+		</td><td align="left">
+		  10.5
+		</td><td align="left">
+		  JMeter Testdurchläufe und Evaluieren mittels JConsole.
+		</td><td align="left">
+		  Das Verhalten des Systems mit unterschiedlichen Konfigurationen testen und dokumentieren.
+		</td></tr></tbody></table>
+	</div></div><br class="table-break">
+      </div>      
+
+    </div>
+
+    <div class="sect2" title="Zeitplan"><div class="titlepage"><div><div><h3 class="title"><a name="idp74080"></a>Zeitplan</h3></div></div></div>
+      
+      <p>
+      </p>
+
+      <div class="mediaobject" align="top"><img src="../images/timetable.svg" align="top"><div class="caption">
+	  <p>
+	    Grobe Zeitplanung im Raster.
+	  </p>
+	</div></div>
+    </div>
+  </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bk02ch01.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="bk02ch01.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="bk02ch01s03.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Kapitel 1. Einleitung </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Vorkenntnisse</td></tr></table></div></body></html>

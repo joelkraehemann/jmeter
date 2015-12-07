@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding="utf-8"?>
+<preface xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0">
+  <title>Preface</title>
+
+  <para>
+    This is JMeter quick start guide to run against OpenOLAT.
+  </para>
+
+  <para>
+    Your ISP may shut down your connection as running tests over internet. This is legitime to prevent denial of service attack.
+  </para>
+
+</preface>
